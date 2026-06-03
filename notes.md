@@ -1,12 +1,14 @@
 
-#### notes  
+#### english-notes  
+* **Accent:** US primary (UK = listen only). Schedule: [sources.md](sources.md)
 * at least 30m listening each day  
     - shadow  
 
-#### reference
+#### reference  
+* [英语口音纠正课程](https://open.163.com/newview/movie/free?pid=MDR81HCB8&mid=MDR81U0RL)  
 * [American Intonation - 1](https://raymondworkshop.github.io/language/american-intonation-1-2017-04-06/)  
 * [Intonation 2](https://raymondworkshop.github.io/language/intonation-2-2020-01-14/)
-* [英语口音纠正课程](https://open.163.com/newview/movie/free?pid=MDR81HCB8&mid=MDR81U0RL)
+
 * [The Sounds of English: Elementary Course](https://mscharlotteacademy.teachable.com/courses/2078007/lectures/46784438)
 
 
