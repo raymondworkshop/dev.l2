@@ -40,6 +40,7 @@
 -   nextjs template, astro template, preline UI
 
 #### reference
+- The Complete Developer - master the full stack  
 
 -   [Prompt Engineering: A Practical Example](https://realpython.com/practical-prompt-engineering/#start-engineering-your-prompts)
 
