@@ -1,3 +1,3 @@
-#### About L2
+#### About second language (L2) learning
 
-##### Copyright (c) 2024 FF Studio Limited
+##### Copyright (c) 2026 Bean Workshop Limited
