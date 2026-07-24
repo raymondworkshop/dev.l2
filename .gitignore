@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+web/dist/
+.DS_Store
+data/sources/*/audio.*
+data/echo-service.log
+data/echo-service.err.log

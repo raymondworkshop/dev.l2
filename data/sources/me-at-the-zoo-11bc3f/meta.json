@@ -1,0 +1,19 @@
+{
+  "id": "me-at-the-zoo-11bc3f",
+  "title": "Me at the zoo",
+  "url": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+  "duration_sec": 19,
+  "accent": "US",
+  "created": "2026-07-24T07:49:47.568486+00:00",
+  "has_audio": true,
+  "has_transcript": true,
+  "source_duration_sec": 19,
+  "ingest": {
+    "ok": true,
+    "audio": true,
+    "transcript": true,
+    "mode": "yt-dlp",
+    "warnings": [],
+    "yt_dlp": "/Users/zhaowenlong/workspace/dev.english/.venv/bin/yt-dlp"
+  }
+}

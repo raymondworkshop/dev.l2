@@ -1,5 +1,7 @@
 
 #### english-notes  
+* build echo service: http://100.90.225.26:5050/  
+
 * **Accent:** US primary (UK = listen only). Schedule: [sources.md](sources.md)
 * at least 30m listening each day  
     - shadow  

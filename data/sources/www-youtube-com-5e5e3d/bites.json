@@ -1,0 +1,2296 @@
+{
+  "bites": [
+    {
+      "id": 0,
+      "text": "[music] [music] &gt;&gt; I don't have time for other lovers.",
+      "start": 3.87,
+      "end": 12.03,
+      "word_from": 0,
+      "word_to": 9,
+      "tokens": [
+        "[music]",
+        "[music]",
+        "&gt;&gt;",
+        "I",
+        "don't",
+        "have",
+        "time",
+        "for",
+        "other",
+        "lovers."
+      ]
+    },
+    {
+      "id": 1,
+      "text": "[&nbsp;__&nbsp;] [&nbsp;__&nbsp;] It's turned.",
+      "start": 13.03,
+      "end": 13.745,
+      "word_from": 10,
+      "word_to": 13,
+      "tokens": [
+        "[&nbsp;__&nbsp;]",
+        "[&nbsp;__&nbsp;]",
+        "It's",
+        "turned."
+      ]
+    },
+    {
+      "id": 2,
+      "text": "It's turned.",
+      "start": 13.745,
+      "end": 13.945,
+      "word_from": 14,
+      "word_to": 15,
+      "tokens": [
+        "It's",
+        "turned."
+      ]
+    },
+    {
+      "id": 3,
+      "text": "&gt;&gt; [music] &gt;&gt; Give me that.",
+      "start": 13.76,
+      "end": 30.39,
+      "word_from": 16,
+      "word_to": 21,
+      "tokens": [
+        "&gt;&gt;",
+        "[music]",
+        "&gt;&gt;",
+        "Give",
+        "me",
+        "that."
+      ]
+    },
+    {
+      "id": 4,
+      "text": "&gt;&gt; You could have just stepped on it.",
+      "start": 33.23,
+      "end": 33.43,
+      "word_from": 22,
+      "word_to": 29,
+      "tokens": [
+        "&gt;&gt;",
+        "You",
+        "could",
+        "have",
+        "just",
+        "stepped",
+        "on",
+        "it."
+      ]
+    },
+    {
+      "id": 5,
+      "text": "&gt;&gt; You could have just stepped on it.",
+      "start": 33.24,
+      "end": 34.271,
+      "word_from": 30,
+      "word_to": 37,
+      "tokens": [
+        "&gt;&gt;",
+        "You",
+        "could",
+        "have",
+        "just",
+        "stepped",
+        "on",
+        "it."
+      ]
+    },
+    {
+      "id": 6,
+      "text": "&gt;&gt; I have asked the super to get an &gt;&gt; I have asked the super to get an &gt;&gt; I have asked the super to get an exterminator in here, and he won't do exterminator in here, and he won't do exterminator in here, and he won't do it.",
+      "start": 34.271,
+      "end": 38.515,
+      "word_from": 38,
+      "word_to": 86,
+      "tokens": [
+        "&gt;&gt;",
+        "I",
+        "have",
+        "asked",
+        "the",
+        "super",
+        "to",
+        "get",
+        "an",
+        "&gt;&gt;",
+        "I",
+        "have",
+        "asked",
+        "the",
+        "super",
+        "to",
+        "get",
+        "an",
+        "&gt;&gt;",
+        "I",
+        "have",
+        "asked",
+        "the",
+        "super",
+        "to",
+        "get",
+        "an",
+        "exterminator",
+        "in",
+        "here,",
+        "and",
+        "he",
+        "won't",
+        "do",
+        "exterminator",
+        "in",
+        "here,",
+        "and",
+        "he",
+        "won't",
+        "do",
+        "exterminator",
+        "in",
+        "here,",
+        "and",
+        "he",
+        "won't",
+        "do",
+        "it."
+      ]
+    },
+    {
+      "id": 7,
+      "text": "So, anytime I see a cockroach or a it.",
+      "start": 38.515,
+      "end": 39.372,
+      "word_from": 87,
+      "word_to": 95,
+      "tokens": [
+        "So,",
+        "anytime",
+        "I",
+        "see",
+        "a",
+        "cockroach",
+        "or",
+        "a",
+        "it."
+      ]
+    },
+    {
+      "id": 8,
+      "text": "So, anytime I see a cockroach or a it.",
+      "start": 39.372,
+      "end": 39.486,
+      "word_from": 96,
+      "word_to": 104,
+      "tokens": [
+        "So,",
+        "anytime",
+        "I",
+        "see",
+        "a",
+        "cockroach",
+        "or",
+        "a",
+        "it."
+      ]
+    },
+    {
+      "id": 9,
+      "text": "So, anytime I see a cockroach or a spider or whatever, I try and trap it, spider or whatever, I try and trap it, spider or whatever, I try and trap it, and then I leave it by his door.",
+      "start": 39.486,
+      "end": 42.99,
+      "word_from": 105,
+      "word_to": 144,
+      "tokens": [
+        "So,",
+        "anytime",
+        "I",
+        "see",
+        "a",
+        "cockroach",
+        "or",
+        "a",
+        "spider",
+        "or",
+        "whatever,",
+        "I",
+        "try",
+        "and",
+        "trap",
+        "it,",
+        "spider",
+        "or",
+        "whatever,",
+        "I",
+        "try",
+        "and",
+        "trap",
+        "it,",
+        "spider",
+        "or",
+        "whatever,",
+        "I",
+        "try",
+        "and",
+        "trap",
+        "it,",
+        "and",
+        "then",
+        "I",
+        "leave",
+        "it",
+        "by",
+        "his",
+        "door."
+      ]
+    },
+    {
+      "id": 10,
+      "text": "and then I leave it by his door.",
+      "start": 42.99,
+      "end": 43.19,
+      "word_from": 145,
+      "word_to": 152,
+      "tokens": [
+        "and",
+        "then",
+        "I",
+        "leave",
+        "it",
+        "by",
+        "his",
+        "door."
+      ]
+    },
+    {
+      "id": 11,
+      "text": "and then I leave it by his door.",
+      "start": 43.0,
+      "end": 43.535,
+      "word_from": 153,
+      "word_to": 160,
+      "tokens": [
+        "and",
+        "then",
+        "I",
+        "leave",
+        "it",
+        "by",
+        "his",
+        "door."
+      ]
+    },
+    {
+      "id": 12,
+      "text": "&gt;&gt; Well, you really ought to get your &gt;&gt; Well, you really ought to get your &gt;&gt; Well, you really ought to get your parents to let you borrow some money, parents to let you borrow some money, parents to let you borrow some money, then you wouldn't have to live in the then you wouldn't have to live in the then you wouldn't have to live in the third world.",
+      "start": 43.535,
+      "end": 48.27,
+      "word_from": 161,
+      "word_to": 231,
+      "tokens": [
+        "&gt;&gt;",
+        "Well,",
+        "you",
+        "really",
+        "ought",
+        "to",
+        "get",
+        "your",
+        "&gt;&gt;",
+        "Well,",
+        "you",
+        "really",
+        "ought",
+        "to",
+        "get",
+        "your",
+        "&gt;&gt;",
+        "Well,",
+        "you",
+        "really",
+        "ought",
+        "to",
+        "get",
+        "your",
+        "parents",
+        "to",
+        "let",
+        "you",
+        "borrow",
+        "some",
+        "money,",
+        "parents",
+        "to",
+        "let",
+        "you",
+        "borrow",
+        "some",
+        "money,",
+        "parents",
+        "to",
+        "let",
+        "you",
+        "borrow",
+        "some",
+        "money,",
+        "then",
+        "you",
+        "wouldn't",
+        "have",
+        "to",
+        "live",
+        "in",
+        "the",
+        "then",
+        "you",
+        "wouldn't",
+        "have",
+        "to",
+        "live",
+        "in",
+        "the",
+        "then",
+        "you",
+        "wouldn't",
+        "have",
+        "to",
+        "live",
+        "in",
+        "the",
+        "third",
+        "world."
+      ]
+    },
+    {
+      "id": 13,
+      "text": "third world.",
+      "start": 48.27,
+      "end": 48.47,
+      "word_from": 232,
+      "word_to": 233,
+      "tokens": [
+        "third",
+        "world."
+      ]
+    },
+    {
+      "id": 14,
+      "text": "third world.",
+      "start": 48.28,
+      "end": 48.817,
+      "word_from": 234,
+      "word_to": 235,
+      "tokens": [
+        "third",
+        "world."
+      ]
+    },
+    {
+      "id": 15,
+      "text": "&gt;&gt; never take money from them.",
+      "start": 48.818,
+      "end": 50.43,
+      "word_from": 236,
+      "word_to": 241,
+      "tokens": [
+        "&gt;&gt;",
+        "never",
+        "take",
+        "money",
+        "from",
+        "them."
+      ]
+    },
+    {
+      "id": 16,
+      "text": "&gt;&gt; never take money from them.",
+      "start": 50.43,
+      "end": 50.63,
+      "word_from": 242,
+      "word_to": 247,
+      "tokens": [
+        "&gt;&gt;",
+        "never",
+        "take",
+        "money",
+        "from",
+        "them."
+      ]
+    },
+    {
+      "id": 17,
+      "text": "&gt;&gt; never take money from them.",
+      "start": 50.44,
+      "end": 51.053,
+      "word_from": 248,
+      "word_to": 253,
+      "tokens": [
+        "&gt;&gt;",
+        "never",
+        "take",
+        "money",
+        "from",
+        "them."
+      ]
+    },
+    {
+      "id": 18,
+      "text": "&gt;&gt; Because they don't have it, or because &gt;&gt; Because they don't have it, or because &gt;&gt; Because they don't have it, or because you don't want it?",
+      "start": 51.053,
+      "end": 52.91,
+      "word_from": 254,
+      "word_to": 281,
+      "tokens": [
+        "&gt;&gt;",
+        "Because",
+        "they",
+        "don't",
+        "have",
+        "it,",
+        "or",
+        "because",
+        "&gt;&gt;",
+        "Because",
+        "they",
+        "don't",
+        "have",
+        "it,",
+        "or",
+        "because",
+        "&gt;&gt;",
+        "Because",
+        "they",
+        "don't",
+        "have",
+        "it,",
+        "or",
+        "because",
+        "you",
+        "don't",
+        "want",
+        "it?"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "you don't want it?",
+      "start": 52.91,
+      "end": 53.11,
+      "word_from": 282,
+      "word_to": 285,
+      "tokens": [
+        "you",
+        "don't",
+        "want",
+        "it?"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "you don't want it?",
+      "start": 52.92,
+      "end": 54.1,
+      "word_from": 286,
+      "word_to": 289,
+      "tokens": [
+        "you",
+        "don't",
+        "want",
+        "it?"
+      ]
+    },
+    {
+      "id": 21,
+      "text": "&gt;&gt; Because I don't want it.",
+      "start": 54.1,
+      "end": 55.87,
+      "word_from": 290,
+      "word_to": 295,
+      "tokens": [
+        "&gt;&gt;",
+        "Because",
+        "I",
+        "don't",
+        "want",
+        "it."
+      ]
+    },
+    {
+      "id": 22,
+      "text": "&gt;&gt; Because I don't want it.",
+      "start": 55.87,
+      "end": 56.07,
+      "word_from": 296,
+      "word_to": 301,
+      "tokens": [
+        "&gt;&gt;",
+        "Because",
+        "I",
+        "don't",
+        "want",
+        "it."
+      ]
+    },
+    {
+      "id": 23,
+      "text": "&gt;&gt; Because I don't want it.",
+      "start": 55.88,
+      "end": 56.995,
+      "word_from": 302,
+      "word_to": 307,
+      "tokens": [
+        "&gt;&gt;",
+        "Because",
+        "I",
+        "don't",
+        "want",
+        "it."
+      ]
+    },
+    {
+      "id": 24,
+      "text": "&gt;&gt; It's Father's Day, you know.",
+      "start": 56.995,
+      "end": 58.11,
+      "word_from": 308,
+      "word_to": 313,
+      "tokens": [
+        "&gt;&gt;",
+        "It's",
+        "Father's",
+        "Day,",
+        "you",
+        "know."
+      ]
+    },
+    {
+      "id": 25,
+      "text": "&gt;&gt; It's Father's Day, you know.",
+      "start": 58.11,
+      "end": 58.31,
+      "word_from": 314,
+      "word_to": 319,
+      "tokens": [
+        "&gt;&gt;",
+        "It's",
+        "Father's",
+        "Day,",
+        "you",
+        "know."
+      ]
+    },
+    {
+      "id": 26,
+      "text": "&gt;&gt; It's Father's Day, you know.",
+      "start": 58.12,
+      "end": 58.647,
+      "word_from": 320,
+      "word_to": 325,
+      "tokens": [
+        "&gt;&gt;",
+        "It's",
+        "Father's",
+        "Day,",
+        "you",
+        "know."
+      ]
+    },
+    {
+      "id": 27,
+      "text": "&gt;&gt; It is?",
+      "start": 58.647,
+      "end": 58.91,
+      "word_from": 326,
+      "word_to": 328,
+      "tokens": [
+        "&gt;&gt;",
+        "It",
+        "is?"
+      ]
+    },
+    {
+      "id": 28,
+      "text": "&gt;&gt; It is?",
+      "start": 58.91,
+      "end": 59.11,
+      "word_from": 329,
+      "word_to": 331,
+      "tokens": [
+        "&gt;&gt;",
+        "It",
+        "is?"
+      ]
+    },
+    {
+      "id": 29,
+      "text": "&gt;&gt; It is?",
+      "start": 58.92,
+      "end": 59.637,
+      "word_from": 332,
+      "word_to": 334,
+      "tokens": [
+        "&gt;&gt;",
+        "It",
+        "is?"
+      ]
+    },
+    {
+      "id": 30,
+      "text": "&gt;&gt; And you should call your father.",
+      "start": 59.637,
+      "end": 61.31,
+      "word_from": 335,
+      "word_to": 341,
+      "tokens": [
+        "&gt;&gt;",
+        "And",
+        "you",
+        "should",
+        "call",
+        "your",
+        "father."
+      ]
+    },
+    {
+      "id": 31,
+      "text": "&gt;&gt; And you should call your father.",
+      "start": 61.31,
+      "end": 61.51,
+      "word_from": 342,
+      "word_to": 348,
+      "tokens": [
+        "&gt;&gt;",
+        "And",
+        "you",
+        "should",
+        "call",
+        "your",
+        "father."
+      ]
+    },
+    {
+      "id": 32,
+      "text": "&gt;&gt; And you should call your father.",
+      "start": 61.32,
+      "end": 61.944,
+      "word_from": 349,
+      "word_to": 355,
+      "tokens": [
+        "&gt;&gt;",
+        "And",
+        "you",
+        "should",
+        "call",
+        "your",
+        "father."
+      ]
+    },
+    {
+      "id": 33,
+      "text": "&gt;&gt; I'll call him tomorrow.",
+      "start": 61.944,
+      "end": 62.39,
+      "word_from": 356,
+      "word_to": 360,
+      "tokens": [
+        "&gt;&gt;",
+        "I'll",
+        "call",
+        "him",
+        "tomorrow."
+      ]
+    },
+    {
+      "id": 34,
+      "text": "&gt;&gt; I'll call him tomorrow.",
+      "start": 62.39,
+      "end": 62.59,
+      "word_from": 361,
+      "word_to": 365,
+      "tokens": [
+        "&gt;&gt;",
+        "I'll",
+        "call",
+        "him",
+        "tomorrow."
+      ]
+    },
+    {
+      "id": 35,
+      "text": "&gt;&gt; I'll call him tomorrow.",
+      "start": 62.4,
+      "end": 62.913,
+      "word_from": 366,
+      "word_to": 370,
+      "tokens": [
+        "&gt;&gt;",
+        "I'll",
+        "call",
+        "him",
+        "tomorrow."
+      ]
+    },
+    {
+      "id": 36,
+      "text": "&gt;&gt; Tomorrow, you'll be the daughter that &gt;&gt; Tomorrow, you'll be the daughter that &gt;&gt; Tomorrow, you'll be the daughter that forgot Father's Day, instead of the one forgot Father's Day, instead of the one forgot Father's Day, instead of the one who remembered.",
+      "start": 62.913,
+      "end": 67.03,
+      "word_from": 371,
+      "word_to": 414,
+      "tokens": [
+        "&gt;&gt;",
+        "Tomorrow,",
+        "you'll",
+        "be",
+        "the",
+        "daughter",
+        "that",
+        "&gt;&gt;",
+        "Tomorrow,",
+        "you'll",
+        "be",
+        "the",
+        "daughter",
+        "that",
+        "&gt;&gt;",
+        "Tomorrow,",
+        "you'll",
+        "be",
+        "the",
+        "daughter",
+        "that",
+        "forgot",
+        "Father's",
+        "Day,",
+        "instead",
+        "of",
+        "the",
+        "one",
+        "forgot",
+        "Father's",
+        "Day,",
+        "instead",
+        "of",
+        "the",
+        "one",
+        "forgot",
+        "Father's",
+        "Day,",
+        "instead",
+        "of",
+        "the",
+        "one",
+        "who",
+        "remembered."
+      ]
+    },
+    {
+      "id": 37,
+      "text": "who remembered.",
+      "start": 67.03,
+      "end": 67.23,
+      "word_from": 415,
+      "word_to": 416,
+      "tokens": [
+        "who",
+        "remembered."
+      ]
+    },
+    {
+      "id": 38,
+      "text": "who remembered.",
+      "start": 67.04,
+      "end": 71.303,
+      "word_from": 417,
+      "word_to": 418,
+      "tokens": [
+        "who",
+        "remembered."
+      ]
+    },
+    {
+      "id": 39,
+      "text": "Go ahead.",
+      "start": 71.303,
+      "end": 75.567,
+      "word_from": 419,
+      "word_to": 420,
+      "tokens": [
+        "Go",
+        "ahead."
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Call him.",
+      "start": 75.567,
+      "end": 79.83,
+      "word_from": 421,
+      "word_to": 422,
+      "tokens": [
+        "Call",
+        "him."
+      ]
+    },
+    {
+      "id": 41,
+      "text": "&gt;&gt; Hey, Dad.",
+      "start": 81.51,
+      "end": 81.71,
+      "word_from": 423,
+      "word_to": 425,
+      "tokens": [
+        "&gt;&gt;",
+        "Hey,",
+        "Dad."
+      ]
+    },
+    {
+      "id": 42,
+      "text": "&gt;&gt; Hey, Dad.",
+      "start": 81.52,
+      "end": 82.373,
+      "word_from": 426,
+      "word_to": 428,
+      "tokens": [
+        "&gt;&gt;",
+        "Hey,",
+        "Dad."
+      ]
+    },
+    {
+      "id": 43,
+      "text": "Sorry it's so late.",
+      "start": 82.373,
+      "end": 83.51,
+      "word_from": 429,
+      "word_to": 432,
+      "tokens": [
+        "Sorry",
+        "it's",
+        "so",
+        "late."
+      ]
+    },
+    {
+      "id": 44,
+      "text": "Sorry it's so late.",
+      "start": 83.51,
+      "end": 83.71,
+      "word_from": 433,
+      "word_to": 436,
+      "tokens": [
+        "Sorry",
+        "it's",
+        "so",
+        "late."
+      ]
+    },
+    {
+      "id": 45,
+      "text": "Sorry it's so late.",
+      "start": 83.52,
+      "end": 84.063,
+      "word_from": 437,
+      "word_to": 440,
+      "tokens": [
+        "Sorry",
+        "it's",
+        "so",
+        "late."
+      ]
+    },
+    {
+      "id": 46,
+      "text": "Cuz you weren't home the last time I Cuz you weren't home the last time I Cuz you weren't home the last time I called her.",
+      "start": 84.063,
+      "end": 85.99,
+      "word_from": 441,
+      "word_to": 466,
+      "tokens": [
+        "Cuz",
+        "you",
+        "weren't",
+        "home",
+        "the",
+        "last",
+        "time",
+        "I",
+        "Cuz",
+        "you",
+        "weren't",
+        "home",
+        "the",
+        "last",
+        "time",
+        "I",
+        "Cuz",
+        "you",
+        "weren't",
+        "home",
+        "the",
+        "last",
+        "time",
+        "I",
+        "called",
+        "her."
+      ]
+    },
+    {
+      "id": 47,
+      "text": "called her.",
+      "start": 85.99,
+      "end": 86.19,
+      "word_from": 467,
+      "word_to": 468,
+      "tokens": [
+        "called",
+        "her."
+      ]
+    },
+    {
+      "id": 48,
+      "text": "called her.",
+      "start": 86.0,
+      "end": 86.382,
+      "word_from": 469,
+      "word_to": 470,
+      "tokens": [
+        "called",
+        "her."
+      ]
+    },
+    {
+      "id": 49,
+      "text": "&gt;&gt; There's so little she'll ever reveal to &gt;&gt; There's so little she'll ever reveal to &gt;&gt; There's so little she'll ever reveal to me, or I to her.",
+      "start": 86.382,
+      "end": 89.717,
+      "word_from": 471,
+      "word_to": 499,
+      "tokens": [
+        "&gt;&gt;",
+        "There's",
+        "so",
+        "little",
+        "she'll",
+        "ever",
+        "reveal",
+        "to",
+        "&gt;&gt;",
+        "There's",
+        "so",
+        "little",
+        "she'll",
+        "ever",
+        "reveal",
+        "to",
+        "&gt;&gt;",
+        "There's",
+        "so",
+        "little",
+        "she'll",
+        "ever",
+        "reveal",
+        "to",
+        "me,",
+        "or",
+        "I",
+        "to",
+        "her."
+      ]
+    },
+    {
+      "id": 50,
+      "text": "Her better half, I me, or I to her.",
+      "start": 89.717,
+      "end": 90.381,
+      "word_from": 500,
+      "word_to": 508,
+      "tokens": [
+        "Her",
+        "better",
+        "half,",
+        "I",
+        "me,",
+        "or",
+        "I",
+        "to",
+        "her."
+      ]
+    },
+    {
+      "id": 51,
+      "text": "Her better half, I me, or I to her.",
+      "start": 90.381,
+      "end": 90.926,
+      "word_from": 509,
+      "word_to": 517,
+      "tokens": [
+        "Her",
+        "better",
+        "half,",
+        "I",
+        "me,",
+        "or",
+        "I",
+        "to",
+        "her."
+      ]
+    },
+    {
+      "id": 52,
+      "text": "Her better half, I know, even less.",
+      "start": 90.926,
+      "end": 91.83,
+      "word_from": 518,
+      "word_to": 524,
+      "tokens": [
+        "Her",
+        "better",
+        "half,",
+        "I",
+        "know,",
+        "even",
+        "less."
+      ]
+    },
+    {
+      "id": 53,
+      "text": "know, even less.",
+      "start": 91.83,
+      "end": 92.03,
+      "word_from": 525,
+      "word_to": 527,
+      "tokens": [
+        "know,",
+        "even",
+        "less."
+      ]
+    },
+    {
+      "id": 54,
+      "text": "know, even less.",
+      "start": 91.84,
+      "end": 92.425,
+      "word_from": 528,
+      "word_to": 530,
+      "tokens": [
+        "know,",
+        "even",
+        "less."
+      ]
+    },
+    {
+      "id": 55,
+      "text": "I'm sure she's speaking half an octave I'm sure she's speaking half an octave I'm sure she's speaking half an octave higher, higher, higher, &gt;&gt; [music] &gt;&gt; [music] &gt;&gt; [music] &gt;&gt; same voice she had when she was 16, &gt;&gt; same voice she had when she was 16, &gt;&gt; same voice she had when she was 16, telling him all about her new job, how telling him all about her new job, how telling him all about her new job, how much she misses him, and sorry [music] much she misses him, and sorry [music] much she misses him, and sorry [music] she didn't send a card.",
+      "start": 92.425,
+      "end": 102.42,
+      "word_from": 531,
+      "word_to": 637,
+      "tokens": [
+        "I'm",
+        "sure",
+        "she's",
+        "speaking",
+        "half",
+        "an",
+        "octave",
+        "I'm",
+        "sure",
+        "she's",
+        "speaking",
+        "half",
+        "an",
+        "octave",
+        "I'm",
+        "sure",
+        "she's",
+        "speaking",
+        "half",
+        "an",
+        "octave",
+        "higher,",
+        "higher,",
+        "higher,",
+        "&gt;&gt;",
+        "[music]",
+        "&gt;&gt;",
+        "[music]",
+        "&gt;&gt;",
+        "[music]",
+        "&gt;&gt;",
+        "same",
+        "voice",
+        "she",
+        "had",
+        "when",
+        "she",
+        "was",
+        "16,",
+        "&gt;&gt;",
+        "same",
+        "voice",
+        "she",
+        "had",
+        "when",
+        "she",
+        "was",
+        "16,",
+        "&gt;&gt;",
+        "same",
+        "voice",
+        "she",
+        "had",
+        "when",
+        "she",
+        "was",
+        "16,",
+        "telling",
+        "him",
+        "all",
+        "about",
+        "her",
+        "new",
+        "job,",
+        "how",
+        "telling",
+        "him",
+        "all",
+        "about",
+        "her",
+        "new",
+        "job,",
+        "how",
+        "telling",
+        "him",
+        "all",
+        "about",
+        "her",
+        "new",
+        "job,",
+        "how",
+        "much",
+        "she",
+        "misses",
+        "him,",
+        "and",
+        "sorry",
+        "[music]",
+        "much",
+        "she",
+        "misses",
+        "him,",
+        "and",
+        "sorry",
+        "[music]",
+        "much",
+        "she",
+        "misses",
+        "him,",
+        "and",
+        "sorry",
+        "[music]",
+        "she",
+        "didn't",
+        "send",
+        "a",
+        "card."
+      ]
+    },
+    {
+      "id": 56,
+      "text": "Telling him she didn't send a card.",
+      "start": 102.42,
+      "end": 102.893,
+      "word_from": 638,
+      "word_to": 644,
+      "tokens": [
+        "Telling",
+        "him",
+        "she",
+        "didn't",
+        "send",
+        "a",
+        "card."
+      ]
+    },
+    {
+      "id": 57,
+      "text": "Telling him she didn't send a card.",
+      "start": 102.893,
+      "end": 103.771,
+      "word_from": 645,
+      "word_to": 651,
+      "tokens": [
+        "Telling",
+        "him",
+        "she",
+        "didn't",
+        "send",
+        "a",
+        "card."
+      ]
+    },
+    {
+      "id": 58,
+      "text": "Telling him everything but the truth, just like she everything but the truth, just like she everything but the truth, just like she wouldn't tell me about that young man wouldn't tell me about that young man wouldn't tell me about that young man downstairs.",
+      "start": 103.771,
+      "end": 108.35,
+      "word_from": 652,
+      "word_to": 696,
+      "tokens": [
+        "Telling",
+        "him",
+        "everything",
+        "but",
+        "the",
+        "truth,",
+        "just",
+        "like",
+        "she",
+        "everything",
+        "but",
+        "the",
+        "truth,",
+        "just",
+        "like",
+        "she",
+        "everything",
+        "but",
+        "the",
+        "truth,",
+        "just",
+        "like",
+        "she",
+        "wouldn't",
+        "tell",
+        "me",
+        "about",
+        "that",
+        "young",
+        "man",
+        "wouldn't",
+        "tell",
+        "me",
+        "about",
+        "that",
+        "young",
+        "man",
+        "wouldn't",
+        "tell",
+        "me",
+        "about",
+        "that",
+        "young",
+        "man",
+        "downstairs."
+      ]
+    },
+    {
+      "id": 59,
+      "text": "downstairs.",
+      "start": 108.35,
+      "end": 108.55,
+      "word_from": 697,
+      "word_to": 697,
+      "tokens": [
+        "downstairs."
+      ]
+    },
+    {
+      "id": 60,
+      "text": "downstairs.",
+      "start": 108.36,
+      "end": 108.645,
+      "word_from": 698,
+      "word_to": 698,
+      "tokens": [
+        "downstairs."
+      ]
+    },
+    {
+      "id": 61,
+      "text": "&gt;&gt; I'm calling now, right?",
+      "start": 108.645,
+      "end": 110.07,
+      "word_from": 699,
+      "word_to": 703,
+      "tokens": [
+        "&gt;&gt;",
+        "I'm",
+        "calling",
+        "now,",
+        "right?"
+      ]
+    },
+    {
+      "id": 62,
+      "text": "&gt;&gt; I'm calling now, right?",
+      "start": 110.07,
+      "end": 110.27,
+      "word_from": 704,
+      "word_to": 708,
+      "tokens": [
+        "&gt;&gt;",
+        "I'm",
+        "calling",
+        "now,",
+        "right?"
+      ]
+    },
+    {
+      "id": 63,
+      "text": "&gt;&gt; I'm calling now, right?",
+      "start": 110.08,
+      "end": 110.905,
+      "word_from": 709,
+      "word_to": 713,
+      "tokens": [
+        "&gt;&gt;",
+        "I'm",
+        "calling",
+        "now,",
+        "right?"
+      ]
+    },
+    {
+      "id": 64,
+      "text": "I don't want him to feel bad about it.",
+      "start": 110.905,
+      "end": 112.39,
+      "word_from": 714,
+      "word_to": 722,
+      "tokens": [
+        "I",
+        "don't",
+        "want",
+        "him",
+        "to",
+        "feel",
+        "bad",
+        "about",
+        "it."
+      ]
+    },
+    {
+      "id": 65,
+      "text": "I don't want him to feel bad about it.",
+      "start": 112.39,
+      "end": 112.59,
+      "word_from": 723,
+      "word_to": 731,
+      "tokens": [
+        "I",
+        "don't",
+        "want",
+        "him",
+        "to",
+        "feel",
+        "bad",
+        "about",
+        "it."
+      ]
+    },
+    {
+      "id": 66,
+      "text": "I don't want him to feel bad about it.",
+      "start": 112.4,
+      "end": 112.945,
+      "word_from": 732,
+      "word_to": 740,
+      "tokens": [
+        "I",
+        "don't",
+        "want",
+        "him",
+        "to",
+        "feel",
+        "bad",
+        "about",
+        "it."
+      ]
+    },
+    {
+      "id": 67,
+      "text": "It was the best thing that could have It was the best thing that could have It was the best thing that could have happened.",
+      "start": 112.945,
+      "end": 115.09,
+      "word_from": 741,
+      "word_to": 765,
+      "tokens": [
+        "It",
+        "was",
+        "the",
+        "best",
+        "thing",
+        "that",
+        "could",
+        "have",
+        "It",
+        "was",
+        "the",
+        "best",
+        "thing",
+        "that",
+        "could",
+        "have",
+        "It",
+        "was",
+        "the",
+        "best",
+        "thing",
+        "that",
+        "could",
+        "have",
+        "happened."
+      ]
+    },
+    {
+      "id": 68,
+      "text": "I didn't [music] fit in there.",
+      "start": 115.09,
+      "end": 116.19,
+      "word_from": 766,
+      "word_to": 771,
+      "tokens": [
+        "I",
+        "didn't",
+        "[music]",
+        "fit",
+        "in",
+        "there."
+      ]
+    },
+    {
+      "id": 69,
+      "text": "happened.",
+      "start": 116.19,
+      "end": 116.219,
+      "word_from": 772,
+      "word_to": 772,
+      "tokens": [
+        "happened."
+      ]
+    },
+    {
+      "id": 70,
+      "text": "I didn't [music] fit in there.",
+      "start": 116.219,
+      "end": 116.39,
+      "word_from": 773,
+      "word_to": 778,
+      "tokens": [
+        "I",
+        "didn't",
+        "[music]",
+        "fit",
+        "in",
+        "there."
+      ]
+    },
+    {
+      "id": 71,
+      "text": "happened.",
+      "start": 116.2,
+      "end": 116.422,
+      "word_from": 779,
+      "word_to": 779,
+      "tokens": [
+        "happened."
+      ]
+    },
+    {
+      "id": 72,
+      "text": "I didn't [music] fit in there.",
+      "start": 116.422,
+      "end": 117.757,
+      "word_from": 780,
+      "word_to": 785,
+      "tokens": [
+        "I",
+        "didn't",
+        "[music]",
+        "fit",
+        "in",
+        "there."
+      ]
+    },
+    {
+      "id": 73,
+      "text": "I've been called worse, Dad.",
+      "start": 117.758,
+      "end": 118.87,
+      "word_from": 786,
+      "word_to": 790,
+      "tokens": [
+        "I've",
+        "been",
+        "called",
+        "worse,",
+        "Dad."
+      ]
+    },
+    {
+      "id": 74,
+      "text": "I've been called worse, Dad.",
+      "start": 118.87,
+      "end": 119.07,
+      "word_from": 791,
+      "word_to": 795,
+      "tokens": [
+        "I've",
+        "been",
+        "called",
+        "worse,",
+        "Dad."
+      ]
+    },
+    {
+      "id": 75,
+      "text": "I've been called worse, Dad.",
+      "start": 118.88,
+      "end": 119.809,
+      "word_from": 796,
+      "word_to": 800,
+      "tokens": [
+        "I've",
+        "been",
+        "called",
+        "worse,",
+        "Dad."
+      ]
+    },
+    {
+      "id": 76,
+      "text": "&gt;&gt; There's a value in having secrets.",
+      "start": 119.809,
+      "end": 121.11,
+      "word_from": 801,
+      "word_to": 807,
+      "tokens": [
+        "&gt;&gt;",
+        "There's",
+        "a",
+        "value",
+        "in",
+        "having",
+        "secrets."
+      ]
+    },
+    {
+      "id": 77,
+      "text": "&gt;&gt; There's a value in having secrets.",
+      "start": 121.11,
+      "end": 121.31,
+      "word_from": 808,
+      "word_to": 814,
+      "tokens": [
+        "&gt;&gt;",
+        "There's",
+        "a",
+        "value",
+        "in",
+        "having",
+        "secrets."
+      ]
+    },
+    {
+      "id": 78,
+      "text": "&gt;&gt; There's a value in having secrets.",
+      "start": 121.12,
+      "end": 122.321,
+      "word_from": 815,
+      "word_to": 821,
+      "tokens": [
+        "&gt;&gt;",
+        "There's",
+        "a",
+        "value",
+        "in",
+        "having",
+        "secrets."
+      ]
+    },
+    {
+      "id": 79,
+      "text": "Creatures like myself, like Claire, like Creatures like myself, like Claire, like Creatures like myself, like Claire, like Zoe, we wouldn't be ourselves without Zoe, we wouldn't be ourselves without Zoe, we wouldn't be ourselves without them.",
+      "start": 122.321,
+      "end": 126.63,
+      "word_from": 822,
+      "word_to": 858,
+      "tokens": [
+        "Creatures",
+        "like",
+        "myself,",
+        "like",
+        "Claire,",
+        "like",
+        "Creatures",
+        "like",
+        "myself,",
+        "like",
+        "Claire,",
+        "like",
+        "Creatures",
+        "like",
+        "myself,",
+        "like",
+        "Claire,",
+        "like",
+        "Zoe,",
+        "we",
+        "wouldn't",
+        "be",
+        "ourselves",
+        "without",
+        "Zoe,",
+        "we",
+        "wouldn't",
+        "be",
+        "ourselves",
+        "without",
+        "Zoe,",
+        "we",
+        "wouldn't",
+        "be",
+        "ourselves",
+        "without",
+        "them."
+      ]
+    },
+    {
+      "id": 80,
+      "text": "them.",
+      "start": 126.63,
+      "end": 126.83,
+      "word_from": 859,
+      "word_to": 859,
+      "tokens": [
+        "them."
+      ]
+    },
+    {
+      "id": 81,
+      "text": "them.",
+      "start": 126.64,
+      "end": 126.849,
+      "word_from": 860,
+      "word_to": 860,
+      "tokens": [
+        "them."
+      ]
+    },
+    {
+      "id": 82,
+      "text": "Peter Russo, on the other hand, he's Peter Russo, on the other hand, he's Peter Russo, on the other hand, he's trapped by his secrets.",
+      "start": 126.849,
+      "end": 130.59,
+      "word_from": 861,
+      "word_to": 885,
+      "tokens": [
+        "Peter",
+        "Russo,",
+        "on",
+        "the",
+        "other",
+        "hand,",
+        "he's",
+        "Peter",
+        "Russo,",
+        "on",
+        "the",
+        "other",
+        "hand,",
+        "he's",
+        "Peter",
+        "Russo,",
+        "on",
+        "the",
+        "other",
+        "hand,",
+        "he's",
+        "trapped",
+        "by",
+        "his",
+        "secrets."
+      ]
+    },
+    {
+      "id": 83,
+      "text": "trapped by his secrets.",
+      "start": 130.59,
+      "end": 130.79,
+      "word_from": 886,
+      "word_to": 889,
+      "tokens": [
+        "trapped",
+        "by",
+        "his",
+        "secrets."
+      ]
+    },
+    {
+      "id": 84,
+      "text": "trapped by his secrets.",
+      "start": 130.6,
+      "end": 131.009,
+      "word_from": 890,
+      "word_to": 893,
+      "tokens": [
+        "trapped",
+        "by",
+        "his",
+        "secrets."
+      ]
+    },
+    {
+      "id": 85,
+      "text": "What I'm trying to do is to give him the What I'm trying to do is to give him the What I'm trying to do is to give him the opportunity to set himself free.",
+      "start": 131.009,
+      "end": 134.67,
+      "word_from": 894,
+      "word_to": 928,
+      "tokens": [
+        "What",
+        "I'm",
+        "trying",
+        "to",
+        "do",
+        "is",
+        "to",
+        "give",
+        "him",
+        "the",
+        "What",
+        "I'm",
+        "trying",
+        "to",
+        "do",
+        "is",
+        "to",
+        "give",
+        "him",
+        "the",
+        "What",
+        "I'm",
+        "trying",
+        "to",
+        "do",
+        "is",
+        "to",
+        "give",
+        "him",
+        "the",
+        "opportunity",
+        "to",
+        "set",
+        "himself",
+        "free."
+      ]
+    },
+    {
+      "id": 86,
+      "text": "opportunity to set himself free.",
+      "start": 134.67,
+      "end": 134.87,
+      "word_from": 929,
+      "word_to": 933,
+      "tokens": [
+        "opportunity",
+        "to",
+        "set",
+        "himself",
+        "free."
+      ]
+    },
+    {
+      "id": 87,
+      "text": "opportunity to set himself free.",
+      "start": 134.68,
+      "end": 137.008,
+      "word_from": 934,
+      "word_to": 938,
+      "tokens": [
+        "opportunity",
+        "to",
+        "set",
+        "himself",
+        "free."
+      ]
+    },
+    {
+      "id": 88,
+      "text": "&gt;&gt; I don't know.",
+      "start": 137.008,
+      "end": 138.87,
+      "word_from": 939,
+      "word_to": 942,
+      "tokens": [
+        "&gt;&gt;",
+        "I",
+        "don't",
+        "know."
+      ]
+    },
+    {
+      "id": 89,
+      "text": "I don't know yet.",
+      "start": 140.43,
+      "end": 140.63,
+      "word_from": 943,
+      "word_to": 946,
+      "tokens": [
+        "I",
+        "don't",
+        "know",
+        "yet."
+      ]
+    },
+    {
+      "id": 90,
+      "text": "I don't know yet.",
+      "start": 140.44,
+      "end": 141.015,
+      "word_from": 947,
+      "word_to": 950,
+      "tokens": [
+        "I",
+        "don't",
+        "know",
+        "yet."
+      ]
+    },
+    {
+      "id": 91,
+      "text": "&gt;&gt; After all, we are nothing more or less &gt;&gt; After all, we are nothing more or less &gt;&gt; After all, we are nothing more or less than what we choose to reveal.",
+      "start": 141.015,
+      "end": 144.278,
+      "word_from": 951,
+      "word_to": 983,
+      "tokens": [
+        "&gt;&gt;",
+        "After",
+        "all,",
+        "we",
+        "are",
+        "nothing",
+        "more",
+        "or",
+        "less",
+        "&gt;&gt;",
+        "After",
+        "all,",
+        "we",
+        "are",
+        "nothing",
+        "more",
+        "or",
+        "less",
+        "&gt;&gt;",
+        "After",
+        "all,",
+        "we",
+        "are",
+        "nothing",
+        "more",
+        "or",
+        "less",
+        "than",
+        "what",
+        "we",
+        "choose",
+        "to",
+        "reveal."
+      ]
+    },
+    {
+      "id": 92,
+      "text": "What I am than what we choose to reveal.",
+      "start": 144.278,
+      "end": 144.803,
+      "word_from": 984,
+      "word_to": 992,
+      "tokens": [
+        "What",
+        "I",
+        "am",
+        "than",
+        "what",
+        "we",
+        "choose",
+        "to",
+        "reveal."
+      ]
+    },
+    {
+      "id": 93,
+      "text": "What I am than what we choose to reveal.",
+      "start": 144.803,
+      "end": 145.334,
+      "word_from": 993,
+      "word_to": 1001,
+      "tokens": [
+        "What",
+        "I",
+        "am",
+        "than",
+        "what",
+        "we",
+        "choose",
+        "to",
+        "reveal."
+      ]
+    },
+    {
+      "id": 94,
+      "text": "What I am to Claire is not what I am to Zoe, just to Claire is not what I am to Zoe, just to Claire is not what I am to Zoe, just as Zoe is not to me what she is to her as Zoe is not to me what she is to her as Zoe is not to me what she is to her father.",
+      "start": 145.334,
+      "end": 154.47,
+      "word_from": 1002,
+      "word_to": 1068,
+      "tokens": [
+        "What",
+        "I",
+        "am",
+        "to",
+        "Claire",
+        "is",
+        "not",
+        "what",
+        "I",
+        "am",
+        "to",
+        "Zoe,",
+        "just",
+        "to",
+        "Claire",
+        "is",
+        "not",
+        "what",
+        "I",
+        "am",
+        "to",
+        "Zoe,",
+        "just",
+        "to",
+        "Claire",
+        "is",
+        "not",
+        "what",
+        "I",
+        "am",
+        "to",
+        "Zoe,",
+        "just",
+        "as",
+        "Zoe",
+        "is",
+        "not",
+        "to",
+        "me",
+        "what",
+        "she",
+        "is",
+        "to",
+        "her",
+        "as",
+        "Zoe",
+        "is",
+        "not",
+        "to",
+        "me",
+        "what",
+        "she",
+        "is",
+        "to",
+        "her",
+        "as",
+        "Zoe",
+        "is",
+        "not",
+        "to",
+        "me",
+        "what",
+        "she",
+        "is",
+        "to",
+        "her",
+        "father."
+      ]
+    },
+    {
+      "id": 95,
+      "text": "Cuz I don't think I can make it back Cuz I don't think I can make it back before then.",
+      "start": 162.07,
+      "end": 174.03,
+      "word_from": 1069,
+      "word_to": 1088,
+      "tokens": [
+        "Cuz",
+        "I",
+        "don't",
+        "think",
+        "I",
+        "can",
+        "make",
+        "it",
+        "back",
+        "Cuz",
+        "I",
+        "don't",
+        "think",
+        "I",
+        "can",
+        "make",
+        "it",
+        "back",
+        "before",
+        "then."
+      ]
+    },
+    {
+      "id": 96,
+      "text": "I said I'll try.",
+      "start": 180.79,
+      "end": 180.99,
+      "word_from": 1089,
+      "word_to": 1092,
+      "tokens": [
+        "I",
+        "said",
+        "I'll",
+        "try."
+      ]
+    },
+    {
+      "id": 97,
+      "text": "I said I'll try.",
+      "start": 180.8,
+      "end": 181.297,
+      "word_from": 1093,
+      "word_to": 1096,
+      "tokens": [
+        "I",
+        "said",
+        "I'll",
+        "try."
+      ]
+    },
+    {
+      "id": 98,
+      "text": "&gt;&gt; Or Christmas?",
+      "start": 181.297,
+      "end": 181.67,
+      "word_from": 1097,
+      "word_to": 1099,
+      "tokens": [
+        "&gt;&gt;",
+        "Or",
+        "Christmas?"
+      ]
+    },
+    {
+      "id": 99,
+      "text": "&gt;&gt; Or Christmas?",
+      "start": 181.67,
+      "end": 181.87,
+      "word_from": 1100,
+      "word_to": 1102,
+      "tokens": [
+        "&gt;&gt;",
+        "Or",
+        "Christmas?"
+      ]
+    },
+    {
+      "id": 100,
+      "text": "&gt;&gt; Or Christmas?",
+      "start": 181.68,
+      "end": 182.874,
+      "word_from": 1103,
+      "word_to": 1105,
+      "tokens": [
+        "&gt;&gt;",
+        "Or",
+        "Christmas?"
+      ]
+    },
+    {
+      "id": 101,
+      "text": "&gt;&gt; Uh &gt;&gt; Uh &gt;&gt; Uh No.",
+      "start": 182.874,
+      "end": 187.27,
+      "word_from": 1106,
+      "word_to": 1112,
+      "tokens": [
+        "&gt;&gt;",
+        "Uh",
+        "&gt;&gt;",
+        "Uh",
+        "&gt;&gt;",
+        "Uh",
+        "No."
+      ]
+    },
+    {
+      "id": 102,
+      "text": "No.",
+      "start": 192.19,
+      "end": 192.39,
+      "word_from": 1113,
+      "word_to": 1113,
+      "tokens": [
+        "No."
+      ]
+    },
+    {
+      "id": 103,
+      "text": "No.",
+      "start": 192.2,
+      "end": 192.616,
+      "word_from": 1114,
+      "word_to": 1114,
+      "tokens": [
+        "No."
+      ]
+    },
+    {
+      "id": 104,
+      "text": "I'm not seeing anyone right now.",
+      "start": 192.616,
+      "end": 195.11,
+      "word_from": 1115,
+      "word_to": 1120,
+      "tokens": [
+        "I'm",
+        "not",
+        "seeing",
+        "anyone",
+        "right",
+        "now."
+      ]
+    },
+    {
+      "id": 105,
+      "text": "I'm not seeing anyone right now.",
+      "start": 195.11,
+      "end": 195.31,
+      "word_from": 1121,
+      "word_to": 1126,
+      "tokens": [
+        "I'm",
+        "not",
+        "seeing",
+        "anyone",
+        "right",
+        "now."
+      ]
+    },
+    {
+      "id": 106,
+      "text": "I'm not seeing anyone right now.",
+      "start": 195.12,
+      "end": 197.58,
+      "word_from": 1127,
+      "word_to": 1132,
+      "tokens": [
+        "I'm",
+        "not",
+        "seeing",
+        "anyone",
+        "right",
+        "now."
+      ]
+    },
+    {
+      "id": 107,
+      "text": "I don't feel like it.",
+      "start": 197.58,
+      "end": 199.63,
+      "word_from": 1133,
+      "word_to": 1137,
+      "tokens": [
+        "I",
+        "don't",
+        "feel",
+        "like",
+        "it."
+      ]
+    },
+    {
+      "id": 108,
+      "text": "I would tell you, Dad.",
+      "start": 207.19,
+      "end": 207.39,
+      "word_from": 1138,
+      "word_to": 1142,
+      "tokens": [
+        "I",
+        "would",
+        "tell",
+        "you,",
+        "Dad."
+      ]
+    },
+    {
+      "id": 109,
+      "text": "I would tell you, Dad.",
+      "start": 207.2,
+      "end": 208.558,
+      "word_from": 1143,
+      "word_to": 1147,
+      "tokens": [
+        "I",
+        "would",
+        "tell",
+        "you,",
+        "Dad."
+      ]
+    },
+    {
+      "id": 110,
+      "text": "Uh-huh.",
+      "start": 208.558,
+      "end": 208.83,
+      "word_from": 1148,
+      "word_to": 1148,
+      "tokens": [
+        "Uh-huh."
+      ]
+    },
+    {
+      "id": 111,
+      "text": "Uh-huh.",
+      "start": 208.83,
+      "end": 209.03,
+      "word_from": 1149,
+      "word_to": 1149,
+      "tokens": [
+        "Uh-huh."
+      ]
+    },
+    {
+      "id": 112,
+      "text": "Uh-huh.",
+      "start": 208.84,
+      "end": 210.835,
+      "word_from": 1150,
+      "word_to": 1150,
+      "tokens": [
+        "Uh-huh."
+      ]
+    },
+    {
+      "id": 113,
+      "text": "Yeah.",
+      "start": 210.835,
+      "end": 212.83,
+      "word_from": 1151,
+      "word_to": 1151,
+      "tokens": [
+        "Yeah."
+      ]
+    }
+  ]
+}

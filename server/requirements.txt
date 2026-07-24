@@ -1,0 +1,7 @@
+flask>=3.0
+flask-cors>=4.0
+python-dotenv>=1.0
+requests>=2.31
+edge-tts>=6.1
+yt-dlp>=2024.1
+pypdf>=4.0

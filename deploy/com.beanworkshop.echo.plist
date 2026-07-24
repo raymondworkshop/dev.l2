@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Installed by: make service-install
+  Label: com.beanworkshop.echo
+  Starts Echo on login and keeps it running.
+-->
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.beanworkshop.echo</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>__ECHO_ROOT__/scripts/echo-serve.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>__ECHO_ROOT__</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>__ECHO_ROOT__/data/echo-service.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__ECHO_ROOT__/data/echo-service.err.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+      <key>FLASK_HOST</key>
+      <string>0.0.0.0</string>
+      <key>FLASK_PORT</key>
+      <string>5050</string>
+      <key>FLASK_DEBUG</key>
+      <string>0</string>
+    </dict>
+  </dict>
+</plist>

@@ -6,12 +6,12 @@ Personal Echo Method trainer based on [doc/echo.md](doc/echo.md).
 
 ## Build checklist
 
-- [ ] BRIEF: echo ritual + in-app pron lookup + word bank review
-- [ ] Scaffold Flask + Vite React, `.env.example`, `data/` incl `lexicon.json`
-- [ ] Echo Session: play ~4–5 words → echo pause → speak → loop → next; 10-min timer
-- [ ] Tap word: in-app US audio + IPA + gloss_zh; Save 生词; optional Cambridge/YouGlish
-- [ ] Word bank list `unknown` | `hard` + light review (replay audio / open bite)
-- [ ] URL ingest short clips + transcript; segment ~4–5 word bites
+- [x] BRIEF: echo ritual + in-app pron lookup + word bank review
+- [x] Scaffold Flask + Vite React, `.env.example`, `data/` incl `lexicon.json`
+- [x] Echo Session: play ~4–5 words → echo pause → speak → loop → next; 10-min timer
+- [x] Tap word: in-app US audio + IPA + gloss_zh; Save 生词; optional Cambridge/YouGlish
+- [x] Word bank list `unknown` | `hard` + light review (replay audio / open bite)
+- [x] URL ingest short clips + transcript; segment ~4–5 word bites
 - [ ] Optional later: post-echo record → tip → auto hard words
 
 ---

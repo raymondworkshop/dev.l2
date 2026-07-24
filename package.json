@@ -1,0 +1,9 @@
+{
+  "name": "echo",
+  "private": true,
+  "scripts": {
+    "dev:web": "npm --prefix web run dev",
+    "dev:api": ".venv/bin/python server/app.py",
+    "build": "npm --prefix web run build"
+  }
+}

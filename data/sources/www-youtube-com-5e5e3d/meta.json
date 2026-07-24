@@ -1,0 +1,19 @@
+{
+  "id": "www-youtube-com-5e5e3d",
+  "title": "Frank and Zoe's Forbidden Affair on Father's Day - HOUSE OF CARDS Clip | Kevin Spacey",
+  "url": "https://www.youtube.com/watch?v=t4_HjFViBNQ",
+  "duration_sec": 213,
+  "accent": "US",
+  "created": "2026-07-24T08:08:07.852622+00:00",
+  "has_audio": true,
+  "has_transcript": true,
+  "source_duration_sec": 244,
+  "ingest": {
+    "ok": true,
+    "audio": true,
+    "transcript": false,
+    "mode": "yt-dlp",
+    "warnings": [],
+    "yt_dlp": "/Users/zhaowenlong/workspace/dev.english/.venv/bin/yt-dlp"
+  }
+}

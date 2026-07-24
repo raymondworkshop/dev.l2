@@ -1,0 +1,401 @@
+{
+  "text": "Climate change is no longer a distant threat. Scientists say rising heat and extreme weather are already shaping daily life. The vulnerability of coastal towns has become impossible to ignore. Kind of overnight, families started asking harder questions about where they live. Public health researchers track how smoke from wildfires travels across state lines. They want people to hear the facts clearly, then act with care.",
+  "words": [
+    {
+      "i": 0,
+      "w": "Climate",
+      "start": 0.0,
+      "end": 0.35
+    },
+    {
+      "i": 1,
+      "w": "change",
+      "start": 0.35,
+      "end": 0.7
+    },
+    {
+      "i": 2,
+      "w": "is",
+      "start": 0.7,
+      "end": 1.05
+    },
+    {
+      "i": 3,
+      "w": "no",
+      "start": 1.05,
+      "end": 1.4
+    },
+    {
+      "i": 4,
+      "w": "longer",
+      "start": 1.4,
+      "end": 1.75
+    },
+    {
+      "i": 5,
+      "w": "a",
+      "start": 1.75,
+      "end": 2.1
+    },
+    {
+      "i": 6,
+      "w": "distant",
+      "start": 2.1,
+      "end": 2.45
+    },
+    {
+      "i": 7,
+      "w": "threat.",
+      "start": 2.45,
+      "end": 2.8
+    },
+    {
+      "i": 8,
+      "w": "Scientists",
+      "start": 2.8,
+      "end": 3.15
+    },
+    {
+      "i": 9,
+      "w": "say",
+      "start": 3.15,
+      "end": 3.5
+    },
+    {
+      "i": 10,
+      "w": "rising",
+      "start": 3.5,
+      "end": 3.85
+    },
+    {
+      "i": 11,
+      "w": "heat",
+      "start": 3.85,
+      "end": 4.2
+    },
+    {
+      "i": 12,
+      "w": "and",
+      "start": 4.2,
+      "end": 4.55
+    },
+    {
+      "i": 13,
+      "w": "extreme",
+      "start": 4.55,
+      "end": 4.9
+    },
+    {
+      "i": 14,
+      "w": "weather",
+      "start": 4.9,
+      "end": 5.25
+    },
+    {
+      "i": 15,
+      "w": "are",
+      "start": 5.25,
+      "end": 5.6
+    },
+    {
+      "i": 16,
+      "w": "already",
+      "start": 5.6,
+      "end": 5.95
+    },
+    {
+      "i": 17,
+      "w": "shaping",
+      "start": 5.95,
+      "end": 6.3
+    },
+    {
+      "i": 18,
+      "w": "daily",
+      "start": 6.3,
+      "end": 6.65
+    },
+    {
+      "i": 19,
+      "w": "life.",
+      "start": 6.65,
+      "end": 7.0
+    },
+    {
+      "i": 20,
+      "w": "The",
+      "start": 7.0,
+      "end": 7.35
+    },
+    {
+      "i": 21,
+      "w": "vulnerability",
+      "start": 7.35,
+      "end": 7.7
+    },
+    {
+      "i": 22,
+      "w": "of",
+      "start": 7.7,
+      "end": 8.05
+    },
+    {
+      "i": 23,
+      "w": "coastal",
+      "start": 8.05,
+      "end": 8.4
+    },
+    {
+      "i": 24,
+      "w": "towns",
+      "start": 8.4,
+      "end": 8.75
+    },
+    {
+      "i": 25,
+      "w": "has",
+      "start": 8.75,
+      "end": 9.1
+    },
+    {
+      "i": 26,
+      "w": "become",
+      "start": 9.1,
+      "end": 9.45
+    },
+    {
+      "i": 27,
+      "w": "impossible",
+      "start": 9.45,
+      "end": 9.8
+    },
+    {
+      "i": 28,
+      "w": "to",
+      "start": 9.8,
+      "end": 10.15
+    },
+    {
+      "i": 29,
+      "w": "ignore.",
+      "start": 10.15,
+      "end": 10.5
+    },
+    {
+      "i": 30,
+      "w": "Kind",
+      "start": 10.5,
+      "end": 10.85
+    },
+    {
+      "i": 31,
+      "w": "of",
+      "start": 10.85,
+      "end": 11.2
+    },
+    {
+      "i": 32,
+      "w": "overnight,",
+      "start": 11.2,
+      "end": 11.55
+    },
+    {
+      "i": 33,
+      "w": "families",
+      "start": 11.55,
+      "end": 11.9
+    },
+    {
+      "i": 34,
+      "w": "started",
+      "start": 11.9,
+      "end": 12.25
+    },
+    {
+      "i": 35,
+      "w": "asking",
+      "start": 12.25,
+      "end": 12.6
+    },
+    {
+      "i": 36,
+      "w": "harder",
+      "start": 12.6,
+      "end": 12.95
+    },
+    {
+      "i": 37,
+      "w": "questions",
+      "start": 12.95,
+      "end": 13.3
+    },
+    {
+      "i": 38,
+      "w": "about",
+      "start": 13.3,
+      "end": 13.65
+    },
+    {
+      "i": 39,
+      "w": "where",
+      "start": 13.65,
+      "end": 14.0
+    },
+    {
+      "i": 40,
+      "w": "they",
+      "start": 14.0,
+      "end": 14.35
+    },
+    {
+      "i": 41,
+      "w": "live.",
+      "start": 14.35,
+      "end": 14.7
+    },
+    {
+      "i": 42,
+      "w": "Public",
+      "start": 14.7,
+      "end": 15.05
+    },
+    {
+      "i": 43,
+      "w": "health",
+      "start": 15.05,
+      "end": 15.4
+    },
+    {
+      "i": 44,
+      "w": "researchers",
+      "start": 15.4,
+      "end": 15.75
+    },
+    {
+      "i": 45,
+      "w": "track",
+      "start": 15.75,
+      "end": 16.1
+    },
+    {
+      "i": 46,
+      "w": "how",
+      "start": 16.1,
+      "end": 16.45
+    },
+    {
+      "i": 47,
+      "w": "smoke",
+      "start": 16.45,
+      "end": 16.8
+    },
+    {
+      "i": 48,
+      "w": "from",
+      "start": 16.8,
+      "end": 17.15
+    },
+    {
+      "i": 49,
+      "w": "wildfires",
+      "start": 17.15,
+      "end": 17.5
+    },
+    {
+      "i": 50,
+      "w": "travels",
+      "start": 17.5,
+      "end": 17.85
+    },
+    {
+      "i": 51,
+      "w": "across",
+      "start": 17.85,
+      "end": 18.2
+    },
+    {
+      "i": 52,
+      "w": "state",
+      "start": 18.2,
+      "end": 18.55
+    },
+    {
+      "i": 53,
+      "w": "lines.",
+      "start": 18.55,
+      "end": 18.9
+    },
+    {
+      "i": 54,
+      "w": "They",
+      "start": 18.9,
+      "end": 19.25
+    },
+    {
+      "i": 55,
+      "w": "want",
+      "start": 19.25,
+      "end": 19.6
+    },
+    {
+      "i": 56,
+      "w": "people",
+      "start": 19.6,
+      "end": 19.95
+    },
+    {
+      "i": 57,
+      "w": "to",
+      "start": 19.95,
+      "end": 20.3
+    },
+    {
+      "i": 58,
+      "w": "hear",
+      "start": 20.3,
+      "end": 20.65
+    },
+    {
+      "i": 59,
+      "w": "the",
+      "start": 20.65,
+      "end": 21.0
+    },
+    {
+      "i": 60,
+      "w": "facts",
+      "start": 21.0,
+      "end": 21.35
+    },
+    {
+      "i": 61,
+      "w": "clearly,",
+      "start": 21.35,
+      "end": 21.7
+    },
+    {
+      "i": 62,
+      "w": "then",
+      "start": 21.7,
+      "end": 22.05
+    },
+    {
+      "i": 63,
+      "w": "act",
+      "start": 22.05,
+      "end": 22.4
+    },
+    {
+      "i": 64,
+      "w": "with",
+      "start": 22.4,
+      "end": 22.75
+    },
+    {
+      "i": 65,
+      "w": "care.",
+      "start": 22.75,
+      "end": 23.1
+    }
+  ]
+}

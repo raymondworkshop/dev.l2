@@ -1,0 +1,83 @@
+{
+  "bites": [
+    {
+      "id": 0,
+      "text": "All right, so here we are, in front of the elephants",
+      "start": 1.2,
+      "end": 3.36,
+      "word_from": 0,
+      "word_to": 10,
+      "tokens": [
+        "All",
+        "right,",
+        "so",
+        "here",
+        "we",
+        "are,",
+        "in",
+        "front",
+        "of",
+        "the",
+        "elephants"
+      ]
+    },
+    {
+      "id": 1,
+      "text": "the cool thing about these guys is that they have really...",
+      "start": 5.318,
+      "end": 7.974,
+      "word_from": 11,
+      "word_to": 21,
+      "tokens": [
+        "the",
+        "cool",
+        "thing",
+        "about",
+        "these",
+        "guys",
+        "is",
+        "that",
+        "they",
+        "have",
+        "really..."
+      ]
+    },
+    {
+      "id": 2,
+      "text": "really really long trunks and that's cool (baaaaaaaaaaahhh!!)",
+      "start": 7.974,
+      "end": 15.733,
+      "word_from": 22,
+      "word_to": 29,
+      "tokens": [
+        "really",
+        "really",
+        "long",
+        "trunks",
+        "and",
+        "that's",
+        "cool",
+        "(baaaaaaaaaaahhh!!)"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "and that's pretty much all there is to say",
+      "start": 16.881,
+      "end": 18.881,
+      "word_from": 30,
+      "word_to": 38,
+      "tokens": [
+        "and",
+        "that's",
+        "pretty",
+        "much",
+        "all",
+        "there",
+        "is",
+        "to",
+        "say"
+      ]
+    }
+  ]
+}
