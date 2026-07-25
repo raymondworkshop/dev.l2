@@ -102,16 +102,15 @@ export default function WordBank() {
         手工查词，或复习生词 / 错词：听美音与英音，看中英文释义。
       </p>
 
-      <form className="panel" onSubmit={onLookup} style={{ marginBottom: '1.25rem' }}>
-        <div className="field" style={{ marginBottom: '0.75rem' }}>
+      <form className="panel lookup-form" onSubmit={onLookup}>
+        <div className="field lookup-field">
           <label htmlFor="manual-word">手工输入单词</label>
-          <div className="actions" style={{ alignItems: 'stretch' }}>
+          <div className="actions lookup-row">
             <input
               id="manual-word"
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               placeholder="e.g. vulnerability"
-              style={{ flex: 1, minWidth: 0 }}
               autoComplete="off"
             />
             <button type="submit" className="btn" disabled={looking || !draft.trim()}>
@@ -155,7 +154,7 @@ export default function WordBank() {
                 {g.definition}
               </p>
             ))}
-            <div className="actions" style={{ marginTop: '0.85rem' }}>
+            <div className="actions lookup-actions">
               <button
                 type="button"
                 className="btn btn-soft"
@@ -213,19 +212,7 @@ export default function WordBank() {
             <li key={`${e.kind}-${e.surface}-${e.updated}`} className="list-item">
               <div>
                 <h3>
-                  <button
-                    type="button"
-                    onClick={() => setSelected(e.surface)}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      font: 'inherit',
-                      fontWeight: 600,
-                      cursor: 'pointer',
-                      color: 'inherit',
-                      padding: 0,
-                    }}
-                  >
+                  <button type="button" className="word-link" onClick={() => setSelected(e.surface)}>
                     {e.surface}
                   </button>
                 </h3>

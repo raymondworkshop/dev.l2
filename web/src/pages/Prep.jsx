@@ -99,13 +99,13 @@ export default function Prep() {
         Read until the meaning is clear. Tap a word for in-app US audio, IPA, and a Chinese gloss —
         then save 生词. Begin Echo when ready.
       </p>
-      <p className="muted" style={{ marginTop: '-1rem', marginBottom: '1.25rem' }}>
+      <p className="muted prep-status">
         {data.audio_url ? 'Audio ready' : 'No audio file'} ·{' '}
         {data.meta?.has_transcript ? 'Transcript ready' : 'Transcript missing / placeholder'}
         {data.meta?.ingest?.warnings?.length ? ` · ${data.meta.ingest.warnings[0]}` : ''}
       </p>
 
-      <div className="actions" style={{ marginBottom: '1.25rem' }}>
+      <div className="actions prep-actions">
         <button type="button" className="btn" onClick={playFull}>
           {playing ? 'Stop' : 'Play full'}
         </button>
@@ -129,13 +129,6 @@ export default function Prep() {
                   selected?.word === tok && selected?.i === i ? ' active' : ''
                 }`}
                 onClick={() => surface && setSelected({ word: surface, i, raw: tok })}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  font: 'inherit',
-                  color: 'inherit',
-                  padding: '0.05em 0.08em',
-                }}
               >
                 {tok}
               </button>{' '}

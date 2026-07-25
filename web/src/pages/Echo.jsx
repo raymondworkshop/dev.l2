@@ -16,6 +16,36 @@ function cleanToken(w) {
   return (w || '').replace(/^[^A-Za-z']+|[^A-Za-z']+$/g, '')
 }
 
+function phaseLabel(phase) {
+  switch (phase) {
+    case 'play':
+      return '听'
+    case 'echo':
+      return '听回音'
+    case 'speak':
+      return '跟说'
+    case 'done':
+      return '完成'
+    default:
+      return '准备'
+  }
+}
+
+function phaseClass(phase) {
+  switch (phase) {
+    case 'play':
+      return 'is-play'
+    case 'echo':
+      return 'is-echo'
+    case 'speak':
+      return 'is-speak'
+    case 'done':
+      return 'is-done'
+    default:
+      return ''
+  }
+}
+
 export default function Echo() {
   const { sourceId } = useParams()
   const [search] = useSearchParams()
@@ -24,7 +54,7 @@ export default function Echo() {
 
   const [data, setData] = useState(null)
   const [biteIndex, setBiteIndex] = useState(startBite)
-  const [phase, setPhase] = useState('idle') // idle | play | echo | speak
+  const [phase, setPhase] = useState('idle') // idle | play | echo | speak | done
   const [remaining, setRemaining] = useState(SESSION_MS)
   const [error, setError] = useState('')
   const [hardMsg, setHardMsg] = useState('')
@@ -138,32 +168,16 @@ export default function Echo() {
     setPhase('speak')
   }, [bite, playBiteAudio, remaining])
 
-  function phaseLabel() {
-    switch (phase) {
-      case 'play':
-        return 'Playing…'
-      case 'echo':
-        return '听回音…'
-      case 'speak':
-        return 'Speak — imitate the echo'
-      case 'done':
-        return 'Time’s up — nice work'
-      default:
-        return 'Ready — tap words to mark 错词'
-    }
-  }
-
   function toggleToken(i) {
+    if (phase === 'play' || phase === 'echo') return
     setHardMsg('')
     setSelected((prev) => {
       if (prev.includes(i)) return prev.filter((x) => x !== i)
-      // Keep selection as a contiguous span when possible
       if (!prev.length) return [i]
       const sorted = [...prev].sort((a, b) => a - b)
       const lo = sorted[0]
       const hi = sorted[sorted.length - 1]
       if (i === lo - 1 || i === hi + 1) return [...prev, i]
-      // Jump: start a new selection
       return [i]
     })
   }
@@ -181,7 +195,7 @@ export default function Echo() {
     if (!bite) return
     setHardMsg('')
     if (!selectedSurface) {
-      setHardMsg('先点选句中的词（可连点组成短语），再标错词')
+      setHardMsg('先点选句中的词，再标错词')
       return
     }
     try {
@@ -235,24 +249,25 @@ export default function Echo() {
     )
   }
 
-  if (!data) return <p className="muted">Loading session…</p>
+  if (!data) return <p className="muted">Loading…</p>
 
   return (
     <div>
-      <div className="actions" style={{ justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+      <div className="echo-top">
         <Link className="btn btn-ghost" to={`/prep/${sourceId}`}>
           Prep
         </Link>
-        <span className="timer" aria-live="polite">
-          {phase === 'done' ? '0:00' : formatTime(remaining)}
-        </span>
+        <div className="timer-wrap">
+          <span className="timer-label">剩余</span>
+          <span className="timer" aria-live="polite">
+            {phase === 'done' ? '0:00' : formatTime(remaining)}
+          </span>
+        </div>
       </div>
 
-      <h1 className="page-title" style={{ fontSize: '1.4rem' }}>
-        {data.meta?.title || 'Echo'}
-      </h1>
-      <p className="muted" style={{ marginTop: 0 }}>
-        Sentence {bites.length ? biteIndex + 1 : 0} / {bites.length} · 按停顿/句号切分 · 点词再标错词
+      <h1 className="page-title">{data.meta?.title || 'Echo'}</h1>
+      <p className="echo-meta">
+        第 {bites.length ? biteIndex + 1 : 0} / {bites.length} 句
       </p>
 
       <div className="panel echo-stage">
@@ -263,20 +278,29 @@ export default function Echo() {
               type="button"
               className={`echo-token${selected.includes(i) ? ' is-selected' : ''}`}
               onClick={() => toggleToken(i)}
+              disabled={busy}
             >
               {tok}
             </button>
           ))}
         </p>
-        <p className={`echo-phase${phase === 'echo' ? ' is-echo' : ''}`}>{phaseLabel()}</p>
+
+        <p className={`echo-phase ${phaseClass(phase)}`} aria-live="polite">
+          {phaseLabel(phase)}
+        </p>
+
+        {phase === 'idle' && !selectedSurface ? (
+          <p className="muted echo-hint">点词可标错词 · Play 开始听 → 回音 → 跟说</p>
+        ) : null}
+
         {selectedSurface ? (
-          <p className="muted">
+          <p className="echo-selected">
             将标为错词：<strong>{selectedSurface}</strong>
           </p>
         ) : null}
 
         {phase === 'done' ? (
-          <div className="actions">
+          <div className="actions echo-controls-primary">
             <button type="button" className="btn" onClick={() => navigate('/bank')}>
               Word
             </button>
@@ -285,33 +309,37 @@ export default function Echo() {
             </Link>
           </div>
         ) : (
-          <div className="actions" style={{ justifyContent: 'center' }}>
-            {busy ? (
-              <button type="button" className="btn btn-ghost" onClick={stopCycle}>
-                Stop
-              </button>
-            ) : (
-              <>
+          <div className="echo-controls">
+            <div className="actions echo-controls-primary">
+              {busy ? (
+                <button type="button" className="btn btn-ghost" onClick={stopCycle}>
+                  Stop
+                </button>
+              ) : (
                 <button type="button" className="btn" onClick={runCycle}>
                   Play
                 </button>
-                <button type="button" className="btn btn-ghost" onClick={runCycle}>
-                  Loop
-                </button>
-              </>
-            )}
-            <button type="button" className="btn btn-ghost" disabled={!canPrev} onClick={prevBite}>
-              Prev
-            </button>
-            <button type="button" className="btn btn-soft" disabled={!canNext} onClick={nextBite}>
-              Next
-            </button>
-            <button type="button" className="btn btn-danger" onClick={markHard}>
-              标错词
-            </button>
+              )}
+            </div>
+
+            <div className={`actions echo-controls-secondary${busy ? ' is-busy' : ''}`}>
+              <button type="button" className="btn btn-ghost" disabled={!canPrev} onClick={prevBite}>
+                Prev
+              </button>
+              <button type="button" className="btn btn-soft" disabled={!canNext} onClick={nextBite}>
+                Next
+              </button>
+            </div>
+
+            <div className={`actions echo-controls-annotate${busy ? ' is-busy' : ''}`}>
+              <button type="button" className="btn btn-danger" onClick={markHard} disabled={busy}>
+                标错词
+              </button>
+            </div>
           </div>
         )}
-        {hardMsg ? <p className="muted">{hardMsg}</p> : null}
+
+        {hardMsg ? <p className="muted echo-hint">{hardMsg}</p> : null}
       </div>
     </div>
   )

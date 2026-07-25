@@ -110,11 +110,7 @@ export default function Inbox() {
           />
         </div>
         {status ? <p className="muted">{status}</p> : null}
-        {error ? (
-          <p className="error" style={{ whiteSpace: 'pre-wrap' }}>
-            {error}
-          </p>
-        ) : null}
+        {error ? <p className="error error-pre">{error}</p> : null}
         {lastIngest?.ingest ? (
           <p className="muted">
             Last ingest — audio: {lastIngest.ingest.audio ? 'yes' : 'no'} · transcript:{' '}
@@ -131,9 +127,7 @@ export default function Inbox() {
         </div>
       </form>
 
-      <h2 className="page-title" style={{ fontSize: '1.35rem', marginTop: '2rem' }}>
-        Recent
-      </h2>
+      <h2 className="page-title page-title-sm">Recent</h2>
       <ul className="list">
         {sources.map((s) => (
           <li key={s.id} className="list-item">
