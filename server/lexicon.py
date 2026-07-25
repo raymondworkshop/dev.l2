@@ -31,8 +31,9 @@ def save(entries: list[dict[str, Any]]) -> None:
 def list_entries(kind: str | None = None) -> list[dict[str, Any]]:
     entries = load()
     if kind in ("unknown", "hard"):
-        return [e for e in entries if e.get("kind") == kind]
-    return entries
+        entries = [e for e in entries if e.get("kind") == kind]
+    # Newest first (manual add / re-save bumps `updated`)
+    return sorted(entries, key=lambda e: e.get("updated") or "", reverse=True)
 
 
 def upsert(
@@ -76,7 +77,7 @@ def upsert(
         "count": 1,
         "updated": _now(),
     }
-    entries.append(entry)
+    entries.insert(0, entry)
     save(entries)
     return entry
 

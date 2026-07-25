@@ -52,5 +52,31 @@
     },
     "count": 1,
     "updated": "2026-07-24T08:31:47.191214+00:00"
+  },
+  {
+    "surface": "converse",
+    "kind": "unknown",
+    "gloss_zh": "v. 谈话，交谈；n. 相反的事物，反面说法；<旧>谈话，交谈；逆命题；adj. 相反的，颠倒的，逆向的；【名】 （Converse）（美、爱）康弗斯（人名）",
+    "ipa": "/kənˈvɝs/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=converse&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-25T04:13:00.556960+00:00"
+  },
+  {
+    "surface": "courtesy",
+    "kind": "unknown",
+    "gloss_zh": "n. 礼貌，彬彬有礼；礼貌的行为（言语）；<古>屈膝礼；adj. 免费提供的；礼节性的",
+    "ipa": "/ˈkɝtəsi/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/courtesy-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-25T07:49:53.334616+00:00"
   }
 ]

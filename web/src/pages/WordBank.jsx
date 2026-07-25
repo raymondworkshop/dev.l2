@@ -31,8 +31,8 @@ export default function WordBank() {
   }, [])
 
   const shown = useMemo(() => {
-    if (filter === 'all') return entries
-    return entries.filter((e) => e.kind === filter)
+    const list = filter === 'all' ? entries : entries.filter((e) => e.kind === filter)
+    return [...list].sort((a, b) => String(b.updated || '').localeCompare(String(a.updated || '')))
   }, [entries, filter])
 
   async function replay(entry) {
