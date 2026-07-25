@@ -114,7 +114,7 @@ export default function WordOverlay({ word, context, sourceId, onClose, onSaved 
                 disabled={saving || info?.in_bank}
                 onClick={() => save('unknown')}
               >
-                {info?.in_bank ? '已收藏' : '加入生词本'}
+                {info?.in_bank ? '已收藏' : '加入生詞本'}
               </button>
             </div>
             <p className="secondary-links">

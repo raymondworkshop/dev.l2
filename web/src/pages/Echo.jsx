@@ -19,15 +19,15 @@ function cleanToken(w) {
 function phaseLabel(phase) {
   switch (phase) {
     case 'play':
-      return '听'
+      return 'Listen'
     case 'echo':
-      return '听回音'
+      return 'Hear the echo'
     case 'speak':
-      return '跟说'
+      return 'Speak'
     case 'done':
-      return '完成'
+      return 'Done'
     default:
-      return '准备'
+      return 'Ready'
   }
 }
 
@@ -58,7 +58,7 @@ export default function Echo() {
   const [remaining, setRemaining] = useState(SESSION_MS)
   const [error, setError] = useState('')
   const [hardMsg, setHardMsg] = useState('')
-  /** Selected token indexes within the current bite (for 标错词). */
+  /** Selected token indexes within the current bite (for 標錯詞). */
   const [selected, setSelected] = useState([])
 
   const endAt = useRef(Date.now() + SESSION_MS)
@@ -195,7 +195,7 @@ export default function Echo() {
     if (!bite) return
     setHardMsg('')
     if (!selectedSurface) {
-      setHardMsg('先点选句中的词，再标错词')
+      setHardMsg('先點選句中的詞，再標錯詞')
       return
     }
     try {
@@ -210,7 +210,7 @@ export default function Echo() {
           clause: bite.text,
         },
       })
-      setHardMsg(`已标错词：${selectedSurface}`)
+      setHardMsg(`已標錯詞：${selectedSurface}`)
       setSelected([])
     } catch (e) {
       setHardMsg(e.message)
@@ -258,7 +258,7 @@ export default function Echo() {
           Prep
         </Link>
         <div className="timer-wrap">
-          <span className="timer-label">剩余</span>
+          <span className="timer-label">剩餘</span>
           <span className="timer" aria-live="polite">
             {phase === 'done' ? '0:00' : formatTime(remaining)}
           </span>
@@ -289,13 +289,9 @@ export default function Echo() {
           {phaseLabel(phase)}
         </p>
 
-        {phase === 'idle' && !selectedSurface ? (
-          <p className="muted echo-hint">点词可标错词 · Play 开始听 → 回音 → 跟说</p>
-        ) : null}
-
         {selectedSurface ? (
           <p className="echo-selected">
-            将标为错词：<strong>{selectedSurface}</strong>
+            將標為錯詞：<strong>{selectedSurface}</strong>
           </p>
         ) : null}
 
@@ -333,11 +329,15 @@ export default function Echo() {
 
             <div className={`actions echo-controls-annotate${busy ? ' is-busy' : ''}`}>
               <button type="button" className="btn btn-danger" onClick={markHard} disabled={busy}>
-                标错词
+                標錯詞
               </button>
             </div>
           </div>
         )}
+
+        {phase === 'idle' && !selectedSurface ? (
+          <p className="muted echo-hint">點詞可標錯詞 · Play to listen → echo → speak</p>
+        ) : null}
 
         {hardMsg ? <p className="muted echo-hint">{hardMsg}</p> : null}
       </div>

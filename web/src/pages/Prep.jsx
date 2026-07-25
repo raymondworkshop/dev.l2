@@ -97,7 +97,7 @@ export default function Prep() {
       <h1 className="page-title">{title}</h1>
       <p className="lede">
         Read until the meaning is clear. Tap a word for in-app US audio, IPA, and a Chinese gloss —
-        then save 生词. Begin Echo when ready.
+        then save 生詞. Begin Echo when ready.
       </p>
       <p className="muted prep-status">
         {data.audio_url ? 'Audio ready' : 'No audio file'} ·{' '}

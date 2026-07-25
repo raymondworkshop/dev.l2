@@ -1,4 +1,4 @@
-"""Lexicon (生词/错词本) persistence."""
+"""Lexicon (生詞/錯詞本) persistence."""
 from __future__ import annotations
 
 import json

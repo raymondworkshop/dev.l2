@@ -99,12 +99,12 @@ export default function WordBank() {
     <div>
       <h1 className="page-title">Word</h1>
       <p className="lede">
-        手工查词，或复习生词 / 错词：听美音与英音，看中英文释义。
+        手工查詞，或複習生詞 / 錯詞：聽美音與英音，看中英文釋義。
       </p>
 
       <form className="panel lookup-form" onSubmit={onLookup}>
         <div className="field lookup-field">
-          <label htmlFor="manual-word">手工输入单词</label>
+          <label htmlFor="manual-word">手工輸入單詞</label>
           <div className="actions lookup-row">
             <input
               id="manual-word"
@@ -114,7 +114,7 @@ export default function WordBank() {
               autoComplete="off"
             />
             <button type="submit" className="btn" disabled={looking || !draft.trim()}>
-              {looking ? '查词…' : '查词'}
+              {looking ? '查詞…' : '查詞'}
             </button>
           </div>
         </div>
@@ -141,12 +141,12 @@ export default function WordBank() {
               />
             </div>
             <p className="gloss">
-              <strong>中</strong> {lookup.gloss_zh || '（暂无中文释义）'}
+              <strong>中</strong> {lookup.gloss_zh || '（暫無中文釋義）'}
             </p>
             <p className="gloss gloss-en">
               <strong>EN</strong>{' '}
               {lookup.pos ? <em>{lookup.pos}. </em> : null}
-              {lookup.gloss_en || '（暂无英文释义）'}
+              {lookup.gloss_en || '（暫無英文釋義）'}
             </p>
             {(lookup.glosses_en || []).slice(1, 3).map((g, i) => (
               <p key={i} className="gloss gloss-en muted">
@@ -161,7 +161,7 @@ export default function WordBank() {
                 disabled={saving || lookup.in_bank}
                 onClick={() => saveLookup('unknown')}
               >
-                {lookup.in_bank ? '已收藏' : '加入生词本'}
+                {lookup.in_bank ? '已收藏' : '加入生詞本'}
               </button>
               <button
                 type="button"
@@ -169,7 +169,7 @@ export default function WordBank() {
                 disabled={saving || lookup.in_hard}
                 onClick={() => saveLookup('hard')}
               >
-                {lookup.in_hard ? '已标错词' : '标为错词'}
+                {lookup.in_hard ? '已標錯詞' : '標為錯詞'}
               </button>
             </div>
             <p className="secondary-links">
@@ -188,8 +188,8 @@ export default function WordBank() {
       <div className="filters">
         {[
           ['all', '全部'],
-          ['unknown', '生词'],
-          ['hard', '错词'],
+          ['unknown', '生詞'],
+          ['hard', '錯詞'],
         ].map(([k, label]) => (
           <button
             key={k}
@@ -217,14 +217,14 @@ export default function WordBank() {
                   </button>
                 </h3>
                 <p>
-                  {e.kind === 'hard' ? '错词' : '生词'}
+                  {e.kind === 'hard' ? '錯詞' : '生詞'}
                   {e.ipa ? ` · ${e.ipa}` : ''}
                   {e.gloss_zh ? ` · ${e.gloss_zh}` : ''}
                 </p>
               </div>
               <div className="actions">
                 <button type="button" className="btn btn-soft" onClick={() => replay(e)}>
-                  再听
+                  再聽
                 </button>
                 {sourceId != null && sourceId !== '' ? (
                   <Link
@@ -257,7 +257,7 @@ export default function WordBank() {
           )
         })}
         {!shown.length ? (
-          <li className="muted">Empty — 上方手工查词，或从 Prep / Echo 收藏。</li>
+          <li className="muted">Empty — 上方手工查詞，或從 Prep / Echo 收藏。</li>
         ) : null}
       </ul>
 

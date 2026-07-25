@@ -209,9 +209,9 @@ def gloss_zh_llm(word: str, context: str = "") -> str:
     base = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
     model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
     prompt = (
-        f"用一句简短中文解释英语词「{word}」"
-        + (f"，语境：{context[:120]}" if context else "")
-        + "。只返回那一句中文，不要引号。"
+        f"用一句簡短繁體中文解釋英語詞「{word}」"
+        + (f"，語境：{context[:120]}" if context else "")
+        + "。只返回那一句繁體中文，不要引號。"
     )
     try:
         r = requests.post(

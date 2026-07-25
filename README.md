@@ -1,4 +1,4 @@
-# Echo Method to learn English  
+# master english pronunciation with echo method    
 
 ```bash
 make setup && make service-install   # 
