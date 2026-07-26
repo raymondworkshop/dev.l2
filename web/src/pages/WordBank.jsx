@@ -224,7 +224,7 @@ export default function WordBank() {
               </div>
               <div className="actions">
                 <button type="button" className="btn btn-soft" onClick={() => replay(e)}>
-                  再聽
+                  Listen
                 </button>
                 {sourceId != null && sourceId !== '' ? (
                   <Link
