@@ -89,13 +89,29 @@ def api_lexicon_list():
 def api_lexicon_add():
     body = request.get_json(force=True, silent=True) or {}
     try:
+        surface = body.get("surface", "")
+        gloss_zh = (body.get("gloss_zh") or "").strip()
+        ipa = (body.get("ipa") or "").strip()
+        audio_url = (body.get("audio_url") or "").strip()
+        context = body.get("context")
+
+        # Enrich from dictionary when client omitted IPA / gloss (e.g. Echo 標錯詞)
+        if surface and (not gloss_zh or not ipa or not audio_url):
+            clause = ""
+            if isinstance(context, dict):
+                clause = str(context.get("clause") or "")
+            info = word_lookup.lookup(surface, context=clause)
+            gloss_zh = gloss_zh or (info.get("gloss_zh") or "")
+            ipa = ipa or (info.get("ipa_us") or info.get("ipa") or "")
+            audio_url = audio_url or (info.get("audio_url_us") or info.get("audio_url") or "")
+
         entry = lexicon.upsert(
-            surface=body.get("surface", ""),
+            surface=surface,
             kind=body.get("kind", "unknown"),
-            gloss_zh=body.get("gloss_zh", ""),
-            ipa=body.get("ipa", ""),
-            audio_url=body.get("audio_url", ""),
-            context=body.get("context"),
+            gloss_zh=gloss_zh,
+            ipa=ipa,
+            audio_url=audio_url,
+            context=context,
         )
         return jsonify(entry), 201
     except ValueError as e:

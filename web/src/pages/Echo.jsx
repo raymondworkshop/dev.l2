@@ -199,10 +199,24 @@ export default function Echo() {
       return
     }
     try {
+      setHardMsg('查詞中…')
+      let gloss_zh = ''
+      let ipa = ''
+      let audio_url = ''
+      try {
+        const info = await api.lookup(selectedSurface, bite.text || '')
+        gloss_zh = info.gloss_zh || ''
+        ipa = info.ipa_us || info.ipa || ''
+        audio_url = info.audio_url_us || info.audio_url || ''
+      } catch {
+        // Still save the hard mark even if lookup fails
+      }
       await api.saveWord({
         surface: selectedSurface,
         kind: 'hard',
-        gloss_zh: '',
+        gloss_zh,
+        ipa,
+        audio_url,
         context: {
           source_id: sourceId,
           bite_id: bite.id,
