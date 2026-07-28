@@ -15,6 +15,17 @@ export default function WordBank() {
   const [looking, setLooking] = useState(false)
   const [saving, setSaving] = useState(false)
   const [lookupError, setLookupError] = useState('')
+  /** Older months: user-opened; newest month is always expanded */
+  const [openMonths, setOpenMonths] = useState(() => new Set())
+
+  function toggleMonth(key) {
+    setOpenMonths((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }
 
   async function load() {
     try {
@@ -30,9 +41,28 @@ export default function WordBank() {
     load()
   }, [])
 
-  const shown = useMemo(() => {
+  const groups = useMemo(() => {
     const list = filter === 'all' ? entries : entries.filter((e) => e.kind === filter)
-    return [...list].sort((a, b) => String(b.updated || '').localeCompare(String(a.updated || '')))
+    const sorted = [...list].sort((a, b) =>
+      String(b.updated || '').localeCompare(String(a.updated || '')),
+    )
+    const buckets = new Map()
+    for (const e of sorted) {
+      const updated = e.updated || ''
+      const key = updated.length >= 7 ? updated.slice(0, 7) : '未知'
+      if (!buckets.has(key)) buckets.set(key, [])
+      buckets.get(key).push(e)
+    }
+    const keys = [...buckets.keys()].sort((a, b) => {
+      if (a === '未知') return 1
+      if (b === '未知') return -1
+      return b.localeCompare(a)
+    })
+    return keys.map((key) => {
+      const [, y, m] = key.match(/^(\d{4})-(\d{2})$/) || []
+      const label = y ? `${y}年${Number(m)}月` : key
+      return { key, label, entries: buckets.get(key) }
+    })
   }, [entries, filter])
 
   async function replay(entry) {
@@ -204,62 +234,110 @@ export default function WordBank() {
 
       {error ? <p className="error">{error}</p> : null}
 
-      <ul className="list">
-        {shown.map((e) => {
-          const biteId = e.context?.bite_id
-          const sourceId = e.context?.source_id
-          return (
-            <li key={`${e.kind}-${e.surface}-${e.updated}`} className="list-item">
-              <div>
-                <h3>
-                  <button type="button" className="word-link" onClick={() => setSelected(e.surface)}>
-                    {e.surface}
-                  </button>
-                </h3>
-                <p>
-                  {e.kind === 'hard' ? '錯詞' : '生詞'}
-                  {e.ipa ? ` · ${e.ipa}` : ''}
-                  {e.gloss_zh ? ` · ${e.gloss_zh}` : ''}
-                </p>
-              </div>
-              <div className="actions">
-                <button type="button" className="btn btn-soft" onClick={() => replay(e)}>
-                  Listen
-                </button>
-                {sourceId != null && sourceId !== '' ? (
-                  <Link
-                    className="btn btn-ghost"
-                    to={
-                      biteId != null
-                        ? `/echo/${sourceId}?bite=${biteId}`
-                        : `/prep/${sourceId}`
-                    }
-                  >
-                    Open bite
-                  </Link>
-                ) : null}
-                <button type="button" className="btn btn-danger" onClick={() => removeEntry(e)}>
-                  Delete
-                </button>
-                <a
-                  className="muted"
-                  href={cambridgeUrl(e.surface)}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Cambridge
-                </a>
-                <a className="muted" href={youglishUrl(e.surface)} target="_blank" rel="noreferrer">
-                  YouGlish
-                </a>
-              </div>
-            </li>
+      {!groups.length ? (
+        <p className="muted">Empty — 上方手工查詞，或從 Prep / Echo 收藏。</p>
+      ) : (
+        groups.map((g, i) => {
+          const expanded = i === 0 || openMonths.has(g.key)
+          const title = (
+            <>
+              {g.label} <span className="muted">{g.entries.length} words</span>
+            </>
           )
-        })}
-        {!shown.length ? (
-          <li className="muted">Empty — 上方手工查詞，或從 Prep / Echo 收藏。</li>
-        ) : null}
-      </ul>
+          return (
+          <section
+            key={g.key}
+            className={`month-group${expanded ? '' : ' is-collapsed'}`}
+          >
+            <h2>
+              {i === 0 ? (
+                title
+              ) : (
+                <button
+                  type="button"
+                  className="month-toggle"
+                  aria-expanded={expanded}
+                  onClick={() => toggleMonth(g.key)}
+                >
+                  <span className="month-chevron" aria-hidden>
+                    {expanded ? '▾' : '▸'}
+                  </span>
+                  {title}
+                </button>
+              )}
+            </h2>
+            {expanded ? (
+            <ul className="list">
+              {g.entries.map((e) => {
+                const biteId = e.context?.bite_id
+                const sourceId = e.context?.source_id
+                return (
+                  <li key={`${e.kind}-${e.surface}-${e.updated}`} className="list-item">
+                    <div>
+                      <h3>
+                        <button
+                          type="button"
+                          className="word-link"
+                          onClick={() => setSelected(e.surface)}
+                        >
+                          {e.surface}
+                        </button>
+                      </h3>
+                      <p>
+                        {e.kind === 'hard' ? '錯詞' : '生詞'}
+                        {e.ipa ? ` · ${e.ipa}` : ''}
+                        {e.gloss_zh ? ` · ${e.gloss_zh}` : ''}
+                      </p>
+                    </div>
+                    <div className="actions">
+                      <button type="button" className="btn btn-soft" onClick={() => replay(e)}>
+                        Listen
+                      </button>
+                      {sourceId != null && sourceId !== '' ? (
+                        <Link
+                          className="btn btn-ghost"
+                          to={
+                            biteId != null
+                              ? `/echo/${sourceId}?bite=${biteId}`
+                              : `/prep/${sourceId}`
+                          }
+                        >
+                          Open bite
+                        </Link>
+                      ) : null}
+                      <button
+                        type="button"
+                        className="btn btn-danger"
+                        onClick={() => removeEntry(e)}
+                      >
+                        Delete
+                      </button>
+                      <a
+                        className="muted"
+                        href={cambridgeUrl(e.surface)}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Cambridge
+                      </a>
+                      <a
+                        className="muted"
+                        href={youglishUrl(e.surface)}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        YouGlish
+                      </a>
+                    </div>
+                  </li>
+                )
+              })}
+            </ul>
+            ) : null}
+          </section>
+          )
+        })
+      )}
 
       {selected ? (
         <WordOverlay

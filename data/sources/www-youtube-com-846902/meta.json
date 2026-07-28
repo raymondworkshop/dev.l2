@@ -1,0 +1,19 @@
+{
+  "id": "www-youtube-com-846902",
+  "title": "Miles Teller falls in Love with his Wingwoman | That Awkward Moment | CLIP",
+  "url": "https://www.youtube.com/watch?v=FDLSUNhmpZY",
+  "duration_sec": 251,
+  "accent": "US",
+  "created": "2026-07-27T10:23:01.646057+00:00",
+  "has_audio": true,
+  "has_transcript": true,
+  "source_duration_sec": 282,
+  "ingest": {
+    "ok": true,
+    "audio": true,
+    "transcript": true,
+    "mode": "yt-dlp",
+    "warnings": [],
+    "yt_dlp": "/Users/zhaowenlong/workspace/dev.english/.venv/bin/yt-dlp"
+  }
+}
