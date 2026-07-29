@@ -2,6 +2,180 @@
   {
     "surface": "test-hotkey-word",
     "kind": "unknown",
+    "surface": "Slide",
+    "kind": "unknown",
+    "gloss_zh": "v. （使）滑行，滑动；滑落；迅速熟练地进出；（使）快捷而悄声地移动；（价格等）下滑，下跌；逐渐败坏，开始出现问题；滑垒；n. 滑梯；滑道；滑行，滑动；（价格、数量等的）下降，跌落，减少；幻灯片；（情况）变糟，恶化，（人）出现问题；（显微镜的）载物玻璃片；（乐器或机器上的）滑动装置；（岩石，土等的）崩落；小发夹；（棒球）滑垒；（吉他）滑奏；无后帮凉鞋（或轻便",
+    "ipa": "/slaɪd/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/slide-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "extension",
+      "page_url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-07-28-2026?mod=hp_lead_pos1"
+    },
+    "count": 1,
+    "updated": "2026-07-28T13:48:43.446436+00:00"
+  },
+  {
+    "surface": "feasible",
+    "kind": "unknown",
+    "gloss_zh": "adj. 可行的，办得到的；很可能会发生的",
+    "ipa": "/ˈfiːzəbəl/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/feasible-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T13:02:06.839411+00:00"
+  },
+  {
+    "surface": "pagination",
+    "kind": "unknown",
+    "gloss_zh": "n. 标记页数；页码",
+    "ipa": "/ˌpædʒəˈneɪʃən/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=pagination&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T13:01:51.150483+00:00"
+  },
+  {
+    "surface": "charity",
+    "kind": "unknown",
+    "gloss_zh": "n. 慈善组织，慈善机构；慈善事业；仁慈，宽厚；赈济，施舍",
+    "ipa": "/ˈtʃæɹɪti/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=charity&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T13:00:55.435567+00:00"
+  },
+  {
+    "surface": "busted",
+    "kind": "unknown",
+    "gloss_zh": "adj. 被降级的；破产了的；失败了的；v. 爆裂；破产；开除；崩溃（bust 的过去分词形式）",
+    "ipa": "/ˈbʌstəd/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=busted&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T08:57:56.311500+00:00"
+  },
+  {
+    "surface": "attorney",
+    "kind": "unknown",
+    "gloss_zh": "n. 律师；代理人",
+    "ipa": "/əˈtɜː(ɹ)ni/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/attorney-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T08:00:25.004731+00:00"
+  },
+  {
+    "surface": "vacant",
+    "kind": "unknown",
+    "gloss_zh": "adj. （地方）空着的，无人用的；（职位，工作）空缺的；茫然的，失神的；【名】 （Vacant）（法）瓦康（人名）",
+    "ipa": "/ˈveɪkənt/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/vacant-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T06:55:42.300681+00:00"
+  },
+  {
+    "surface": "gaze",
+    "kind": "unknown",
+    "gloss_zh": "v. 凝视，注视；n. 凝视，注视；特定视角，特定角度；【名】 （Gaze）（俄、意）加泽，（德）加策（人名）",
+    "ipa": "/ɡeɪz/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/gaze-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T06:26:43.193257+00:00"
+  },
+  {
+    "surface": "flick",
+    "kind": "unknown",
+    "gloss_zh": "v. （尤指用手指或手快速地）轻击，轻弹；（使）突然快速移动；用（毛巾、绳等）轻拂，轻快地甩打；向……笑了一下（或瞥了一眼等）；轻按开关（打开或关上）；快速翻阅，不停地转换（电视频道）（flick through）；n. （手指或拇指的）轻弹，弹开（尤指小物体）；轻拂，轻拍；（尤指鞭子的）轻快抽击；快速浏览（a flick through sth.）；电影；",
+    "ipa": "/flɪk/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/flick-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T06:25:21.117980+00:00"
+  },
+  {
+    "surface": "Alliance",
+    "kind": "unknown",
+    "gloss_zh": "n. 联盟，结盟；结盟团体，结盟国家；（人们间的）亲密关系，（尤指）联姻",
+    "ipa": "/əˈlaɪ.əns/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=alliance&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T05:30:55.773817+00:00"
+  },
+  {
+    "surface": "companion",
+    "kind": "unknown",
+    "gloss_zh": "n. 同伴，伴侣；（受雇照料老人或病人的）陪护；成对的物品之一；同甘共苦的伙伴；（用于书名）指南，手册；伴星；最低级爵士；v. 陪伴；【名】 （Companion）（英）康帕宁（人名）",
+    "ipa": "/kəmˈpænjən/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/companion-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T04:29:54.885540+00:00"
+  },
+  {
+    "surface": "agitation",
+    "kind": "unknown",
+    "gloss_zh": "n. 焦虑不安；煽动，鼓动；（液体的）搅动",
+    "ipa": "/æ.d͡ʒɪˈteɪ.ʃən/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/agitation-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T04:24:48.706682+00:00"
+  },
+  {
+    "surface": "mental",
+    "kind": "hard",
+    "gloss_zh": "adj. 存在于大脑中的，思考的；精神的，思想的，智力的；精神病治疗的，精神健康的；<非正式>疯癫的，不正常的",
+    "ipa": "/ˈmɛntəl/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/mental-us.mp3",
+    "context": {
+      "source_id": "www-youtube-com-846902",
+      "bite_id": 10,
+      "timestamp": 10.802,
+      "clause": "Sorry, I'm just making a mental list of all the things I'd like to do before giving you a blowjob."
+    },
+    "count": 1,
+    "updated": "2026-07-27T10:47:28.419968+00:00"
+  },
+  {
+    "surface": "blowjob",
+    "kind": "hard",
     "gloss_zh": "",
     "ipa": "",
     "audio_url": "",
@@ -37,6 +211,28 @@
     },
     "count": 1,
     "updated": "2026-07-28T06:01:24.846639+00:00"
+      "source_id": "www-youtube-com-846902",
+      "bite_id": 6,
+      "timestamp": 5.964,
+      "clause": "Like, what about a blowjob?"
+    },
+    "count": 1,
+    "updated": "2026-07-27T10:36:42.217564+00:00"
+  },
+  {
+    "surface": "wingman",
+    "kind": "hard",
+    "gloss_zh": "",
+    "ipa": "",
+    "audio_url": "",
+    "context": {
+      "source_id": "www-youtube-com-846902",
+      "bite_id": 1,
+      "timestamp": 0.709,
+      "clause": "You're like the worst wingman ever."
+    },
+    "count": 1,
+    "updated": "2026-07-27T10:36:05.092400+00:00"
   },
   {
     "surface": "vulnerability",
