@@ -7,4 +7,6 @@ make setup            # venv + deps + build UI
 make service-install  # always-on API on :5050
 ```
 
+**iPhone:** open the site in Safari → Share → **Add to Home Screen**. Opens as a standalone app (Word bank + Echo). Needs Tailscale (or LAN) to reach your Mac API.
+
 Copyright © 2026 Bean Workshop Ltd.

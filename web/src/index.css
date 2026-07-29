@@ -23,6 +23,7 @@ html,
 body,
 #root {
   min-height: 100%;
+  min-height: 100dvh;
 }
 
 body {
@@ -31,6 +32,8 @@ body {
   color: var(--ink);
   background: var(--page);
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
 }
 
 a {
@@ -50,6 +53,7 @@ textarea {
 
 .app-shell {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -62,6 +66,9 @@ textarea {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem 1.5rem;
+  padding-top: calc(0.85rem + env(safe-area-inset-top, 0px));
+  padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
+  padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
   position: sticky;
   top: 0;
   z-index: 20;
@@ -91,10 +98,44 @@ textarea {
 .nav a {
   color: var(--ink-soft);
   text-decoration: none;
-  padding: 0.35rem 0.65rem;
+  padding: 0.5rem 0.75rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 500;
+}
+
+.a2hs-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  padding-left: calc(1.25rem + env(safe-area-inset-left, 0px));
+  padding-right: calc(1.25rem + env(safe-area-inset-right, 0px));
+  background: var(--teal-wash);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.a2hs-hint p {
+  margin: 0;
+  flex: 1;
+}
+
+.a2hs-dismiss {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 0.15rem 0.35rem;
+  cursor: pointer;
 }
 
 .nav a:hover,
@@ -108,6 +149,9 @@ textarea {
   width: min(760px, 100%);
   margin: 0 auto;
   padding: 2rem 1.25rem 4rem;
+  padding-left: calc(1.25rem + env(safe-area-inset-left, 0px));
+  padding-right: calc(1.25rem + env(safe-area-inset-right, 0px));
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
   flex: 1;
 }
 
