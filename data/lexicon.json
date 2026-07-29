@@ -1,5 +1,44 @@
 [
   {
+    "surface": "test-hotkey-word",
+    "kind": "unknown",
+    "gloss_zh": "",
+    "ipa": "",
+    "audio_url": "",
+    "context": {
+      "clause": "test-hotkey-word",
+      "source": "macos-service"
+    },
+    "count": 1,
+    "updated": "2026-07-28T06:20:44.022355+00:00"
+  },
+  {
+    "surface": "illustrate",
+    "kind": "unknown",
+    "gloss_zh": "v. 加插图于；说明，阐明；证明，证实",
+    "ipa": "/ɪ.ˈlʌs.tɹeɪt/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=illustrate&type=2",
+    "context": {
+      "clause": "illustrate",
+      "source": "macos-service"
+    },
+    "count": 3,
+    "updated": "2026-07-28T06:22:08.973121+00:00"
+  },
+  {
+    "surface": "resilience",
+    "kind": "unknown",
+    "gloss_zh": "n. 恢复力，复原力；（橡胶等的）弹性",
+    "ipa": "/ɹə.zɪl.ɪ.əns/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=resilience&type=2",
+    "context": {
+      "clause": "resilience",
+      "source": "macos-service"
+    },
+    "count": 1,
+    "updated": "2026-07-28T06:01:24.846639+00:00"
+  },
+  {
     "surface": "vulnerability",
     "kind": "unknown",
     "gloss_zh": "脆弱性；易受伤害",
