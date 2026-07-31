@@ -1,5 +1,343 @@
 [
   {
+    "surface": "genial",
+    "kind": "unknown",
+    "gloss_zh": "adj. 亲切的，友好的；和蔼的；适宜的",
+    "ipa": "/-ni.əl/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/genial-1-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T14:19:31.088608+00:00"
+  },
+  {
+    "surface": "wrestler",
+    "kind": "unknown",
+    "gloss_zh": "n. 摔跤选手，搏斗者",
+    "ipa": "/ˈreslər/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=wrestler&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T14:16:55.692206+00:00"
+  },
+  {
+    "surface": "judgmental",
+    "kind": "unknown",
+    "gloss_zh": "adj. 审判的，判断的；评头论足的，吹毛求疵的",
+    "ipa": "/dʒʌdʒˈmentl/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=judgmental&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T13:42:00.717432+00:00"
+  },
+  {
+    "surface": "inflexible",
+    "kind": "unknown",
+    "gloss_zh": "adj. 固守己见的，顽固的；（规则、安排等）不可改变的，不容变更的；（材料）坚硬的，不能弯曲",
+    "ipa": "/ɪnˈflɛksəbl̩/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/inflexible-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T13:41:33.359234+00:00"
+  },
+  {
+    "surface": "tentatively",
+    "kind": "unknown",
+    "gloss_zh": "adv. 暂时地；试验性地",
+    "ipa": "/ˈtɛntətɪvli/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=tentatively&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T13:29:44.727268+00:00"
+  },
+  {
+    "surface": "receptivity",
+    "kind": "unknown",
+    "gloss_zh": "n. 接受能力；[生理] 感受性",
+    "ipa": "/ˌriːsepˈtɪvəti/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=receptivity&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T13:19:51.371126+00:00"
+  },
+  {
+    "surface": "gauge",
+    "kind": "unknown",
+    "gloss_zh": "n. 测量仪器；宽度，厚度；（测量或判断的）尺度，标准；（铁道的）轨距；（枪管的）口径；（汽车）胎压计；v. 估计，判断；测量",
+    "ipa": "/ˈɡeɪdʒ/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/gauge-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T13:19:37.083823+00:00"
+  },
+  {
+    "surface": "piggyback",
+    "kind": "unknown",
+    "gloss_zh": "n. 肩驮；驮运；adj. 在背上的；驮运的；adv. 肩驮背扛地；v. 驮运；以现有事物为依托",
+    "ipa": "/ˈpɪɡibæk/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=piggyback&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T12:59:02.830263+00:00"
+  },
+  {
+    "surface": "elicit",
+    "kind": "unknown",
+    "gloss_zh": "v. 引出，得到；<古>使（潜在的东西）显现，诱出",
+    "ipa": "/ɪˈlɪsɪt/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/elicit-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T12:51:17.803382+00:00"
+  },
+  {
+    "surface": "steer",
+    "kind": "unknown",
+    "gloss_zh": "v. 驾驶（交通工具），掌方向盘；引导，指导（某人的行为）；引导，带领（某人去某地）；（交通工具）行驶，沿（特定路线或方向）行进；选择某种做法，采取某种方式；（机动车）容易（或难以）驾驶；n. （车辆的）驱动方式；<非正式> 建议，忠告；阉公牛，食用公牛；【名】 （Steer）（英）斯蒂尔，（德，匈）施特尔（人名）",
+    "ipa": "/stɪə(ɹ)/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/steer-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T12:50:25.274235+00:00"
+  },
+  {
+    "surface": "imperceptible",
+    "kind": "unknown",
+    "gloss_zh": "adj. 感觉不到的；极细微的",
+    "ipa": "/ˌɪmpərˈseptəbl/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=imperceptible&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T12:29:45.002075+00:00"
+  },
+  {
+    "surface": "quotient",
+    "kind": "unknown",
+    "gloss_zh": "n. 程度，系数；（数学中的）商；份额",
+    "ipa": "/ˈkwoʊʃənt/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/quotient-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T09:07:04.397484+00:00"
+  },
+  {
+    "surface": "tempo",
+    "kind": "unknown",
+    "gloss_zh": "n. （运动或活动的）速度，节奏；（音乐的）节奏，拍子；（印度次大陆）轻型三轮货车",
+    "ipa": "/ˈtɛm.pəʊ/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=tempo&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T08:54:59.734209+00:00"
+  },
+  {
+    "surface": "purple",
+    "kind": "unknown",
+    "gloss_zh": "adj. 紫色的，紫红色的；（作品）词藻华丽的，华而不实的；帝王的；n. 紫色，紫红色；紫色衣服（或料子）；（古罗马，拜占庭）紫色衣服（the purple）；（从某些软体动物提取的）深红色染料；（古罗马）要职，高位，拥有特权的职位（the purple）；（红衣主教的）大红袍（the purple）；v. （使）成紫色，（使）发紫",
+    "ipa": "/ˈpɝpəl/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/purple-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T06:51:36.545393+00:00"
+  },
+  {
+    "surface": "pink",
+    "kind": "unknown",
+    "gloss_zh": "adj. 粉红色的；（因窘迫、愤怒或剧烈活动而）脸色发红的；同性恋的；<非正式，贬>左倾的；石竹科的；兴奋的（tickled pink）；n. 粉红色；粉红色衣服或衣料；<非正式>粉红色葡萄酒；石竹；<史>尖尾帆船；满面红光，容光焕发（in the pink (of)）；粉红色桌球；<旧>微黄颜料；<非正式>左倾的人；<旧>精英，典范；v. <英>（车辆引擎",
+    "ipa": "/piŋk/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=pink&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T06:51:29.278788+00:00"
+  },
+  {
+    "surface": "irritating",
+    "kind": "unknown",
+    "gloss_zh": "adj. 烦人的，使人恼火的；有刺激性的，引发疼痛的；v. 使不耐烦，激怒；刺激（身体某部位），使疼痛；使（生物体、细胞或器官）兴奋（irritate 的现在分词形式）",
+    "ipa": "/ˈɪrɪteɪtɪŋ/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=irritating&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T06:33:04.631205+00:00"
+  },
+  {
+    "surface": "theater",
+    "kind": "unknown",
+    "gloss_zh": "n. 电影院，戏院，剧场；戏剧；手术室",
+    "ipa": "/ˈθi(ə)tɚ/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/theater-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T06:26:11.480506+00:00"
+  },
+  {
+    "surface": "pharmacy",
+    "kind": "unknown",
+    "gloss_zh": "n. 药店；（医院的）药房，配药室；药剂学，配药学；一批备用药品",
+    "ipa": "/ˈfɑɹməsi/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/pharmacy-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-30T06:09:22.811857+00:00"
+  },
+  {
+    "surface": "bass",
+    "kind": "unknown",
+    "gloss_zh": "n. 男低音歌手；低音，低音部；低音吉他，低音提琴；鲈鱼；椴树；adj. 低音的，低声调的；【名】 （Bass）（英、法、德、俄、罗、捷、马里、匈）巴斯（人名）",
+    "ipa": "/beɪs/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/bass-1-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-29T12:16:08.765407+00:00"
+  },
+  {
+    "surface": "charm",
+    "kind": "unknown",
+    "gloss_zh": "n. 魅力，魔力；护身符，咒语；小挂件，小饰物；粲，粲数；v. 吸引，迷住；诱使，哄诱；向……施魔法，用魔法控制；有魔力",
+    "ipa": "/tʃɑɹm/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/charm-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-29T09:56:18.874465+00:00"
+  },
+  {
+    "surface": "lopsided",
+    "kind": "unknown",
+    "gloss_zh": "adj. 不平衡的，倾向一方的",
+    "ipa": "/ˈlɑp.saɪ.dɪd/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/lopsided-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-29T08:50:33.803914+00:00"
+  },
+  {
+    "surface": "infection",
+    "kind": "unknown",
+    "gloss_zh": "n. 传染病；感染；玷污，污染",
+    "ipa": "/ɪnˈfɛkʃən/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=infection&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-29T08:49:38.027701+00:00"
+  },
+  {
+    "surface": "linger",
+    "kind": "unknown",
+    "gloss_zh": "v. 继续存留，缓慢消失；流连，逗留；持续看（或思考）；苟延残喘；消磨，缓慢度过；【名】 （Linger）（法）兰热，（德、捷、瑞典）林格（人名）",
+    "ipa": "/ˈlɪŋɡə/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=linger&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-29T08:48:11.601902+00:00"
+  },
+  {
+    "surface": "submission",
+    "kind": "unknown",
+    "gloss_zh": "n. 屈服，投降；提交，呈递；提交的文件，呈递材料；<法律>（向法官提出的）看法，意见；<正式> 意见，建议；<古> 谦恭，温顺；（摔跤）制服",
+    "ipa": "/səbˈmɪʃən/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/submission-1-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-29T03:48:52.993652+00:00"
+  },
+  {
+    "surface": "upvoted",
+    "kind": "unknown",
+    "gloss_zh": "vt. （线上）赞同，点赞; n. （线上）有利的投票",
+    "ipa": "",
+    "audio_url": "",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-29T03:48:42.058787+00:00"
+  },
+  {
+    "surface": "pissed",
+    "kind": "unknown",
+    "gloss_zh": "adj. <英>酒醉的；<美>恼火的，生气的；v. 撒尿，把……尿湿；（因害怕等）尿裤子；下大雨（piss 的过去式和过去分词）",
+    "ipa": "/pɪst/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=pissed&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-28T13:53:06.905891+00:00"
+  },
+  {
     "surface": "Slide",
     "kind": "unknown",
     "gloss_zh": "v. （使）滑行，滑动；滑落；迅速熟练地进出；（使）快捷而悄声地移动；（价格等）下滑，下跌；逐渐败坏，开始出现问题；滑垒；n. 滑梯；滑道；滑行，滑动；（价格、数量等的）下降，跌落，减少；幻灯片；（情况）变糟，恶化，（人）出现问题；（显微镜的）载物玻璃片；（乐器或机器上的）滑动装置；（岩石，土等的）崩落；小发夹；（棒球）滑垒；（吉他）滑奏；无后帮凉鞋（或轻便",
