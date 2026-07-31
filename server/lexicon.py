@@ -17,15 +17,24 @@ def _now() -> str:
 def load() -> list[dict[str, Any]]:
     if not LEXICON_PATH.exists():
         return []
-    with LEXICON_PATH.open(encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        with LEXICON_PATH.open(encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        # Keep API up if the file was corrupted by a partial write.
+        print(f"[lexicon] JSON corrupt ({e}); returning []")
+        return []
     return data if isinstance(data, list) else []
 
 
 def save(entries: list[dict[str, Any]]) -> None:
     LEXICON_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with LEXICON_PATH.open("w", encoding="utf-8") as f:
-        json.dump(entries, f, ensure_ascii=False, indent=2)
+    payload = json.dumps(entries, ensure_ascii=False, indent=2)
+    tmp = LEXICON_PATH.with_suffix(".json.tmp")
+    with tmp.open("w", encoding="utf-8") as f:
+        f.write(payload)
+        f.flush()
+    tmp.replace(LEXICON_PATH)
 
 
 def list_entries(kind: str | None = None) -> list[dict[str, Any]]:

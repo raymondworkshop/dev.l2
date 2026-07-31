@@ -1,7 +1,5 @@
 [
   {
-    "surface": "test-hotkey-word",
-    "kind": "unknown",
     "surface": "Slide",
     "kind": "unknown",
     "gloss_zh": "v. （使）滑行，滑动；滑落；迅速熟练地进出；（使）快捷而悄声地移动；（价格等）下滑，下跌；逐渐败坏，开始出现问题；滑垒；n. 滑梯；滑道；滑行，滑动；（价格、数量等的）下降，跌落，减少；幻灯片；（情况）变糟，恶化，（人）出现问题；（显微镜的）载物玻璃片；（乐器或机器上的）滑动装置；（岩石，土等的）崩落；小发夹；（棒球）滑垒；（吉他）滑奏；无后帮凉鞋（或轻便",
@@ -180,10 +178,12 @@
     "ipa": "",
     "audio_url": "",
     "context": {
-      "clause": "test-hotkey-word",
-      "source": "macos-service"
+      "source_id": "www-youtube-com-846902",
+      "bite_id": 6,
+      "timestamp": 5.964,
+      "clause": "Like, what about a blowjob?"
     },
-    "count": 1,
+    "count": 2,
     "updated": "2026-07-28T06:20:44.022355+00:00"
   },
   {
@@ -211,13 +211,6 @@
     },
     "count": 1,
     "updated": "2026-07-28T06:01:24.846639+00:00"
-      "source_id": "www-youtube-com-846902",
-      "bite_id": 6,
-      "timestamp": 5.964,
-      "clause": "Like, what about a blowjob?"
-    },
-    "count": 1,
-    "updated": "2026-07-27T10:36:42.217564+00:00"
   },
   {
     "surface": "wingman",

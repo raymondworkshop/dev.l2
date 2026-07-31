@@ -1,8 +1,14 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { api, cambridgeUrl, playUsAudio, warmVoices, youglishUrl } from '../api'
+import { api, cambridgeUrl, playUsAudio, stopAllAudio, warmVoices, youglishUrl } from '../api'
 import PronRow from '../components/PronRow'
 import WordOverlay from '../components/WordOverlay'
+
+const PLAYLIST_GAP_MS = 550
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
 
 export default function WordBank() {
   const [entries, setEntries] = useState([])
@@ -17,6 +23,9 @@ export default function WordBank() {
   const [lookupError, setLookupError] = useState('')
   /** Older months: user-opened; newest month is always expanded */
   const [openMonths, setOpenMonths] = useState(() => new Set())
+  const [playingMonth, setPlayingMonth] = useState(null)
+  const [playingSurface, setPlayingSurface] = useState(null)
+  const playGenRef = useRef(0)
 
   function toggleMonth(key) {
     setOpenMonths((prev) => {
@@ -25,6 +34,36 @@ export default function WordBank() {
       else next.add(key)
       return next
     })
+  }
+
+  function stopMonthPlay() {
+    playGenRef.current += 1
+    stopAllAudio()
+    setPlayingMonth(null)
+    setPlayingSurface(null)
+  }
+
+  async function playMonth(key, monthEntries) {
+    stopMonthPlay()
+    const gen = playGenRef.current
+    setPlayingMonth(key)
+    for (const entry of monthEntries) {
+      if (playGenRef.current !== gen) return
+      setPlayingSurface(entry.surface)
+      const wordKey = `${key}:${entry.surface}`
+      const row = [...document.querySelectorAll('[data-word-key]')].find(
+        (el) => el.getAttribute('data-word-key') === wordKey,
+      )
+      row?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+      const result = await playUsAudio(entry.audio_url, entry.surface)
+      if (playGenRef.current !== gen || result === 'stopped') return
+      await sleep(PLAYLIST_GAP_MS)
+      if (playGenRef.current !== gen) return
+    }
+    if (playGenRef.current === gen) {
+      setPlayingMonth(null)
+      setPlayingSurface(null)
+    }
   }
 
   async function load() {
@@ -39,7 +78,15 @@ export default function WordBank() {
   useEffect(() => {
     warmVoices()
     load()
+    return () => {
+      playGenRef.current += 1
+      stopAllAudio()
+    }
   }, [])
+
+  useEffect(() => {
+    stopMonthPlay()
+  }, [filter])
 
   const groups = useMemo(() => {
     const list = filter === 'all' ? entries : entries.filter((e) => e.kind === filter)
@@ -66,6 +113,7 @@ export default function WordBank() {
   }, [entries, filter])
 
   async function replay(entry) {
+    stopMonthPlay()
     await playUsAudio(entry.audio_url, entry.surface)
   }
 
@@ -129,7 +177,7 @@ export default function WordBank() {
     <div>
       <h1 className="page-title">Word</h1>
       <p className="lede">
-        手工查詞，或複習生詞 / 錯詞：聽美音與英音，看中英文釋義。
+        手工查詞，或複習生詞 / 錯詞。點「聽列表」可連播本月美音。
       </p>
 
       <form className="panel lookup-form" onSubmit={onLookup}>
@@ -230,6 +278,19 @@ export default function WordBank() {
             {label}
           </button>
         ))}
+        {groups[0] ? (
+          <button
+            type="button"
+            className={`chip chip-play${playingMonth === groups[0].key ? ' active' : ''}`}
+            onClick={() =>
+              playingMonth === groups[0].key
+                ? stopMonthPlay()
+                : playMonth(groups[0].key, groups[0].entries)
+            }
+          >
+            {playingMonth === groups[0].key ? '停止連播' : '聽列表'}
+          </button>
+        ) : null}
       </div>
 
       {error ? <p className="error">{error}</p> : null}
@@ -244,35 +305,58 @@ export default function WordBank() {
               {g.label} <span className="muted">{g.entries.length} words</span>
             </>
           )
+          const isPlayingMonth = playingMonth === g.key
           return (
           <section
             key={g.key}
             className={`month-group${expanded ? '' : ' is-collapsed'}`}
           >
-            <h2>
-              {i === 0 ? (
-                title
-              ) : (
+            <div className="month-head">
+              <h2>
+                {i === 0 ? (
+                  title
+                ) : (
+                  <button
+                    type="button"
+                    className="month-toggle"
+                    aria-expanded={expanded}
+                    onClick={() => {
+                      if (isPlayingMonth && expanded) stopMonthPlay()
+                      toggleMonth(g.key)
+                    }}
+                  >
+                    <span className="month-chevron" aria-hidden>
+                      {expanded ? '▾' : '▸'}
+                    </span>
+                    {title}
+                  </button>
+                )}
+              </h2>
+              {expanded ? (
                 <button
                   type="button"
-                  className="month-toggle"
-                  aria-expanded={expanded}
-                  onClick={() => toggleMonth(g.key)}
+                  className="btn month-play"
+                  aria-pressed={isPlayingMonth}
+                  onClick={() =>
+                    isPlayingMonth ? stopMonthPlay() : playMonth(g.key, g.entries)
+                  }
                 >
-                  <span className="month-chevron" aria-hidden>
-                    {expanded ? '▾' : '▸'}
-                  </span>
-                  {title}
+                  {isPlayingMonth ? '停止' : '聽列表'}
                 </button>
-              )}
-            </h2>
+              ) : null}
+            </div>
             {expanded ? (
             <ul className="list">
               {g.entries.map((e) => {
                 const biteId = e.context?.bite_id
                 const sourceId = e.context?.source_id
+                const active = isPlayingMonth && playingSurface === e.surface
                 return (
-                  <li key={`${e.kind}-${e.surface}-${e.updated}`} className="list-item">
+                  <li
+                    key={`${e.kind}-${e.surface}-${e.updated}`}
+                    className={`list-item${active ? ' is-playing' : ''}`}
+                    data-word-key={`${g.key}:${e.surface}`}
+                  >
                     <div>
                       <h3>
                         <button

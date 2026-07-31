@@ -71,19 +71,54 @@ export function warmVoices() {
   }
 }
 
+let currentAudio = null
+let finishPlay = null
+
+function finishCurrent(result) {
+  const fn = finishPlay
+  finishPlay = null
+  currentAudio = null
+  if (fn) fn(result)
+}
+
+/** Stop dictionary audio / TTS; resolves any in-flight play promise with `'stopped'`. */
+export function stopAllAudio() {
+  if (currentAudio) {
+    currentAudio.onended = null
+    currentAudio.onerror = null
+    try {
+      currentAudio.pause()
+      currentAudio.removeAttribute('src')
+      currentAudio.load()
+    } catch {
+      /* ignore */
+    }
+    currentAudio = null
+  }
+  window.speechSynthesis?.cancel()
+  finishCurrent('stopped')
+}
+
 /** Play dictionary audio URL, else TTS for lang (en-US / en-GB). */
 export function playAccentAudio(audioUrl, text, lang = 'en-US') {
   return new Promise((resolve) => {
+    stopAllAudio()
+    finishPlay = resolve
     if (audioUrl) {
       const a = new Audio(audioUrl)
-      a.onended = () => resolve('audio')
+      currentAudio = a
+      a.onended = () => finishCurrent('audio')
       a.onerror = () => {
-        speakTts(text, lang).then(resolve)
+        currentAudio = null
+        speakTts(text, lang).then((r) => finishCurrent(r))
       }
-      a.play().catch(() => speakTts(text, lang).then(resolve))
+      a.play().catch(() => {
+        currentAudio = null
+        speakTts(text, lang).then((r) => finishCurrent(r))
+      })
       return
     }
-    speakTts(text, lang).then(resolve)
+    speakTts(text, lang).then((r) => finishCurrent(r))
   })
 }
 
