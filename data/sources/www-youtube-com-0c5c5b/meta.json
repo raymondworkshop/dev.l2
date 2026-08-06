@@ -1,0 +1,19 @@
+{
+  "id": "www-youtube-com-0c5c5b",
+  "title": "Gal Gadot's bikini mission | Fast Five | CLIP",
+  "url": "https://www.youtube.com/watch?v=OPanp-txShA",
+  "duration_sec": 158,
+  "accent": "US",
+  "created": "2026-07-31T10:09:52.143819+00:00",
+  "has_audio": true,
+  "has_transcript": true,
+  "source_duration_sec": 171,
+  "ingest": {
+    "ok": true,
+    "audio": true,
+    "transcript": false,
+    "mode": "yt-dlp",
+    "warnings": [],
+    "yt_dlp": "/Users/zhaowenlong/workspace/dev.english/.venv/bin/yt-dlp"
+  }
+}

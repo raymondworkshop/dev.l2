@@ -372,11 +372,11 @@
     },
     {
       "id": 25,
-      "text": "I think he's going for brooding and dark, mysterious.",
+      "text": "I think he's going for brooding and dark,",
       "start": 32.323,
-      "end": 36.953,
+      "end": 36.439,
       "word_from": 120,
-      "word_to": 128,
+      "word_to": 127,
       "tokens": [
         "I",
         "think",
@@ -385,12 +385,22 @@
         "for",
         "brooding",
         "and",
-        "dark,",
-        "mysterious."
+        "dark,"
       ]
     },
     {
       "id": 26,
+      "text": "mysterious.",
+      "start": 36.439,
+      "end": 36.953,
+      "word_from": 128,
+      "word_to": 128,
+      "tokens": [
+        "mysterious."
+      ]
+    },
+    {
+      "id": 27,
       "text": "It's kind of working for me.",
       "start": 37.037,
       "end": 38.079,
@@ -406,7 +416,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": 28,
       "text": "- That is working?",
       "start": 38.163,
       "end": 38.969,
@@ -420,7 +430,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": 29,
       "text": "- Yes.",
       "start": 38.969,
       "end": 39.372,
@@ -432,7 +442,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": 30,
       "text": "You cannot be that attractive and have a skill.",
       "start": 39.456,
       "end": 41.469,
@@ -451,7 +461,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": 31,
       "text": "That's bullshit.",
       "start": 41.469,
       "end": 41.916,
@@ -463,7 +473,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": 32,
       "text": "Well, I'm gonna play, so you're wrong.",
       "start": 42.0,
       "end": 43.835,
@@ -480,7 +490,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": 33,
       "text": "Then somebody's in trouble.",
       "start": 43.918,
       "end": 45.795,
@@ -494,7 +504,7 @@
       ]
     },
     {
-      "id": 33,
+      "id": 34,
       "text": "Cheer up, asshole.",
       "start": 45.879,
       "end": 46.88,
@@ -507,7 +517,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": 35,
       "text": "You're the guy.",
       "start": 46.88,
       "end": 47.881,
@@ -520,7 +530,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": 36,
       "text": "Buckle up.",
       "start": 49.049,
       "end": 50.258,
@@ -532,7 +542,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": 37,
       "text": "Hey, excuse me?",
       "start": 50.341,
       "end": 50.842,
@@ -545,7 +555,7 @@
       ]
     },
     {
-      "id": 37,
+      "id": 38,
       "text": "I just wanted to tell you great job.",
       "start": 50.842,
       "end": 52.177,
@@ -563,7 +573,7 @@
       ]
     },
     {
-      "id": 38,
+      "id": 39,
       "text": "I almost cried right there.",
       "start": 52.26,
       "end": 53.678,
@@ -578,7 +588,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": 40,
       "text": "It was really some powerful stuff.",
       "start": 53.887,
       "end": 55.388,
@@ -594,7 +604,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": 41,
       "text": "Yeah.",
       "start": 55.472,
       "end": 55.706,
@@ -605,7 +615,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": 42,
       "text": "It was brooding, dark, and mysterious, apparently.",
       "start": 55.706,
       "end": 57.348,
@@ -622,7 +632,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": 43,
       "text": "- Yeah.",
       "start": 57.474,
       "end": 57.816,
@@ -634,7 +644,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": 44,
       "text": "- Thanks.",
       "start": 57.816,
       "end": 58.158,
@@ -646,7 +656,7 @@
       ]
     },
     {
-      "id": 44,
+      "id": 45,
       "text": "That's what I was going for.",
       "start": 58.158,
       "end": 59.184,
@@ -662,7 +672,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": 46,
       "text": "Told you.",
       "start": 59.434,
       "end": 60.602,
@@ -674,7 +684,7 @@
       ]
     },
     {
-      "id": 46,
+      "id": 47,
       "text": "This is my friend, Chelsea.",
       "start": 60.685,
       "end": 61.644,
@@ -689,7 +699,7 @@
       ]
     },
     {
-      "id": 47,
+      "id": 48,
       "text": "She's not much to look at, but wait till you hear her play the piano.",
       "start": 61.728,
       "end": 64.314,
@@ -714,7 +724,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": 49,
       "text": "- Really good.",
       "start": 64.397,
       "end": 65.19,
@@ -727,7 +737,7 @@
       ]
     },
     {
-      "id": 49,
+      "id": 50,
       "text": "- I can't wait.",
       "start": 65.19,
       "end": 66.247,
@@ -741,7 +751,7 @@
       ]
     },
     {
-      "id": 50,
+      "id": 51,
       "text": "I'm Diego.",
       "start": 66.247,
       "end": 66.775,
@@ -753,7 +763,7 @@
       ]
     },
     {
-      "id": 51,
+      "id": 52,
       "text": "I know you are.",
       "start": 67.609,
       "end": 68.61,
@@ -767,7 +777,7 @@
       ]
     },
     {
-      "id": 52,
+      "id": 53,
       "text": "I warn you, though.",
       "start": 68.693,
       "end": 69.744,
@@ -781,7 +791,7 @@
       ]
     },
     {
-      "id": 53,
+      "id": 54,
       "text": "She can be really aggressive sometimes.",
       "start": 69.744,
       "end": 71.321,
@@ -797,7 +807,7 @@
       ]
     },
     {
-      "id": 54,
+      "id": 55,
       "text": "Is that right?",
       "start": 71.404,
       "end": 72.447,
@@ -810,7 +820,7 @@
       ]
     },
     {
-      "id": 55,
+      "id": 56,
       "text": "But you can tame her with tequila and compliments.",
       "start": 72.53,
       "end": 74.657,
@@ -829,7 +839,7 @@
       ]
     },
     {
-      "id": 56,
+      "id": 57,
       "text": "- Yeah.",
       "start": 74.741,
       "end": 75.263,
@@ -841,7 +851,7 @@
       ]
     },
     {
-      "id": 57,
+      "id": 58,
       "text": "- So...",
       "start": 75.263,
       "end": 75.784,
@@ -853,7 +863,7 @@
       ]
     },
     {
-      "id": 58,
+      "id": 59,
       "text": "- Super aggressive.",
       "start": 75.867,
       "end": 76.743,
@@ -866,7 +876,7 @@
       ]
     },
     {
-      "id": 59,
+      "id": 60,
       "text": "- Yeah?",
       "start": 76.743,
       "end": 77.327,
@@ -878,7 +888,7 @@
       ]
     },
     {
-      "id": 60,
+      "id": 61,
       "text": "- Hey, are you home?",
       "start": 77.577,
       "end": 78.426,
@@ -893,7 +903,7 @@
       ]
     },
     {
-      "id": 61,
+      "id": 62,
       "text": "- No.",
       "start": 78.426,
       "end": 78.765,
@@ -905,7 +915,7 @@
       ]
     },
     {
-      "id": 62,
+      "id": 63,
       "text": "I'm at the hospital.",
       "start": 78.766,
       "end": 79.445,
@@ -919,7 +929,7 @@
       ]
     },
     {
-      "id": 63,
+      "id": 64,
       "text": "Where are you?",
       "start": 79.445,
       "end": 79.954,
@@ -932,7 +942,7 @@
       ]
     },
     {
-      "id": 64,
+      "id": 65,
       "text": "I'm headed back.",
       "start": 80.038,
       "end": 81.206,
@@ -945,7 +955,7 @@
       ]
     },
     {
-      "id": 65,
+      "id": 66,
       "text": "All right.",
       "start": 81.289,
       "end": 82.068,
@@ -957,7 +967,7 @@
       ]
     },
     {
-      "id": 66,
+      "id": 67,
       "text": "So?",
       "start": 82.068,
       "end": 82.457,
@@ -968,7 +978,7 @@
       ]
     },
     {
-      "id": 67,
+      "id": 68,
       "text": "How was it?",
       "start": 82.54,
       "end": 83.5,
@@ -981,7 +991,7 @@
       ]
     },
     {
-      "id": 68,
+      "id": 69,
       "text": "It was amazing, man.",
       "start": 83.583,
       "end": 84.751,
@@ -995,7 +1005,7 @@
       ]
     },
     {
-      "id": 69,
+      "id": 70,
       "text": "She was amazing.",
       "start": 84.751,
       "end": 85.627,
@@ -1008,7 +1018,7 @@
       ]
     },
     {
-      "id": 70,
+      "id": 71,
       "text": "So is she coming back to the house or what?",
       "start": 85.71,
       "end": 87.045,
@@ -1028,7 +1038,7 @@
       ]
     },
     {
-      "id": 71,
+      "id": 72,
       "text": "Not exactly.",
       "start": 88.129,
       "end": 89.464,
@@ -1040,7 +1050,7 @@
       ]
     },
     {
-      "id": 72,
+      "id": 73,
       "text": "- Hey.",
       "start": 128.545,
       "end": 129.449,
@@ -1052,7 +1062,7 @@
       ]
     },
     {
-      "id": 73,
+      "id": 74,
       "text": "- After midnight?",
       "start": 129.449,
       "end": 130.804,
@@ -1065,7 +1075,7 @@
       ]
     },
     {
-      "id": 74,
+      "id": 75,
       "text": "Really?",
       "start": 130.804,
       "end": 131.256,
@@ -1076,7 +1086,7 @@
       ]
     },
     {
-      "id": 75,
+      "id": 76,
       "text": "I couldn't sleep.",
       "start": 131.422,
       "end": 133.007,
@@ -1089,7 +1099,7 @@
       ]
     },
     {
-      "id": 76,
+      "id": 77,
       "text": "It's good to see you.",
       "start": 135.593,
       "end": 137.428,
@@ -1104,7 +1114,7 @@
       ]
     },
     {
-      "id": 77,
+      "id": 78,
       "text": "So what happened with you and the piano man?",
       "start": 171.212,
       "end": 173.277,
@@ -1123,7 +1133,7 @@
       ]
     },
     {
-      "id": 78,
+      "id": 79,
       "text": "Rodrigo?",
       "start": 173.277,
       "end": 173.506,
@@ -1134,7 +1144,7 @@
       ]
     },
     {
-      "id": 79,
+      "id": 80,
       "text": "- Diego?",
       "start": 173.59,
       "end": 174.34,
@@ -1146,7 +1156,7 @@
       ]
     },
     {
-      "id": 80,
+      "id": 81,
       "text": "- Diego.",
       "start": 174.341,
       "end": 175.091,
@@ -1158,12 +1168,25 @@
       ]
     },
     {
-      "id": 81,
+      "id": 82,
+      "text": "I don't know.",
+      "start": 175.175,
+      "end": 176.217,
+      "word_from": 347,
+      "word_to": 349,
+      "tokens": [
+        "I",
+        "don't",
+        "know."
+      ]
+    },
+    {
+      "id": 83,
       "text": "I don't want to date a guy that's prettier than me.",
       "start": 176.301,
       "end": 177.818,
-      "word_from": 347,
-      "word_to": 357,
+      "word_from": 350,
+      "word_to": 360,
       "tokens": [
         "I",
         "don't",
@@ -1179,47 +1202,47 @@
       ]
     },
     {
-      "id": 82,
+      "id": 84,
       "text": "You know?",
       "start": 177.818,
       "end": 178.094,
-      "word_from": 358,
-      "word_to": 359,
+      "word_from": 361,
+      "word_to": 362,
       "tokens": [
         "You",
         "know?"
       ]
     },
     {
-      "id": 83,
+      "id": 85,
       "text": "Yeah.",
       "start": 178.178,
       "end": 178.72,
-      "word_from": 360,
-      "word_to": 360,
+      "word_from": 363,
+      "word_to": 363,
       "tokens": [
         "Yeah."
       ]
     },
     {
-      "id": 84,
+      "id": 86,
       "text": "Me neither.",
       "start": 178.72,
       "end": 179.804,
-      "word_from": 361,
-      "word_to": 362,
+      "word_from": 364,
+      "word_to": 365,
       "tokens": [
         "Me",
         "neither."
       ]
     },
     {
-      "id": 85,
+      "id": 87,
       "text": "Plus, he works out.",
       "start": 179.888,
       "end": 181.139,
-      "word_from": 363,
-      "word_to": 366,
+      "word_from": 366,
+      "word_to": 369,
       "tokens": [
         "Plus,",
         "he",
@@ -1228,12 +1251,12 @@
       ]
     },
     {
-      "id": 86,
+      "id": 88,
       "text": "I don't want a man that works out.",
       "start": 181.222,
       "end": 182.473,
-      "word_from": 367,
-      "word_to": 374,
+      "word_from": 370,
+      "word_to": 377,
       "tokens": [
         "I",
         "don't",
@@ -1246,23 +1269,23 @@
       ]
     },
     {
-      "id": 87,
+      "id": 89,
       "text": "Yeah.",
       "start": 182.557,
       "end": 183.016,
-      "word_from": 375,
-      "word_to": 375,
+      "word_from": 378,
+      "word_to": 378,
       "tokens": [
         "Yeah."
       ]
     },
     {
-      "id": 88,
+      "id": 90,
       "text": "I worked out once.",
       "start": 183.016,
       "end": 184.851,
-      "word_from": 376,
-      "word_to": 379,
+      "word_from": 379,
+      "word_to": 382,
       "tokens": [
         "I",
         "worked",
@@ -1271,23 +1294,23 @@
       ]
     },
     {
-      "id": 89,
+      "id": 91,
       "text": "2004.",
       "start": 184.851,
       "end": 185.31,
-      "word_from": 380,
-      "word_to": 380,
+      "word_from": 383,
+      "word_to": 383,
       "tokens": [
         "2004."
       ]
     },
     {
-      "id": 90,
+      "id": 92,
       "text": "Got on the 15 dumbbells.",
       "start": 185.393,
       "end": 187.187,
-      "word_from": 381,
-      "word_to": 385,
+      "word_from": 384,
+      "word_to": 388,
       "tokens": [
         "Got",
         "on",
@@ -1297,12 +1320,12 @@
       ]
     },
     {
-      "id": 91,
+      "id": 93,
       "text": "I was like, \"Those are way too light, let me go to the 30s.\"",
       "start": 187.27,
       "end": 189.189,
-      "word_from": 386,
-      "word_to": 399,
+      "word_from": 389,
+      "word_to": 402,
       "tokens": [
         "I",
         "was",
@@ -1321,24 +1344,24 @@
       ]
     },
     {
-      "id": 92,
+      "id": 94,
       "text": "- Nice.",
       "start": 189.272,
       "end": 189.512,
-      "word_from": 400,
-      "word_to": 401,
+      "word_from": 403,
+      "word_to": 404,
       "tokens": [
         "-",
         "Nice."
       ]
     },
     {
-      "id": 93,
+      "id": 95,
       "text": "- And if you feel it...",
       "start": 189.512,
       "end": 190.231,
-      "word_from": 402,
-      "word_to": 407,
+      "word_from": 405,
+      "word_to": 410,
       "tokens": [
         "-",
         "And",
@@ -1349,23 +1372,23 @@
       ]
     },
     {
-      "id": 94,
+      "id": 96,
       "text": "Don't.",
       "start": 190.315,
       "end": 190.489,
-      "word_from": 408,
-      "word_to": 408,
+      "word_from": 411,
+      "word_to": 411,
       "tokens": [
         "Don't."
       ]
     },
     {
-      "id": 95,
+      "id": 97,
       "text": "I don't wanna touch it.",
       "start": 190.489,
       "end": 191.357,
-      "word_from": 409,
-      "word_to": 413,
+      "word_from": 412,
+      "word_to": 416,
       "tokens": [
         "I",
         "don't",
@@ -1375,12 +1398,12 @@
       ]
     },
     {
-      "id": 96,
+      "id": 98,
       "text": "And then I hit the hammies.",
       "start": 191.441,
       "end": 192.567,
-      "word_from": 414,
-      "word_to": 419,
+      "word_from": 417,
+      "word_to": 422,
       "tokens": [
         "And",
         "then",
@@ -1391,12 +1414,12 @@
       ]
     },
     {
-      "id": 97,
+      "id": 99,
       "text": "- Some quads.",
       "start": 192.65,
       "end": 193.201,
-      "word_from": 420,
-      "word_to": 422,
+      "word_from": 423,
+      "word_to": 425,
       "tokens": [
         "-",
         "Some",
@@ -1404,12 +1427,12 @@
       ]
     },
     {
-      "id": 98,
+      "id": 100,
       "text": "And if you feel that.",
       "start": 193.201,
       "end": 194.118,
-      "word_from": 423,
-      "word_to": 427,
+      "word_from": 426,
+      "word_to": 430,
       "tokens": [
         "And",
         "if",
@@ -1419,12 +1442,12 @@
       ]
     },
     {
-      "id": 99,
+      "id": 101,
       "text": "- You definitely got the lingo down.",
       "start": 194.118,
       "end": 195.403,
-      "word_from": 428,
-      "word_to": 434,
+      "word_from": 431,
+      "word_to": 437,
       "tokens": [
         "-",
         "You",
@@ -1436,12 +1459,12 @@
       ]
     },
     {
-      "id": 100,
+      "id": 102,
       "text": "- Do you see that?",
       "start": 195.486,
       "end": 196.231,
-      "word_from": 435,
-      "word_to": 439,
+      "word_from": 438,
+      "word_to": 442,
       "tokens": [
         "-",
         "Do",
@@ -1451,48 +1474,48 @@
       ]
     },
     {
-      "id": 101,
+      "id": 103,
       "text": "- No.",
       "start": 196.231,
       "end": 196.529,
-      "word_from": 440,
-      "word_to": 441,
+      "word_from": 443,
+      "word_to": 444,
       "tokens": [
         "-",
         "No."
       ]
     },
     {
-      "id": 102,
+      "id": 104,
       "text": "- Well...",
       "start": 196.613,
       "end": 197.322,
-      "word_from": 442,
-      "word_to": 443,
+      "word_from": 445,
+      "word_to": 446,
       "tokens": [
         "-",
         "Well..."
       ]
     },
     {
-      "id": 103,
+      "id": 105,
       "text": "- Fat.",
       "start": 197.322,
       "end": 198.031,
-      "word_from": 444,
-      "word_to": 445,
+      "word_from": 447,
+      "word_to": 448,
       "tokens": [
         "-",
         "Fat."
       ]
     },
     {
-      "id": 104,
+      "id": 106,
       "text": "That's what happens when you work out once.",
       "start": 198.114,
       "end": 202.16,
-      "word_from": 446,
-      "word_to": 453,
+      "word_from": 449,
+      "word_to": 456,
       "tokens": [
         "That's",
         "what",
@@ -1505,12 +1528,12 @@
       ]
     },
     {
-      "id": 105,
+      "id": 107,
       "text": "What are you doing here anyway?",
       "start": 203.828,
       "end": 205.121,
-      "word_from": 454,
-      "word_to": 459,
+      "word_from": 457,
+      "word_to": 462,
       "tokens": [
         "What",
         "are",
@@ -1521,12 +1544,12 @@
       ]
     },
     {
-      "id": 106,
+      "id": 108,
       "text": "- What do you mean?",
       "start": 205.205,
       "end": 205.807,
-      "word_from": 460,
-      "word_to": 464,
+      "word_from": 463,
+      "word_to": 467,
       "tokens": [
         "-",
         "What",
@@ -1536,12 +1559,12 @@
       ]
     },
     {
-      "id": 107,
+      "id": 109,
       "text": "- I don't know.",
       "start": 205.807,
       "end": 206.289,
-      "word_from": 465,
-      "word_to": 468,
+      "word_from": 468,
+      "word_to": 471,
       "tokens": [
         "-",
         "I",
@@ -1550,12 +1573,12 @@
       ]
     },
     {
-      "id": 108,
+      "id": 110,
       "text": "Weren't you supposed to hang out with that girl from Trinity?",
       "start": 206.372,
       "end": 208.833,
-      "word_from": 469,
-      "word_to": 479,
+      "word_from": 472,
+      "word_to": 482,
       "tokens": [
         "Weren't",
         "you",
@@ -1571,23 +1594,23 @@
       ]
     },
     {
-      "id": 109,
+      "id": 111,
       "text": "Yeah.",
       "start": 208.958,
       "end": 209.359,
-      "word_from": 480,
-      "word_to": 480,
+      "word_from": 483,
+      "word_to": 483,
       "tokens": [
         "Yeah."
       ]
     },
     {
-      "id": 110,
+      "id": 112,
       "text": "I had to tell her I wasn't looking for anything too serious.",
       "start": 209.359,
       "end": 214.172,
-      "word_from": 481,
-      "word_to": 492,
+      "word_from": 484,
+      "word_to": 495,
       "tokens": [
         "I",
         "had",
@@ -1604,12 +1627,12 @@
       ]
     },
     {
-      "id": 111,
+      "id": 113,
       "text": "'Cause if it ever stopped being fun for you guys, you'd want to just call it off?",
       "start": 214.38,
       "end": 218.343,
-      "word_from": 493,
-      "word_to": 509,
+      "word_from": 496,
+      "word_to": 512,
       "tokens": [
         "'Cause",
         "if",
@@ -1631,35 +1654,35 @@
       ]
     },
     {
-      "id": 112,
+      "id": 114,
       "text": "- That's...",
       "start": 218.426,
       "end": 218.871,
-      "word_from": 510,
-      "word_to": 511,
+      "word_from": 513,
+      "word_to": 514,
       "tokens": [
         "-",
         "That's..."
       ]
     },
     {
-      "id": 113,
+      "id": 115,
       "text": "Yeah.",
       "start": 218.871,
       "end": 219.093,
-      "word_from": 512,
-      "word_to": 512,
+      "word_from": 515,
+      "word_to": 515,
       "tokens": [
         "Yeah."
       ]
     },
     {
-      "id": 114,
+      "id": 116,
       "text": "- I know.",
       "start": 219.094,
       "end": 219.761,
-      "word_from": 513,
-      "word_to": 515,
+      "word_from": 516,
+      "word_to": 518,
       "tokens": [
         "-",
         "I",
@@ -1667,12 +1690,12 @@
       ]
     },
     {
-      "id": 115,
+      "id": 117,
       "text": "You got it down.",
       "start": 219.844,
       "end": 220.845,
-      "word_from": 516,
-      "word_to": 519,
+      "word_from": 519,
+      "word_to": 522,
       "tokens": [
         "You",
         "got",
@@ -1681,24 +1704,24 @@
       ]
     },
     {
-      "id": 116,
+      "id": 118,
       "text": "- Brother.",
       "start": 220.929,
       "end": 221.179,
-      "word_from": 520,
-      "word_to": 521,
+      "word_from": 523,
+      "word_to": 524,
       "tokens": [
         "-",
         "Brother."
       ]
     },
     {
-      "id": 117,
+      "id": 119,
       "text": "I know the spiel.",
       "start": 221.179,
       "end": 221.68,
-      "word_from": 522,
-      "word_to": 525,
+      "word_from": 525,
+      "word_to": 528,
       "tokens": [
         "I",
         "know",
@@ -1707,35 +1730,35 @@
       ]
     },
     {
-      "id": 118,
+      "id": 120,
       "text": "- Brother.",
       "start": 221.68,
       "end": 221.93,
-      "word_from": 526,
-      "word_to": 527,
+      "word_from": 529,
+      "word_to": 530,
       "tokens": [
         "-",
         "Brother."
       ]
     },
     {
-      "id": 119,
+      "id": 121,
       "text": "Yeah.",
       "start": 222.013,
       "end": 223.264,
-      "word_from": 528,
-      "word_to": 528,
+      "word_from": 531,
+      "word_to": 531,
       "tokens": [
         "Yeah."
       ]
     },
     {
-      "id": 120,
+      "id": 122,
       "text": "I don't know.",
       "start": 223.598,
       "end": 224.071,
-      "word_from": 529,
-      "word_to": 531,
+      "word_from": 532,
+      "word_to": 534,
       "tokens": [
         "I",
         "don't",
@@ -1743,12 +1766,12 @@
       ]
     },
     {
-      "id": 121,
+      "id": 123,
       "text": "I just thought you liked her.",
       "start": 224.071,
       "end": 225.016,
-      "word_from": 532,
-      "word_to": 537,
+      "word_from": 535,
+      "word_to": 540,
       "tokens": [
         "I",
         "just",
@@ -1759,12 +1782,12 @@
       ]
     },
     {
-      "id": 122,
+      "id": 124,
       "text": "I did like her.",
       "start": 225.099,
       "end": 226.184,
-      "word_from": 538,
-      "word_to": 541,
+      "word_from": 541,
+      "word_to": 544,
       "tokens": [
         "I",
         "did",
@@ -1773,12 +1796,12 @@
       ]
     },
     {
-      "id": 123,
+      "id": 125,
       "text": "She was cool, really smart, funny, well-read.",
       "start": 226.267,
       "end": 228.811,
-      "word_from": 542,
-      "word_to": 548,
+      "word_from": 545,
+      "word_to": 551,
       "tokens": [
         "She",
         "was",
@@ -1790,12 +1813,12 @@
       ]
     },
     {
-      "id": 124,
+      "id": 126,
       "text": "- Great family.",
       "start": 228.895,
       "end": 229.75,
-      "word_from": 549,
-      "word_to": 551,
+      "word_from": 552,
+      "word_to": 554,
       "tokens": [
         "-",
         "Great",
@@ -1803,12 +1826,12 @@
       ]
     },
     {
-      "id": 125,
+      "id": 127,
       "text": "- Love it.",
       "start": 229.75,
       "end": 230.605,
-      "word_from": 552,
-      "word_to": 554,
+      "word_from": 555,
+      "word_to": 557,
       "tokens": [
         "-",
         "Love",
@@ -1816,12 +1839,12 @@
       ]
     },
     {
-      "id": 126,
+      "id": 128,
       "text": "And gave the best blowjob in recorded history.",
       "start": 230.688,
       "end": 232.607,
-      "word_from": 555,
-      "word_to": 562,
+      "word_from": 558,
+      "word_to": 565,
       "tokens": [
         "And",
         "gave",
@@ -1834,12 +1857,12 @@
       ]
     },
     {
-      "id": 127,
+      "id": 129,
       "text": "I feel like every blowjob you get, you think is the best in recorded history...",
       "start": 232.69,
       "end": 235.86,
-      "word_from": 563,
-      "word_to": 577,
+      "word_from": 566,
+      "word_to": 580,
       "tokens": [
         "I",
         "feel",
@@ -1859,12 +1882,12 @@
       ]
     },
     {
-      "id": 128,
+      "id": 130,
       "text": "Well, if you look at the common variable across all encounters, you'll find that it's me.",
       "start": 235.944,
       "end": 239.697,
-      "word_from": 578,
-      "word_to": 593,
+      "word_from": 581,
+      "word_to": 596,
       "tokens": [
         "Well,",
         "if",
@@ -1885,12 +1908,12 @@
       ]
     },
     {
-      "id": 129,
+      "id": 131,
       "text": "So maybe I'm the best in recorded history at receiving blowjobs.",
       "start": 239.781,
       "end": 243.034,
-      "word_from": 594,
-      "word_to": 604,
+      "word_from": 597,
+      "word_to": 607,
       "tokens": [
         "So",
         "maybe",
@@ -1906,36 +1929,36 @@
       ]
     },
     {
-      "id": 130,
+      "id": 132,
       "text": "- Bam.",
       "start": 243.117,
       "end": 243.722,
-      "word_from": 605,
-      "word_to": 606,
+      "word_from": 608,
+      "word_to": 609,
       "tokens": [
         "-",
         "Bam."
       ]
     },
     {
-      "id": 131,
+      "id": 133,
       "text": "- Bam.",
       "start": 243.722,
       "end": 244.327,
-      "word_from": 607,
-      "word_to": 608,
+      "word_from": 610,
+      "word_to": 611,
       "tokens": [
         "-",
         "Bam."
       ]
     },
     {
-      "id": 132,
+      "id": 134,
       "text": "- Think about that.",
       "start": 244.41,
       "end": 245.182,
-      "word_from": 609,
-      "word_to": 612,
+      "word_from": 612,
+      "word_to": 615,
       "tokens": [
         "-",
         "Think",
@@ -1944,12 +1967,12 @@
       ]
     },
     {
-      "id": 133,
+      "id": 135,
       "text": "- Don't want to.",
       "start": 245.182,
       "end": 245.954,
-      "word_from": 613,
-      "word_to": 616,
+      "word_from": 616,
+      "word_to": 619,
       "tokens": [
         "-",
         "Don't",
@@ -1958,12 +1981,12 @@
       ]
     },
     {
-      "id": 134,
+      "id": 136,
       "text": "Cheers to me getting awesome blowjobs and just being good at it.",
       "start": 246.037,
       "end": 249.29,
-      "word_from": 617,
-      "word_to": 628,
+      "word_from": 620,
+      "word_to": 631,
       "tokens": [
         "Cheers",
         "to",
@@ -1980,12 +2003,12 @@
       ]
     },
     {
-      "id": 135,
+      "id": 137,
       "text": "You're such an idiot.",
       "start": 249.374,
       "end": 250.541,
-      "word_from": 629,
-      "word_to": 632,
+      "word_from": 632,
+      "word_to": 635,
       "tokens": [
         "You're",
         "such",

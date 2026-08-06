@@ -582,56 +582,171 @@ def _ts_to_sec(stamp: str) -> float:
     )
 
 
-def _captions_to_words(raw: str) -> tuple[str, list[dict[str, Any]]]:
-    """Parse VTT/SRT into plain text + timed words (cue-level timing spread across tokens)."""
-    # Strip header / NOTE blocks lightly
-    cues: list[tuple[float, float, str]] = []
-    blocks = re.split(r"\n\s*\n", raw.strip())
-    for block in blocks:
-        lines = [ln.strip("\ufeff ") for ln in block.splitlines() if ln.strip()]
-        if not lines:
-            continue
-        # find timing line
-        t_idx = next((i for i, ln in enumerate(lines) if "-->" in ln), None)
-        if t_idx is None:
-            continue
-        left, _, right = lines[t_idx].partition("-->")
-        start = _ts_to_sec(left)
-        end = _ts_to_sec(right.split()[0] if right.strip() else "")
-        text_lines = lines[t_idx + 1 :]
-        text = " ".join(text_lines)
-        text = re.sub(r"<[^>]+>", "", text)
-        text = re.sub(r"\s+", " ", text).strip()
-        if text:
-            cues.append((start, end or start + 0.5, text))
+_TAGGED_WORD_RE = re.compile(
+    r"<(\d{2}:\d{2}:\d{2}[\.,]\d{3})><c>\s*([^<]+?)\s*</c>",
+    re.IGNORECASE,
+)
+_NOISE_BRACKET_RE = re.compile(r"^\[.*\]$")
 
-    # Dedupe overlapping auto-caption spam (keep first occurrence of identical text)
-    deduped: list[tuple[float, float, str]] = []
-    seen: set[str] = set()
-    for start, end, text in cues:
-        key = text.lower()
-        if key in seen:
+
+def _is_noise_token(tok: str) -> bool:
+    t = tok.strip()
+    if not t:
+        return True
+    low = t.lower()
+    if low in {"foreign", ">>", "&gt;&gt;", "♪", "♫", "&nbsp;", "nbsp;"}:
+        return True
+    if _NOISE_BRACKET_RE.match(t):  # [Music], [Applause], …
+        return True
+    if "__" in t:
+        return True
+    return False
+
+
+def _strip_cue_text(raw_body: str) -> str:
+    text = re.sub(r"<[^>]+>", "", raw_body)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def _new_suffix(prev: list[str], curr: list[str]) -> list[str]:
+    """Rolling auto-caption: return tokens in curr that are new vs previous cue."""
+    if not curr:
+        return []
+    if not prev:
+        return curr
+    prev_l = [p.lower() for p in prev]
+    curr_l = [c.lower() for c in curr]
+    # Hold / flash frame: curr is prefix of (or equal to) previous cue
+    if len(curr_l) <= len(prev_l) and curr_l == prev_l[: len(curr_l)]:
+        return []
+    max_k = min(len(prev_l), len(curr_l))
+    for k in range(max_k, 0, -1):
+        if prev_l[-k:] == curr_l[:k]:
+            return curr[k:]
+    return curr
+
+
+def _assign_word_ends(
+    events: list[tuple[float, str]], cue_end: float
+) -> list[tuple[float, float, str]]:
+    if not events:
+        return []
+    out: list[tuple[float, float, str]] = []
+    for i, (t, tok) in enumerate(events):
+        te = events[i + 1][0] if i + 1 < len(events) else (cue_end or t + 0.25)
+        if te <= t:
+            te = t + 0.2
+        out.append((t, te, tok))
+    return out
+
+
+def _parse_caption_cues(raw: str) -> list[tuple[float, float, str]]:
+    """Return (start, end, raw_body) cues; body keeps <c> timing tags.
+
+    Line-oriented: YouTube auto VTT often puts a whitespace-only line between the
+    timing arrow and the cue text; blank-line splits would orphan that text.
+    """
+    cues: list[tuple[float, float, str]] = []
+    start = end = 0.0
+    in_cue = False
+    text_lines: list[str] = []
+
+    def flush() -> None:
+        nonlocal in_cue, text_lines
+        if not in_cue:
+            return
+        body = " ".join(ln for ln in text_lines if ln.strip()).strip()
+        body = re.sub(r"\s+", " ", body).strip()
+        if body:
+            cues.append((start, end or start + 0.5, body))
+        in_cue = False
+        text_lines = []
+
+    for ln in raw.splitlines():
+        ln = ln.strip("\ufeff")
+        if "-->" in ln:
+            flush()
+            left, _, right = ln.partition("-->")
+            start = _ts_to_sec(left)
+            end = _ts_to_sec(right.split()[0] if right.strip() else "")
+            in_cue = True
+            text_lines = []
             continue
-        seen.add(key)
-        deduped.append((start, end, text))
+        if not in_cue:
+            continue
+        if not ln.strip():
+            # Only end the cue on a truly empty line after we've seen text;
+            # whitespace-only placeholders before text are ignored.
+            if any(t.strip() for t in text_lines):
+                flush()
+            continue
+        text_lines.append(ln.strip())
+    flush()
+    return cues
+
+
+def _captions_to_words(raw: str) -> tuple[str, list[dict[str, Any]]]:
+    """Parse VTT/SRT into plain text + timed words.
+
+    YouTube auto-captions use a rolling window and optional word-level <c> tags;
+    we de-overlap those so Echo bites are real sentences, not triple-repeated spam.
+    """
+    cues = _parse_caption_cues(raw)
+    timed: list[tuple[float, float, str]] = []
+    emitted: list[str] = []
+
+    has_tags = any("<c>" in b.lower() for _, _, b in cues)
+    for start, end, body in cues:
+        if has_tags and "<c>" not in body.lower():
+            # Hold/display frame — ignore (would mark words seen without emitting)
+            continue
+
+        if "<c>" in body.lower():
+            events: list[tuple[float, str]] = []
+            lead = re.split(r"<\d{2}:", body, maxsplit=1)[0]
+            lead = re.sub(r"<[^>]+>", "", lead).strip()
+            lead_toks = [t for t in lead.split() if not _is_noise_token(t)]
+            new_lead = _new_suffix(emitted, lead_toks)
+            for tok in new_lead:
+                events.append((start, tok))
+            for m in _TAGGED_WORD_RE.finditer(body):
+                tok = m.group(2).strip()
+                if _is_noise_token(tok):
+                    continue
+                events.append((_ts_to_sec(m.group(1)), tok))
+            chunk = _assign_word_ends(events, end)
+            for _s, _e, tok in chunk:
+                emitted.append(tok)
+            timed.extend(chunk)
+        else:
+            plain = _strip_cue_text(body)
+            toks = [t for t in plain.split() if not _is_noise_token(t)]
+            new_toks = _new_suffix(emitted, toks)
+            if not new_toks:
+                continue
+            span = max(end - start, 0.2)
+            step = span / len(new_toks)
+            for j, tok in enumerate(new_toks):
+                ws = start + j * step
+                timed.append((ws, ws + step, tok))
+                emitted.append(tok)
+
+    # Final near-duplicate cleanup (same token re-emitted almost immediately)
+    cleaned: list[tuple[float, float, str]] = []
+    for start, end, tok in timed:
+        if cleaned:
+            ps, pe, pt = cleaned[-1]
+            if tok.lower() == pt.lower() and abs(start - ps) < 0.35:
+                cleaned[-1] = (ps, max(pe, end), pt)
+                continue
+        cleaned.append((start, end, tok))
 
     words: list[dict[str, Any]] = []
-    i = 0
-    parts: list[str] = []
-    for start, end, text in deduped:
-        toks = text.split()
-        if not toks:
-            continue
-        parts.append(text)
-        span = max(end - start, 0.2)
-        step = span / len(toks)
-        for j, tok in enumerate(toks):
-            ws = start + j * step
-            we = ws + step
-            words.append({"i": i, "w": tok, "start": round(ws, 3), "end": round(we, 3)})
-            i += 1
+    for i, (start, end, tok) in enumerate(cleaned):
+        words.append({"i": i, "w": tok, "start": round(start, 3), "end": round(end, 3)})
 
-    plain = " ".join(parts)
+    plain = " ".join(w["w"] for w in words)
     if not words:
         plain = _vtt_to_text(raw)
         words = words_from_plain_text(plain)
@@ -639,14 +754,72 @@ def _captions_to_words(raw: str) -> tuple[str, list[dict[str, Any]]]:
 
 
 def _vtt_to_text(vtt: str) -> str:
-    lines: list[str] = []
-    seen: set[str] = set()
-    for line in vtt.splitlines():
-        line = line.strip()
-        if not line or line.startswith("WEBVTT") or "-->" in line or line.isdigit():
-            continue
-        line = re.sub(r"<[^>]+>", "", line)
-        if line and line not in seen:
-            seen.add(line)
-            lines.append(line)
-    return " ".join(lines)
+    """Fallback plain text from VTT with rolling-cue de-overlap."""
+    cues = _parse_caption_cues(vtt)
+    prev_toks: list[str] = []
+    parts: list[str] = []
+    for _, _, body in cues:
+        plain = _strip_cue_text(body)
+        toks = [t for t in plain.split() if not _is_noise_token(t)]
+        new_toks = _new_suffix(prev_toks, toks)
+        prev_toks = toks
+        if new_toks:
+            parts.append(" ".join(new_toks))
+    return " ".join(parts)
+
+
+def find_saved_captions(source_dir: Path) -> Path | None:
+    """Prefer cleaned en.vtt over en-orig when both exist."""
+    sub = source_dir / "_subs"
+    if not sub.is_dir():
+        return None
+    vtts = sorted(sub.rglob("*.vtt")) + sorted(sub.rglob("*.srt"))
+    if not vtts:
+        return None
+    # Prefer non-orig english track when available
+    preferred = [p for p in vtts if "orig" not in p.name.lower()]
+    return (preferred or vtts)[0]
+
+
+def reparse_source_captions(source_id: str) -> dict[str, Any] | None:
+    """Re-parse saved captions into transcript.json + bites.json."""
+    d = SOURCES_DIR / source_id
+    if not d.is_dir():
+        return None
+    cap = find_saved_captions(d)
+    if not cap:
+        return None
+    raw = cap.read_text(encoding="utf-8", errors="ignore")
+    text, words = _captions_to_words(raw)
+    if not words:
+        return None
+    bites = segment_words(words)
+    duration = words[-1]["end"] if words else 0
+    with (d / "transcript.json").open("w", encoding="utf-8") as f:
+        json.dump({"text": text, "words": words}, f, ensure_ascii=False, indent=2)
+    with (d / "bites.json").open("w", encoding="utf-8") as f:
+        json.dump({"bites": bites}, f, ensure_ascii=False, indent=2)
+    meta_path = d / "meta.json"
+    if meta_path.exists():
+        with meta_path.open(encoding="utf-8") as f:
+            meta = json.load(f)
+        meta["has_transcript"] = True
+        meta["duration_sec"] = round(duration)
+        with meta_path.open("w", encoding="utf-8") as f:
+            json.dump(meta, f, ensure_ascii=False, indent=2)
+    return {"id": source_id, "words": len(words), "bites": len(bites), "captions": str(cap)}
+
+
+if __name__ == "__main__":
+    import sys
+
+    ids = [a for a in sys.argv[1:] if not a.startswith("-")]
+    if not ids:
+        ids = [
+            d.name
+            for d in sorted(SOURCES_DIR.iterdir())
+            if d.is_dir() and find_saved_captions(d)
+        ]
+    for sid in ids:
+        result = reparse_source_captions(sid)
+        print(result or f"skip {sid}: no saved captions")

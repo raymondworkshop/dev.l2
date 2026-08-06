@@ -1,6 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { api } from '../api'
+
+function displayUrl(raw) {
+  try {
+    const u = new URL(raw)
+    const host = u.hostname.replace(/^www\./, '')
+    const path = `${u.pathname}${u.search}`
+    const short = path === '/' ? host : `${host}${path}`
+    return short.length > 56 ? `${short.slice(0, 53)}…` : short
+  } catch {
+    return raw.length > 56 ? `${raw.slice(0, 53)}…` : raw
+  }
+}
 
 export default function Inbox() {
   const navigate = useNavigate()
@@ -12,6 +24,10 @@ export default function Inbox() {
   const [status, setStatus] = useState('')
   const [error, setError] = useState('')
   const [lastIngest, setLastIngest] = useState(null)
+  /** Older months: user-opened; newest month is always expanded */
+  const [openMonths, setOpenMonths] = useState(() => new Set())
+  const [playingId, setPlayingId] = useState(null)
+  const audioRef = useRef(null)
 
   async function refresh() {
     try {
@@ -25,6 +41,81 @@ export default function Inbox() {
   useEffect(() => {
     refresh()
   }, [])
+
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current = null
+      }
+    }
+  }, [])
+
+  function stopListen() {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+      audioRef.current = null
+    }
+    setPlayingId(null)
+  }
+
+  function listenSource(id) {
+    if (playingId === id) {
+      stopListen()
+      return
+    }
+    stopListen()
+    const a = new Audio(`/api/sources/${id}/audio`)
+    audioRef.current = a
+    setPlayingId(id)
+    a.onended = () => {
+      audioRef.current = null
+      setPlayingId(null)
+    }
+    a.onerror = () => {
+      audioRef.current = null
+      setPlayingId(null)
+      setError('Audio failed to play.')
+    }
+    a.play().catch(() => {
+      audioRef.current = null
+      setPlayingId(null)
+      setError('Audio failed to play.')
+    })
+  }
+
+  function toggleMonth(key) {
+    setOpenMonths((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }
+
+  const groups = useMemo(() => {
+    const sorted = [...sources].sort((a, b) =>
+      String(b.created || '').localeCompare(String(a.created || '')),
+    )
+    const buckets = new Map()
+    for (const s of sorted) {
+      const created = s.created || ''
+      const key = created.length >= 7 ? created.slice(0, 7) : '未知'
+      if (!buckets.has(key)) buckets.set(key, [])
+      buckets.get(key).push(s)
+    }
+    const keys = [...buckets.keys()].sort((a, b) => {
+      if (a === '未知') return 1
+      if (b === '未知') return -1
+      return b.localeCompare(a)
+    })
+    return keys.map((key) => {
+      const [, y, m] = key.match(/^(\d{4})-(\d{2})$/) || []
+      const label = y ? `${y}年${Number(m)}月` : key
+      return { key, label, entries: buckets.get(key) }
+    })
+  }, [sources])
 
   async function startPrep(e) {
     e.preventDefault()
@@ -66,6 +157,7 @@ export default function Inbox() {
   async function removeSource(id, title) {
     if (!window.confirm(`Delete “${title}”?`)) return
     try {
+      if (playingId === id) stopListen()
       await api.deleteSource(id)
       await refresh()
     } catch (e) {
@@ -127,37 +219,103 @@ export default function Inbox() {
         </div>
       </form>
 
-      <h2 className="page-title page-title-sm">Recent</h2>
-      <ul className="list">
-        {sources.map((s) => (
-          <li key={s.id} className="list-item">
-            <div>
-              <h3>{s.title}</h3>
-              <p>
-                {s.duration_sec ? `~${s.duration_sec}s` : 'clip'} · {s.accent || 'US'}
-                {s.has_audio ? ' · audio' : ' · no audio'}
-                {s.has_transcript ? ' · transcript' : ' · no transcript'}
-              </p>
-            </div>
-            <div className="actions">
-              <Link className="btn btn-ghost" to={`/prep/${s.id}`}>
-                Prep
-              </Link>
-              <Link className="btn btn-soft" to={`/echo/${s.id}`}>
-                Echo
-              </Link>
-              <button
-                type="button"
-                className="btn btn-danger"
-                onClick={() => removeSource(s.id, s.title)}
+      <div className="inbox-months">
+        {!groups.length ? (
+          <p className="muted">No clips yet.</p>
+        ) : (
+          groups.map((g, i) => {
+            const expanded = i === 0 || openMonths.has(g.key)
+            const titleNode = (
+              <>
+                {g.label} <span className="muted">{g.entries.length}</span>
+              </>
+            )
+            return (
+              <section
+                key={g.key}
+                className={`month-group${expanded ? '' : ' is-collapsed'}`}
               >
-                Delete
-              </button>
-            </div>
-          </li>
-        ))}
-        {!sources.length ? <li className="muted">No clips yet.</li> : null}
-      </ul>
+                <div className="month-head">
+                  <h2>
+                    {i === 0 ? (
+                      titleNode
+                    ) : (
+                      <button
+                        type="button"
+                        className="month-toggle"
+                        aria-expanded={expanded}
+                        onClick={() => toggleMonth(g.key)}
+                      >
+                        <span className="month-chevron" aria-hidden>
+                          {expanded ? '▾' : '▸'}
+                        </span>
+                        {titleNode}
+                      </button>
+                    )}
+                  </h2>
+                </div>
+                {expanded ? (
+                  <ul className="list">
+                    {g.entries.map((s) => {
+                      const isPlaying = playingId === s.id
+                      return (
+                        <li
+                          key={s.id}
+                          className={`list-item list-item-stack${isPlaying ? ' is-playing' : ''}`}
+                        >
+                          <div>
+                            <h3>
+                              <Link className="clip-title" to={`/prep/${s.id}`}>
+                                {s.title}
+                              </Link>
+                            </h3>
+                            <p>
+                              {s.duration_sec ? `~${s.duration_sec}s` : 'clip'} ·{' '}
+                              {s.accent || 'US'}
+                              {s.has_audio ? ' · audio' : ' · no audio'}
+                              {s.has_transcript ? ' · transcript' : ' · no transcript'}
+                            </p>
+                            {s.url ? (
+                              <a
+                                className="source-url"
+                                href={s.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {displayUrl(s.url)}
+                              </a>
+                            ) : null}
+                          </div>
+                          <div className="item-actions">
+                            <button
+                              type="button"
+                              className="btn"
+                              disabled={!s.has_audio}
+                              onClick={() => listenSource(s.id)}
+                            >
+                              {isPlaying ? 'Stop' : 'Listen'}
+                            </button>
+                            <Link className="text-link" to={`/echo/${s.id}`}>
+                              Echo
+                            </Link>
+                            <button
+                              type="button"
+                              className="text-link text-link-danger"
+                              onClick={() => removeSource(s.id, s.title)}
+                            >
+                              Delete
+                            </button>
+                          </div>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                ) : null}
+              </section>
+            )
+          })
+        )}
+      </div>
     </div>
   )
 }

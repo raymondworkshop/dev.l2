@@ -13,7 +13,8 @@ PLIST_DEST := $(HOME)/Library/LaunchAgents/$(PLIST_ID).plist
 UI_DOMAIN  := gui/$$(id -u)
 
 .PHONY: help setup install install-web env build run api web start synthesize clean-pyc \
-	service-install service-uninstall service-start service-stop service-restart service-status service-logs
+	service-install service-uninstall service-start service-stop service-restart service-status service-logs \
+	reparse-captions
 
 help:
 	@echo "Echo Makefile"
@@ -24,6 +25,7 @@ help:
 	@echo "  make start              build then run (foreground)"
 	@echo "  make web                Vite hot-reload :5173"
 	@echo "  make synthesize         Neural US TTS (SOURCE=id)"
+	@echo "  make reparse-captions   Re-parse saved _subs → transcript/bites"
 	@echo ""
 	@echo "  Default background service (login + KeepAlive):"
 	@echo "  make service-install    Install + start LaunchAgent (do once)"
@@ -66,6 +68,9 @@ web:
 SOURCE ?= fixture-npr-climate
 synthesize:
 	$(PYTHON) $(ROOT)/server/synthesize.py $(SOURCE)
+
+reparse-captions:
+	$(PYTHON) $(ROOT)/server/sources.py $(ID)
 
 clean-pyc:
 	find $(ROOT) -type d -name __pycache__ -not -path '$(ROOT)/.venv/*' -exec rm -rf {} + 2>/dev/null || true

@@ -1,5 +1,356 @@
 [
   {
+    "surface": "roll",
+    "kind": "unknown",
+    "gloss_zh": "v. （使）翻滚，滚动；（使）翻身，翻转；行驶，开动；（机器）转动，运转；（液体）滚落，滑落；使……成球状（或管状）；使平坦，压平；把（衣服的边）卷起来；（使）摇摆，摇晃；（使）原地转圈，翻白眼；摇（车窗），卷（窗帘等）；发出持续的声音；（时间）流逝；（产品）从（流水线，机器）产出；<非正式>盗窃；连获成功；n. 卷，卷轴；卷状食品；赘肉，肥肉；名单，花名册",
+    "ipa": "/ɹoʊl/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/roll-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T07:30:52.375152+00:00"
+  },
+  {
+    "surface": "dismissive",
+    "kind": "unknown",
+    "gloss_zh": "adj. 轻蔑的，鄙视的，不加考虑的，不屑一顾的",
+    "ipa": "/dɪsˈmɪs.ɪv/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=dismissive&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T06:13:54.848466+00:00"
+  },
+  {
+    "surface": "depart",
+    "kind": "unknown",
+    "gloss_zh": "v. 启程，出发；背离，违背；离职",
+    "ipa": "/dɪˈpɑɹt/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/depart-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T05:57:36.510059+00:00"
+  },
+  {
+    "surface": "sanitize",
+    "kind": "unknown",
+    "gloss_zh": "vt. 使……无害；给……消毒；对……采取卫生措施",
+    "ipa": "/ˈsænɪtaɪz/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=sanitize&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-05T10:05:09.329241+00:00"
+  },
+  {
+    "surface": "newsletter",
+    "kind": "unknown",
+    "gloss_zh": "n. （机构定期寄发给成员的）通讯，简报",
+    "ipa": "/ˈnjuːzˌlɛtə/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=newsletter&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-05T08:39:12.754342+00:00"
+  },
+  {
+    "surface": "cause",
+    "kind": "unknown",
+    "gloss_zh": "n. 原因；事业；理由；v. 引起",
+    "ipa": "/kɔz/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/cause-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-05T03:37:02.793266+00:00"
+  },
+  {
+    "surface": "moat",
+    "kind": "unknown",
+    "gloss_zh": "n. 护城河；壕沟；vt. 将……围以壕沟",
+    "ipa": "/moʊt/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=moat&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-04T08:37:00.908297+00:00"
+  },
+  {
+    "surface": "instalment",
+    "kind": "unknown",
+    "gloss_zh": "n. （分期付款的）一期付款；（连载故事的）一节，（电视连续剧的）一集；安装，安置；就任，就职",
+    "ipa": "/ɪnˈstɔːlmənt/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=instalment&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-04T03:01:12.143066+00:00"
+  },
+  {
+    "surface": "loan",
+    "kind": "unknown",
+    "gloss_zh": "n. 贷款，借款；借用，借出；<苏格兰>（尤指通向开阔地的）小径；（未开垦的开阔的）挤奶牧场；v. 借出，借给",
+    "ipa": "/loʊn/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/loan-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-04T03:00:45.076512+00:00"
+  },
+  {
+    "surface": "insult",
+    "kind": "unknown",
+    "gloss_zh": "v. 侮辱，冒犯；损害，危害；n. 侮辱，冒犯；（医）（对组织、器官的）损伤",
+    "ipa": "/ɪnˈsʌlt/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/insult-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T03:06:29.397326+00:00"
+  },
+  {
+    "surface": "intervention",
+    "kind": "unknown",
+    "gloss_zh": "n. 干预，介入；调停，斡旋；（为改善情况尤指病痛采取的）措施，做法",
+    "ipa": "/ɪntəˈvɛnʃən/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=intervention&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T03:03:29.324051+00:00"
+  },
+  {
+    "surface": "blanket",
+    "kind": "unknown",
+    "gloss_zh": "n. 毯子，毛毯；厚层，覆盖层；气氛，氛围；障碍，障碍物；（平版印刷的）橡皮布；（平版印刷的）橡皮；v. 覆盖，盖住，笼罩；消除（声音），使（声音）模糊不清；迎风航行抢（他船）的上风；adj. 总括的，全面的，通用的",
+    "ipa": "/ˈblæŋkɪt/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/blanket-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T02:46:47.189398+00:00"
+  },
+  {
+    "surface": "exaggerate",
+    "kind": "unknown",
+    "gloss_zh": "v. 夸大，言过其实；使扩大",
+    "ipa": "/ɛɡˈzæ.dʒə.ɹeɪt/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/exaggerate-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T02:46:06.111444+00:00"
+  },
+  {
+    "surface": "antithetical",
+    "kind": "unknown",
+    "gloss_zh": "adj. 对立的，正相反的",
+    "ipa": "/ˌæntɪˈθetɪk(ə)l/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=antithetical&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T02:44:59.748863+00:00"
+  },
+  {
+    "surface": "dystopian",
+    "kind": "unknown",
+    "gloss_zh": "adj. 反面假想国的；反面乌托邦的；n. 反面乌托邦的鼓吹者",
+    "ipa": "/dɪs.ˈtoʊ.pi.ən/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=dystopian&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T02:39:32.901106+00:00"
+  },
+  {
+    "surface": "absurd",
+    "kind": "unknown",
+    "gloss_zh": "adj. 愚蠢的，荒谬的；滑稽可笑的；荒诞派的；n. 荒诞，荒诞的事物 （the absurd）",
+    "ipa": "/æbˈsɝd/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/absurd-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T02:35:29.790877+00:00"
+  },
+  {
+    "surface": "fraud",
+    "kind": "unknown",
+    "gloss_zh": "n. 欺诈，骗局，诡计；骗子；伪劣品，冒牌货；【名】 （Fraud）（法）弗罗（人名）",
+    "ipa": "/fɹɔd/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=fraud&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-02T02:27:56.974925+00:00"
+  },
+  {
+    "surface": "Aurora",
+    "kind": "unknown",
+    "gloss_zh": "n. 极光；晨曦；（Aurora）奥罗拉（古罗马神话中的黎明女神）；（Aurora）奥罗拉（美国科罗拉多州城市）；（Aurora）奥罗拉（美国伊利诺伊州城市）",
+    "ipa": "/ɔːˈɹɔː.ɹə/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=aurora&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T12:45:46.695195+00:00"
+  },
+  {
+    "surface": "tokyo",
+    "kind": "unknown",
+    "gloss_zh": "n. 东京（日本首都）",
+    "ipa": "/ˈtoʊkioʊ/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=tokyo&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:22:40.608573+00:00"
+  },
+  {
+    "surface": "madrid",
+    "kind": "unknown",
+    "gloss_zh": "n. 马德里（西班牙首都）",
+    "ipa": "/məˈdrɪd/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=madrid&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:22:25.936917+00:00"
+  },
+  {
+    "surface": "slap",
+    "kind": "unknown",
+    "gloss_zh": "v. （用手掌）打，拍；拍打，拍击；（尤指生气地）啪的一声放下，随意扔放；（快速地、随意地或用力地）涂抹（某物）；甩击；侮辱；n. 拍，掌击；掌击声，拍打声；<英，非正式>（厚厚地或随意涂抹的）化妆品；侮辱；adv. <非正式> 直接地，猛然；<非正式> 恰好，正好；adj. 精力不足的，效率不高的；（食物）松软的，过于柔软的",
+    "ipa": "/slæp/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=slap&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:17:40.777081+00:00"
+  },
+  {
+    "surface": "thong",
+    "kind": "unknown",
+    "gloss_zh": "n. 皮带；皮鞭；人字拖鞋；vt. 鞭打；给……装上皮带；n. （Thong）人名；（中）唐（广东话·威妥玛）；（泰、老、柬）通",
+    "ipa": "/θɔːŋ/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=thong&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:16:54.384418+00:00"
+  },
+  {
+    "surface": "bust",
+    "kind": "unknown",
+    "gloss_zh": "n. 半身像；女子胸部，胸围；突击搜查；没价值的事物；经济萧条时期；v. 弄坏，打碎；逮捕；降级；阻止，破坏；突袭，搜查；猛烈打击；打破，炸破；adj. 坏掉的；破产的；【名】 （Bust）（英、美、德）布斯特（人名）",
+    "ipa": "/ˈbʌst/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/bust-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:15:26.214748+00:00"
+  },
+  {
+    "surface": "military",
+    "kind": "unknown",
+    "gloss_zh": "adj. 军事的，军队的；陆军的；军人般的，军人作风的；n. 军人，军方",
+    "ipa": "/ˈmɪl.ɪ.tɛɹ.i/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/military-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:13:43.201886+00:00"
+  },
+  {
+    "surface": "tourist",
+    "kind": "unknown",
+    "gloss_zh": "n. 旅行者，观光客；<英>（在国外参加）巡回比赛的运动队队员；经济舱；adj. 旅游者的，游客的；v. <罕>旅行；adv. 坐旅游车厢，坐经济舱",
+    "ipa": "/ˈtʊəɹɪst/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=tourist&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:11:22.086468+00:00"
+  },
+  {
+    "surface": "fanny pack",
+    "kind": "unknown",
+    "gloss_zh": "臀包：一种绑在腰部用于携带个人物品的包。",
+    "ipa": "/ˈfæni pæk/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=fanny pack&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T10:11:08.570769+00:00"
+  },
+  {
+    "surface": "heuristic",
+    "kind": "unknown",
+    "gloss_zh": "adj. （教学或教育）启发式的；（计算机程序）探试的，探索的；n. 启发式步骤（或方法）",
+    "ipa": "/hjuˈɹɪstɪk/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/heuristic-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-07-31T04:26:13.472977+00:00"
+  },
+  {
     "surface": "genial",
     "kind": "unknown",
     "gloss_zh": "adj. 亲切的，友好的；和蔼的；适宜的",
