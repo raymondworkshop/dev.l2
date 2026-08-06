@@ -1,5 +1,135 @@
 [
   {
+    "surface": "toggle",
+    "kind": "unknown",
+    "gloss_zh": "n. 套索扣，栓扣钉；转换键，切换键；系墙螺栓；（鱼叉上的）转动倒钩；v. （计算机）切换，转换；为…配备棒形纽扣（或倒钩），用绳针拴牢，用系墙螺栓拧紧",
+    "ipa": "/ˈtɑ.ɡəl/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/toggle-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T10:06:11.296169+00:00"
+  },
+  {
+    "surface": "golf",
+    "kind": "unknown",
+    "gloss_zh": "n. 高尔夫球运动；（无线通讯中的）字母G的代码；v. 打高尔夫球；【名】 （Golf）（西、挪）戈尔夫（人名）",
+    "ipa": "/ɡɑlf/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/golf-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T09:16:54.165380+00:00"
+  },
+  {
+    "surface": "vitamin",
+    "kind": "unknown",
+    "gloss_zh": "n. 维生素，维他命；维生素片，维生素丸",
+    "ipa": "/ˈvaɪtəmɪn/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=vitamin&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T09:00:25.484459+00:00"
+  },
+  {
+    "surface": "panacea",
+    "kind": "unknown",
+    "gloss_zh": "n. 灵丹妙药；万能药",
+    "ipa": "/ˌpænəˈsiːə/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=panacea&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T08:53:39.347401+00:00"
+  },
+  {
+    "surface": "presume",
+    "kind": "unknown",
+    "gloss_zh": "v. 料想，（不肯定地）认为；假设，设想；（法律上或官方）假定，推定；擅自，冒昧；意味着；<正式>擅作主张，冒昧",
+    "ipa": "/pɹiˈz(j)um/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/presume-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T08:53:19.722389+00:00"
+  },
+  {
+    "surface": "virtue",
+    "kind": "unknown",
+    "gloss_zh": "n. 高尚的道德，德行；美德，优秀品质；优点，长处；<古>（尤指妇女的）贞操；功效；（传统基督教天使学）道德天使（天国九级制度的第七级）（virtues）；【名】 （Virtue）弗丘（人名）",
+    "ipa": "/ˈvɜːrtʃuː/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=virtue&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T08:52:49.718185+00:00"
+  },
+  {
+    "surface": "extol",
+    "kind": "unknown",
+    "gloss_zh": "vt. 颂扬；赞美；赞颂",
+    "ipa": "/ɪkˈstoʊl/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=extol&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T08:52:38.050310+00:00"
+  },
+  {
+    "surface": "fleet",
+    "kind": "unknown",
+    "gloss_zh": "n. 船队，舰队；（某家公司控制的）车队；小湾，水道；adj. <文>快速的；快速的；（水）浅的；adv. 浅，不深地；v. <文>疾驰，飞逝",
+    "ipa": "/flit/",
+    "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/fleet-us.mp3",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T08:51:56.833002+00:00"
+  },
+  {
+    "surface": "habitat",
+    "kind": "unknown",
+    "gloss_zh": "n. （动植物的）生活环境，栖息地；【名】 （Habitat）（德）哈比塔特（人名）",
+    "ipa": "/ˈhæbɪtæt/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=habitat&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T08:33:05.614536+00:00"
+  },
+  {
+    "surface": "penguin",
+    "kind": "unknown",
+    "gloss_zh": "n. 企鹅；空军地勤人员",
+    "ipa": "/ˈpeŋɡwɪn/",
+    "audio_url": "https://dict.youdao.com/dictvoice?audio=penguin&type=2",
+    "context": {
+      "source_id": "",
+      "clause": "manual"
+    },
+    "count": 1,
+    "updated": "2026-08-06T08:32:49.636796+00:00"
+  },
+  {
     "surface": "roll",
     "kind": "unknown",
     "gloss_zh": "v. （使）翻滚，滚动；（使）翻身，翻转；行驶，开动；（机器）转动，运转；（液体）滚落，滑落；使……成球状（或管状）；使平坦，压平；把（衣服的边）卷起来；（使）摇摆，摇晃；（使）原地转圈，翻白眼；摇（车窗），卷（窗帘等）；发出持续的声音；（时间）流逝；（产品）从（流水线，机器）产出；<非正式>盗窃；连获成功；n. 卷，卷轴；卷状食品；赘肉，肥肉；名单，花名册",

@@ -14,6 +14,8 @@ export const api = {
   sources: () => req('/api/sources'),
   source: (id) => req(`/api/sources/${id}`),
   deleteSource: (id) => req(`/api/sources/${id}`, { method: 'DELETE' }),
+  patchSource: (id, body) =>
+    req(`/api/sources/${id}`, { method: 'PATCH', body: JSON.stringify(body) }),
   ingest: (body) => req('/api/ingest', { method: 'POST', body: JSON.stringify(body) }),
   lexicon: (kind) => req(kind ? `/api/lexicon?kind=${kind}` : '/api/lexicon'),
   saveWord: (body) => req('/api/lexicon', { method: 'POST', body: JSON.stringify(body) }),

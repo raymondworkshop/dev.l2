@@ -14,11 +14,24 @@ function displayUrl(raw) {
   }
 }
 
+function sourceLabels(s) {
+  return Array.isArray(s?.labels) ? s.labels : []
+}
+
+/** Parse "todo, shadow" or "todo shadow" into label list. */
+function parseLabelInput(raw) {
+  return String(raw || '')
+    .split(/[,\s]+/)
+    .map((p) => p.trim().toLowerCase())
+    .filter(Boolean)
+}
+
 export default function Inbox() {
   const navigate = useNavigate()
   const [sources, setSources] = useState([])
   const [url, setUrl] = useState('')
   const [title, setTitle] = useState('')
+  const [labelsInput, setLabelsInput] = useState('')
   const [text, setText] = useState('')
   const [busy, setBusy] = useState(false)
   const [status, setStatus] = useState('')
@@ -27,6 +40,7 @@ export default function Inbox() {
   /** Older months: user-opened; newest month is always expanded */
   const [openMonths, setOpenMonths] = useState(() => new Set())
   const [playingId, setPlayingId] = useState(null)
+  const [labelFilter, setLabelFilter] = useState('all')
   const audioRef = useRef(null)
 
   async function refresh() {
@@ -94,8 +108,35 @@ export default function Inbox() {
     })
   }
 
+  const usedLabels = useMemo(() => {
+    const counts = new Map()
+    for (const s of sources) {
+      for (const lab of sourceLabels(s)) {
+        counts.set(lab, (counts.get(lab) || 0) + 1)
+      }
+    }
+    return [...counts.entries()]
+      .sort((a, b) => {
+        if (a[0] === 'todo') return -1
+        if (b[0] === 'todo') return 1
+        return a[0].localeCompare(b[0])
+      })
+      .map(([key, count]) => ({ key, count }))
+  }, [sources])
+
+  useEffect(() => {
+    if (labelFilter !== 'all' && !usedLabels.some((l) => l.key === labelFilter)) {
+      setLabelFilter('all')
+    }
+  }, [usedLabels, labelFilter])
+
+  const filtered = useMemo(() => {
+    if (labelFilter === 'all') return sources
+    return sources.filter((s) => sourceLabels(s).includes(labelFilter))
+  }, [sources, labelFilter])
+
   const groups = useMemo(() => {
-    const sorted = [...sources].sort((a, b) =>
+    const sorted = [...filtered].sort((a, b) =>
       String(b.created || '').localeCompare(String(a.created || '')),
     )
     const buckets = new Map()
@@ -115,7 +156,27 @@ export default function Inbox() {
       const label = y ? `${y}年${Number(m)}月` : key
       return { key, label, entries: buckets.get(key) }
     })
-  }, [sources])
+  }, [filtered])
+
+  async function patchLabels(id, labels) {
+    try {
+      const meta = await api.patchSource(id, { labels })
+      setSources((prev) => prev.map((s) => (s.id === id ? { ...s, labels: meta.labels || [] } : s)))
+    } catch (e) {
+      setError(e.message)
+    }
+  }
+
+  /** Click URL line → edit labels (same idea as Title field). */
+  async function editLabels(s) {
+    const current = sourceLabels(s).join(', ')
+    const raw = window.prompt(
+      'Labels (comma-separated, e.g. todo, shadow). Clear to remove all.',
+      current,
+    )
+    if (raw == null) return
+    await patchLabels(s.id, parseLabelInput(raw))
+  }
 
   async function startPrep(e) {
     e.preventDefault()
@@ -134,8 +195,10 @@ export default function Inbox() {
           url: url.trim(),
           title: title.trim(),
           text: text.trim(),
+          labels: parseLabelInput(labelsInput),
         })
         setLastIngest(meta)
+        setLabelsInput('')
         await refresh()
       } else if (sources[0]) {
         navigate(`/prep/${sources[0].id}`)
@@ -154,8 +217,8 @@ export default function Inbox() {
     }
   }
 
-  async function removeSource(id, title) {
-    if (!window.confirm(`Delete “${title}”?`)) return
+  async function removeSource(id, clipTitle) {
+    if (!window.confirm(`Delete “${clipTitle}”?`)) return
     try {
       if (playingId === id) stopListen()
       await api.deleteSource(id)
@@ -193,6 +256,15 @@ export default function Inbox() {
           />
         </div>
         <div className="field">
+          <label htmlFor="labels">Labels (optional)</label>
+          <input
+            id="labels"
+            placeholder="todo, shadow, rachel…"
+            value={labelsInput}
+            onChange={(e) => setLabelsInput(e.target.value)}
+          />
+        </div>
+        <div className="field">
           <label htmlFor="text">Transcript (optional if the URL has captions)</label>
           <textarea
             id="text"
@@ -219,9 +291,35 @@ export default function Inbox() {
         </div>
       </form>
 
+      {usedLabels.length ? (
+        <div className="filters">
+          <button
+            type="button"
+            className={`chip${labelFilter === 'all' ? ' active' : ''}`}
+            onClick={() => setLabelFilter('all')}
+          >
+            全部 <span className="muted">{sources.length}</span>
+          </button>
+          {usedLabels.map(({ key, count }) => (
+            <button
+              key={key}
+              type="button"
+              className={`chip${labelFilter === key ? ' active' : ''}`}
+              onClick={() => setLabelFilter(key)}
+            >
+              {key} <span className="muted">{count}</span>
+            </button>
+          ))}
+        </div>
+      ) : null}
+
       <div className="inbox-months">
         {!groups.length ? (
-          <p className="muted">No clips yet.</p>
+          <p className="muted">
+            {labelFilter === 'all'
+              ? 'No clips yet.'
+              : `No clips labeled “${labelFilter}”.`}
+          </p>
         ) : (
           groups.map((g, i) => {
             const expanded = i === 0 || openMonths.has(g.key)
@@ -258,6 +356,7 @@ export default function Inbox() {
                   <ul className="list">
                     {g.entries.map((s) => {
                       const isPlaying = playingId === s.id
+                      const labels = sourceLabels(s)
                       return (
                         <li
                           key={s.id}
@@ -285,8 +384,31 @@ export default function Inbox() {
                                 {displayUrl(s.url)}
                               </a>
                             ) : null}
+                            {labels.length ? (
+                              <button
+                                type="button"
+                                className="source-labels-edit"
+                                title="Edit labels"
+                                onClick={() => editLabels(s)}
+                              >
+                                <span className="source-labels">
+                                  {labels.map((lab) => (
+                                    <span key={lab} className="label-pill label-pill-static">
+                                      {lab}
+                                    </span>
+                                  ))}
+                                </span>
+                              </button>
+                            ) : null}
                           </div>
                           <div className="item-actions">
+                            <button
+                              type="button"
+                              className="text-link"
+                              onClick={() => editLabels(s)}
+                            >
+                              Label
+                            </button>
                             <button
                               type="button"
                               className="btn"

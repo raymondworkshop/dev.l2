@@ -58,6 +58,7 @@ def list_sources() -> list[dict[str, Any]]:
                 meta["has_transcript"] = False
         else:
             meta["has_transcript"] = False
+        meta["labels"] = _normalize_labels(meta.get("labels"))
         out.append(meta)
     return out
 
@@ -147,13 +148,14 @@ def _write_source(
     return meta
 
 
-def ingest_text(title: str, text: str, url: str = "") -> dict[str, Any]:
+def ingest_text(title: str, text: str, url: str = "", labels: list[str] | None = None) -> dict[str, Any]:
     text = text.strip()
     if not text:
         raise ValueError("transcript text required")
     title = (title or "Untitled clip").strip()
     source_id = _slug(title)
-    meta = _write_source(source_id, title, url, text)
+    extra = {"labels": _normalize_labels(labels or [])}
+    meta = _write_source(source_id, title, url, text, extra_meta=extra)
     try:
         from synthesize import synthesize
         import asyncio
@@ -194,6 +196,59 @@ def delete_source(source_id: str) -> bool:
     return True
 
 
+_LABEL_RE = re.compile(r"^[a-z0-9][a-z0-9\-_]{0,31}$")
+
+
+def _normalize_label(raw: str) -> str | None:
+    s = (raw or "").strip().lower().replace(" ", "-")
+    s = re.sub(r"[^a-z0-9\-_]", "", s)
+    if not s or not _LABEL_RE.match(s):
+        return None
+    return s
+
+
+def _normalize_labels(raw: Any) -> list[str]:
+    if not isinstance(raw, list):
+        return []
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in raw:
+        lab = _normalize_label(str(item))
+        if lab and lab not in seen:
+            seen.add(lab)
+            out.append(lab)
+    return out
+
+
+def update_source_labels(source_id: str, labels: list[str] | None = None, *, add: str | None = None, remove: str | None = None) -> dict[str, Any] | None:
+    """Set or toggle labels on a source. Returns updated meta or None."""
+    if not source_id or "/" in source_id or "\\" in source_id:
+        return None
+    d = SOURCES_DIR / source_id
+    meta_path = d / "meta.json"
+    if not meta_path.exists():
+        return None
+    with meta_path.open(encoding="utf-8") as f:
+        meta = json.load(f)
+    current = _normalize_labels(meta.get("labels"))
+    if labels is not None:
+        current = _normalize_labels(labels)
+    else:
+        if add:
+            lab = _normalize_label(add)
+            if lab and lab not in current:
+                current.append(lab)
+        if remove:
+            lab = _normalize_label(remove)
+            if lab:
+                current = [x for x in current if x != lab]
+    meta["labels"] = current
+    meta["id"] = meta.get("id") or source_id
+    with meta_path.open("w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    return meta
+
+
 def _http_get(url: str, timeout: int = 60) -> Any:
     import requests
 
@@ -228,7 +283,9 @@ def _clean_bbc_transcript(text: str) -> str:
     return " ".join(lines)
 
 
-def ingest_bbc_learning_english(url: str, title: str = "") -> dict[str, Any]:
+def ingest_bbc_learning_english(
+    url: str, title: str = "", labels: list[str] | None = None
+) -> dict[str, Any]:
     """BBC Learning English pages expose direct MP3 + transcript PDF — skip yt-dlp/ffmpeg."""
     warnings: list[str] = []
     try:
@@ -327,6 +384,7 @@ def ingest_bbc_learning_english(url: str, title: str = "") -> dict[str, Any]:
         extra_meta={
             "has_audio": True,
             "accent": "UK",
+            "labels": _normalize_labels(labels or []),
             "ingest": {
                 "ok": True,
                 "audio": True,
@@ -344,7 +402,7 @@ def ingest_bbc_learning_english(url: str, title: str = "") -> dict[str, Any]:
     return meta
 
 
-def ingest_url(url: str, title: str = "") -> dict[str, Any]:
+def ingest_url(url: str, title: str = "", labels: list[str] | None = None) -> dict[str, Any]:
     """Download audio + captions. BBC Learning English uses direct MP3/PDF; else yt-dlp."""
     url = url.strip()
     if not url:
@@ -355,7 +413,7 @@ def ingest_url(url: str, title: str = "") -> dict[str, Any]:
         raise ValueError("url must be http(s)")
 
     if _is_bbc_learning_english(url):
-        return ingest_bbc_learning_english(url, title=title)
+        return ingest_bbc_learning_english(url, title=title, labels=labels)
 
     yt = _yt_dlp()
     if not yt:
@@ -472,6 +530,7 @@ def ingest_url(url: str, title: str = "") -> dict[str, Any]:
         extra_meta={
             "has_audio": has_audio,
             "source_duration_sec": duration_hint or None,
+            "labels": _normalize_labels(labels or []),
             "ingest": {
                 "ok": has_audio or bool(transcript_text and not transcript_text.startswith("[")),
                 "audio": has_audio,

@@ -456,6 +456,64 @@ textarea {
   text-decoration: underline;
 }
 
+.source-labels-edit {
+  display: block;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.source-labels-edit:hover .muted {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+.label-pill-static {
+  cursor: inherit;
+}
+
+.label-pill-static:hover {
+  border-color: var(--line);
+  color: var(--teal);
+  background: var(--teal-wash);
+}
+
+.source-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.45rem;
+}
+
+.label-pill {
+  margin: 0;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--teal-wash);
+  color: var(--teal);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.label-pill:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: #fff;
+}
+
+.chip-todo {
+  padding: 0.25rem 0.7rem;
+  font-size: 0.85rem;
+}
+
 .muted {
   color: var(--ink-soft);
   font-size: 0.92rem;

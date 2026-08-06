@@ -15,5 +15,6 @@
     "mode": "yt-dlp",
     "warnings": [],
     "yt_dlp": "/Users/zhaowenlong/workspace/dev.english/.venv/bin/yt-dlp"
-  }
+  },
+  "labels": []
 }

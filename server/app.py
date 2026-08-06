@@ -58,17 +58,47 @@ def api_delete_source(source_id: str):
     return jsonify({"error": "not found"}), 404
 
 
+@app.patch("/api/sources/<source_id>")
+def api_patch_source(source_id: str):
+    body = request.get_json(force=True, silent=True) or {}
+    labels = body.get("labels")
+    add = body.get("add_label")
+    remove = body.get("remove_label")
+    if labels is None and not add and not remove:
+        return jsonify({"error": "labels, add_label, or remove_label required"}), 400
+    if labels is not None and not isinstance(labels, list):
+        return jsonify({"error": "labels must be a list"}), 400
+    meta = sources.update_source_labels(
+        source_id,
+        labels=labels if isinstance(labels, list) else None,
+        add=str(add) if add else None,
+        remove=str(remove) if remove else None,
+    )
+    if not meta:
+        return jsonify({"error": "not found"}), 404
+    return jsonify(meta)
+
+
 @app.post("/api/ingest")
 def api_ingest():
     body = request.get_json(force=True, silent=True) or {}
     url = (body.get("url") or "").strip()
     text = (body.get("text") or "").strip()
     title = (body.get("title") or "").strip()
+    raw_labels = body.get("labels")
+    if isinstance(raw_labels, str):
+        labels = [p.strip() for p in raw_labels.replace(",", " ").split() if p.strip()]
+    elif isinstance(raw_labels, list):
+        labels = raw_labels
+    else:
+        labels = []
     try:
         if text:
-            meta = sources.ingest_text(title=title or "Pasted clip", text=text, url=url)
+            meta = sources.ingest_text(
+                title=title or "Pasted clip", text=text, url=url, labels=labels
+            )
         elif url:
-            meta = sources.ingest_url(url=url, title=title)
+            meta = sources.ingest_url(url=url, title=title, labels=labels)
         else:
             return jsonify({"error": "url or text required"}), 400
         return jsonify(meta), 201
